@@ -20,11 +20,11 @@ library(reshape) #and melt function from https://www.statmethods.net/management/
 library(tidyr)
 library(readr) #provided by import button for file
 library(rsconnect)
-
+library(data.table)
 
 ################################################################################ READ IN ALL THE FILES ################################################################################
 temp = list.files(pattern="*.csv")
-allData2 <- lapply(temp, function(x) read.csv(x, stringsAsFactors = FALSE))
+allData2 <- lapply(temp, function(x) fread(x, stringsAsFactors = FALSE))
 dailyData <- do.call(rbind, allData2)
 
 
@@ -105,7 +105,7 @@ years<-c(1980:2018)
 ui <- dashboardPage(
   ################################################################################ THE COLOR AND LENGTH OF THE TITLE FOR THE SIDEBAR ################################################################################
   skin = "yellow",
-  dashboardHeader(title = "CS 424 PROJECT 1 - Nicole Laczny", titleWidth = 450),
+  dashboardHeader(title = "CS 424 PROJECT 2", titleWidth = 450),
   
   ######################################## CREATE DROP DOWN MENUS IN SIDEBAR + NEW TAB CONTAINING RESOURCES ######################################## 
   dashboardSidebar(disable = FALSE, collapsed = FALSE,
