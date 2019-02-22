@@ -105,16 +105,18 @@ years<-c(1980:2018)
 ui <- dashboardPage(
   ################################################################################ THE COLOR AND LENGTH OF THE TITLE FOR THE SIDEBAR ################################################################################
   skin = "yellow",
-  dashboardHeader(title = "CS 424 PROJECT 2", titleWidth = 450),
+  dashboardHeader(title = "CS 424 PROJECT 2", titleWidth = 450 ),
   
   ######################################## CREATE DROP DOWN MENUS IN SIDEBAR + NEW TAB CONTAINING RESOURCES ######################################## 
-  dashboardSidebar(disable = FALSE, collapsed = FALSE,
+  dashboardSidebar(sidebarMenu(disable = FALSE, collapsed = FALSE,
                    selectInput("Year", "Select the year to visualize", years, selected = 2017),
                    selectInput("State", "State", choices = "" , selected = ""),
                    selectInput("Countys", "Countys",choices = "" , selected = ""),
                    #selectInput("County", "Select the county to visualize", listNamesB, selected = " select County"), #### THIS IS THE PART B GRADE MENU ####
+                   menuItem("Yearly Data", tabName="yearlydata", icon = icon("dashboard")),
+                   menuItem("Daily Data", tabName="dailydata", icon = icon("dashboard")),
                    menuItem("Resources", tabName="resources", icon = icon("bullet"))
-  ),
+  )),
   ######################################## THE MAIN BODDY OF THE WEB APP ########################################
   dashboardBody(
     
@@ -149,7 +151,7 @@ ui <- dashboardPage(
         h6("  *http://www.cookbook-r.com/Graphs/Colors_(ggplot2)/"),
         h6("  *professor Andy Johnson")
         
-      )),
+      ), tabItem(tabName = "yearlydata",
     
     ######################################## THE MAIN BODY DISPLAY ########################################
     fluidRow(
@@ -203,9 +205,21 @@ ui <- dashboardPage(
              box(title = "Pollutant Count over Years", solidHeader = TRUE, status = "primary", width = 6, plotOutput("line2", height = 400))
     )
     
-  )
+  )),
+  tabItem(tabName = "dailydata",
+          
+          ######################################## THE MAIN BODY DISPLAY ########################################
+          fluidRow(
+            ################## FIRST COLUMN ######################
+            column(2,
+                   
+                   fluidRow(box(title = "% of Day Type", solidHeader = TRUE, status = "primary", width = 12, plotOutput("daily", height = 400)))
+                   #fluidRow(box(title = "Location of County", solidHeader = TRUE, status = "primary", width = 12, leafletOutput("map1", height = 400)))
+             
+            
+          )))
   
-)) ####~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~< END OF UI CODE >~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#####
+))) ####~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~< END OF UI CODE >~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#####
 
 
 ####~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~< START OF SERVER CODE >~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~####
@@ -529,6 +543,13 @@ server <- function(session,input, output) {
     }
   })
   
+  
+  
+  ###################################blank daily code###############
+  
+  output$daily <- renderPlot({
+      
+  })
 }####~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END OF SERVER CODE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~####
 
 
