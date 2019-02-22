@@ -211,13 +211,27 @@ ui <- dashboardPage(
           ######################################## THE MAIN BODY DISPLAY ########################################
           fluidRow(
             ################## FIRST COLUMN ######################
-            column(2,
+            column(3,
                    
-                   fluidRow(box(title = "% of Day Type", solidHeader = TRUE, status = "primary", width = 12, plotOutput("daily", height = 400)))
-                   #fluidRow(box(title = "Location of County", solidHeader = TRUE, status = "primary", width = 12, leafletOutput("map1", height = 400)))
-             
-            
-          )))
+                   fluidRow(box(title = "this is the line plot box", solidHeader = TRUE, status = "primary", width = 12, plotOutput("line", height = 400)))
+          ),
+          
+          column(3,
+                 
+                 fluidRow(box(title = "this is the bar plot box", solidHeader = TRUE, status = "primary", width = 12, plotOutput("bar", height = 400)))
+          ),
+          
+          column(3, 
+                 
+                 fluidRow(box(title = "this is the table box", solidHeader = TRUE, status = "primary", width = 12, dataTableOutput("table", height = 400)))
+          ),
+          
+          column(3,
+                 
+                 fluidRow(box(title = "this is the map box", solidHeader = TRUE, status = "primary", width = 12, leafletOutput("map", height = 400)))
+          ) 
+          
+          ))
   
 ))) ####~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~< END OF UI CODE >~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#####
 
@@ -547,9 +561,23 @@ server <- function(session,input, output) {
   
   ###################################blank daily code###############
   
-  output$daily <- renderPlot({
+  output$line <- renderPlot({
       
   })
+  
+  output$bar <- renderPlot({
+    
+  })
+  
+  output$table <- DT::renderDataTable({
+   
+    
+  })
+  
+  output$map <- renderLeaflet({ # adapted from prof code
+    
+  })
+
 }####~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END OF SERVER CODE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~####
 
 
