@@ -109,13 +109,13 @@ ui <- dashboardPage(
   
   ######################################## CREATE DROP DOWN MENUS IN SIDEBAR + NEW TAB CONTAINING RESOURCES ######################################## 
   dashboardSidebar(sidebarMenu(disable = FALSE, collapsed = FALSE,
-                   selectInput("Year", "Select the year to visualize", years, selected = 2017),
-                   selectInput("State", "State", choices = "" , selected = ""),
-                   selectInput("Countys", "Countys",choices = "" , selected = ""),
-                   #selectInput("County", "Select the county to visualize", listNamesB, selected = " select County"), #### THIS IS THE PART B GRADE MENU ####
-                   menuItem("Yearly Data", tabName="yearlydata", icon = icon("dashboard")),
-                   menuItem("Daily Data", tabName="dailydata", icon = icon("dashboard")),
-                   menuItem("Resources", tabName="resources", icon = icon("bullet"))
+                               selectInput("Year", "Select the year to visualize", years, selected = 2017),
+                               selectInput("State", "State", choices = "" , selected = ""),
+                               selectInput("Countys", "Countys",choices = "" , selected = ""),
+                               #selectInput("County", "Select the county to visualize", listNamesB, selected = " select County"), #### THIS IS THE PART B GRADE MENU ####
+                               menuItem("Yearly Data", tabName="yearlydata", icon = icon("dashboard")),
+                               menuItem("Daily Data", tabName="dailydata", icon = icon("dashboard")),
+                               menuItem("Resources", tabName="resources", icon = icon("bullet"))
   )),
   ######################################## THE MAIN BODDY OF THE WEB APP ########################################
   dashboardBody(
@@ -152,88 +152,90 @@ ui <- dashboardPage(
         h6("  *professor Andy Johnson")
         
       ), tabItem(tabName = "yearlydata",
-    
-    ######################################## THE MAIN BODY DISPLAY ########################################
-    fluidRow(
-      ################## FIRST COLUMN ######################
-      column(2,
-             
-             fluidRow(box(title = "% of Day Type", solidHeader = TRUE, status = "primary", width = 12, plotOutput("hist1", height = 400))),
-             fluidRow(box(title = "Location of County", solidHeader = TRUE, status = "primary", width = 12, leafletOutput("map1", height = 400)))
-             
-             #fluidRow(box( title = "% of Pollutant", solidHeader = TRUE, status = "primary", width = 12,plotOutput("hist3", height = 400)))
-             #fluidRow(box(title = "Pollutant Count over Years", solidHeader = TRUE, status = "primary", width = 12, plotOutput("line2", height = 400)))
-             
-      ),
-      ################### SECOND COLUMN #####################
-      column(2,
-             
-             fluidRow(box( title = "Number of Day Types", solidHeader = TRUE, status = "primary", width = 12,plotOutput("hist2", height = 400))),
-             fluidRow(box(title = "Number of Pollutant Days", solidHeader = TRUE, status = "primary", width = 12, plotOutput("hist4", height = 400)))
-             
-             #fluidRow(box( title = "AQI Count over Years", solidHeader = TRUE, status = "primary", width = 12,plotOutput("line1", height = 400)))
-             
-      ),
-      ################### THIRD COLUMN #####################
-      column(2,
-             
-             fluidRow(box(title = "Day Types in Table Format", solidHeader = TRUE, status = "primary", width = 12, dataTableOutput("tab2", height = 400))),
-             fluidRow(box(title = "Pollutant Types in Table Format", solidHeader = TRUE, status = "primary", width = 12, dataTableOutput("tab3", height = 400)))
-             
-             #fluidRow(box(title = "Location of County", solidHeader = TRUE, status = "primary", width = 12, leafletOutput("map1", height = 400)))
-             
-             
-      ),
-      ################### FOURTH COLUMN #####################
-      column(2,
-             fluidRow(box( title = "% of Pollutant CO", solidHeader = TRUE, status = "primary", width = 12,plotOutput("pieCO", height = 400))),
-             fluidRow(box( title = "% of Pollutant NO2", solidHeader = TRUE, status = "primary", width = 12,plotOutput("pieNO2", height = 400)))
-             ),
-      
-      ################### FIFTH COLUMN #####################
-      column(2,
-             fluidRow(box( title = "% of Pollutant Ozone", solidHeader = TRUE, status = "primary", width = 12,plotOutput("pieOzone", height = 400))),
-             fluidRow(box( title = "% of Pollutant SO2", solidHeader = TRUE, status = "primary", width = 12,plotOutput("pieSO2", height = 400)))
-      ),
-      ################### SIXTH COLUMN #####################
-      column(2,
-             fluidRow(box( title = "% of Pollutant PM2.5", solidHeader = TRUE, status = "primary", width = 12,plotOutput("piePM2.5", height = 400))),
-             fluidRow(box( title = "% of Pollutant PM10", solidHeader = TRUE, status = "primary", width = 12,plotOutput("piePM10", height = 400)))
-      ),
-      ################### ROW LINE PLOTS #####################
-    fluidRow(box( title = "AQI Count over Years", solidHeader = TRUE, status = "primary", width = 6, plotOutput("line1", height = 400)),
-             box(title = "Pollutant Count over Years", solidHeader = TRUE, status = "primary", width = 6, plotOutput("line2", height = 400))
-    )
-    
-  )),
-  tabItem(tabName = "dailydata",
-          
-          ######################################## THE MAIN BODY DISPLAY ########################################
-          fluidRow(
-            ################## FIRST COLUMN ######################
-            column(3,
+                 
+                 ######################################## THE MAIN BODY DISPLAY ########################################
+                 fluidRow(
+                   ################## FIRST COLUMN ######################
+                   column(2,
+                          
+                          fluidRow(box(title = "% of Day Type", solidHeader = TRUE, status = "primary", width = 12, plotOutput("hist1", height = 400))),
+                          fluidRow(box(title = "Location of County", solidHeader = TRUE, status = "primary", width = 12, leafletOutput("map1", height = 400)))
+                          
+                          #fluidRow(box( title = "% of Pollutant", solidHeader = TRUE, status = "primary", width = 12,plotOutput("hist3", height = 400)))
+                          #fluidRow(box(title = "Pollutant Count over Years", solidHeader = TRUE, status = "primary", width = 12, plotOutput("line2", height = 400)))
+                          
+                   ),
+                   ################### SECOND COLUMN #####################
+                   column(2,
+                          
+                          fluidRow(box( title = "Number of Day Types", solidHeader = TRUE, status = "primary", width = 12,plotOutput("hist2", height = 400))),
+                          fluidRow(box(title = "Number of Pollutant Days", solidHeader = TRUE, status = "primary", width = 12, plotOutput("hist4", height = 400)))
+                          
+                          #fluidRow(box( title = "AQI Count over Years", solidHeader = TRUE, status = "primary", width = 12,plotOutput("line1", height = 400)))
+                          
+                   ),
+                   ################### THIRD COLUMN #####################
+                   column(2,
+                          
+                          fluidRow(box(title = "Day Types in Table Format", solidHeader = TRUE, status = "primary", width = 12, dataTableOutput("tab2", height = 400))),
+                          fluidRow(box(title = "Pollutant Types in Table Format", solidHeader = TRUE, status = "primary", width = 12, dataTableOutput("tab3", height = 400)))
+                          
+                          #fluidRow(box(title = "Location of County", solidHeader = TRUE, status = "primary", width = 12, leafletOutput("map1", height = 400)))
+                          
+                          
+                   ),
+                   ################### FOURTH COLUMN #####################
+                   column(2,
+                          fluidRow(box( title = "% of Pollutant CO", solidHeader = TRUE, status = "primary", width = 12,plotOutput("pieCO", height = 400))),
+                          fluidRow(box( title = "% of Pollutant NO2", solidHeader = TRUE, status = "primary", width = 12,plotOutput("pieNO2", height = 400)))
+                   ),
                    
-                   fluidRow(box(title = "this is the line plot box", solidHeader = TRUE, status = "primary", width = 12, plotOutput("line", height = 400)))
-          ),
-          
-          column(3,
-                 
-                 fluidRow(box(title = "this is the bar plot box", solidHeader = TRUE, status = "primary", width = 12, plotOutput("bar", height = 400)))
-          ),
-          
-          column(3, 
-                 
-                 fluidRow(box(title = "this is the table box", solidHeader = TRUE, status = "primary", width = 12, dataTableOutput("table", height = 400)))
-          ),
-          
-          column(3,
-                 
-                 fluidRow(box(title = "this is the map box", solidHeader = TRUE, status = "primary", width = 12, leafletOutput("map", height = 400)))
-          ) 
-          
-          ))
-  
-))) ####~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~< END OF UI CODE >~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#####
+                   ################### FIFTH COLUMN #####################
+                   column(2,
+                          fluidRow(box( title = "% of Pollutant Ozone", solidHeader = TRUE, status = "primary", width = 12,plotOutput("pieOzone", height = 400))),
+                          fluidRow(box( title = "% of Pollutant SO2", solidHeader = TRUE, status = "primary", width = 12,plotOutput("pieSO2", height = 400)))
+                   ),
+                   ################### SIXTH COLUMN #####################
+                   column(2,
+                          fluidRow(box( title = "% of Pollutant PM2.5", solidHeader = TRUE, status = "primary", width = 12,plotOutput("piePM2.5", height = 400))),
+                          fluidRow(box( title = "% of Pollutant PM10", solidHeader = TRUE, status = "primary", width = 12,plotOutput("piePM10", height = 400)))
+                   ),
+                   ################### ROW LINE PLOTS #####################
+                   fluidRow(box( title = "AQI Count over Years", solidHeader = TRUE, status = "primary", width = 6, plotOutput("line1", height = 400)),
+                            box(title = "Pollutant Count over Years", solidHeader = TRUE, status = "primary", width = 6, plotOutput("line2", height = 400))
+                   )
+                   
+                 )),
+      tabItem(tabName = "dailydata",
+              
+              ######################################## THE MAIN BODY DISPLAY ########################################
+              fluidRow(
+                ################## FIRST COLUMN ######################
+                column(3,
+                       
+                       fluidRow(
+                         box(title = "Daily AQI line chart", solidHeader = TRUE, status = "primary", width = 12, 
+                             plotOutput("line_chart", height = 400)))
+                ),
+                
+                column(3,
+                       
+                       fluidRow(box(title = "this is the bar plot box", solidHeader = TRUE, status = "primary", width = 12, plotOutput("bar", height = 400)))
+                ),
+                
+                column(3, 
+                       
+                       fluidRow(box(title = "this is the table box", solidHeader = TRUE, status = "primary", width = 12, dataTableOutput("table", height = 400)))
+                ),
+                
+                column(3,
+                       
+                       fluidRow(box(title = "this is the map box", solidHeader = TRUE, status = "primary", width = 12, leafletOutput("map", height = 400)))
+                ) 
+                
+              ))
+      
+    ))) ####~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~< END OF UI CODE >~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#####
 
 
 ####~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~< START OF SERVER CODE >~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~####
@@ -250,13 +252,15 @@ server <- function(session,input, output) {
   mainY <- reactive({subset(allData, allData$Year == input$Year & allData$County == input$Countys & allData$State == input$State) })
   mainC<- reactive({subset(allData, allData$County == input$Countys & allData$State == input$State)})
   mapLL <- reactive({subset(latlong, State.Name == input$State & County.Name == input$Countys)})
-
+  
+  dailyY <- reactive({subset(dailyData, as.integer(substr(dailyData$Date,1,4)) == input$Year & dailyData$`county Name` == input$Countys & dailyData$`State Name` == input$State) })
+  
   
   #################### CHANGES DROP MENU OPTIONS FOR STATE BASED ON YEAR CHOSEN####################
   #observe events adapted from https://gist.github.com/aagarw30/d08c5fb1794cf9b58fa38342db97b697
   observeEvent(
     input$Year,
-  updateSelectInput(session, "State", "State", choices = unique(allData$State[allData$Year == input$Year]))
+    updateSelectInput(session, "State", "State", choices = unique(allData$State[allData$Year == input$Year]))
   )
   #################### CHANGES DROP DOWN MENU OPTIONS FOR COUNTY BASED ON STATE AND YEAR CHOSEN####################
   observeEvent(
@@ -280,7 +284,7 @@ server <- function(session,input, output) {
       str(sum(FullDays$value))
       DaysPieChart <- ggplot(FullDays,aes(x="",y=value)) + geom_bar(width = 1, stat = "identity", aes("", value, fill = variable), position = position_stack(reverse = TRUE))+coord_polar("y") # adapted from https://www.rdocumentation.org/packages/ggplot2/versions/3.1.0/topics/position_stack and http://www.sthda.com/english/wiki/ggplot2-pie-chart-quick-start-guide-r-software-and-data-visualization
       DaysPieChart +  geom_text(data=subset(FullDays, value>0), aes(x= "",y= value,label=percent(value/sum(value))), size=5, position = position_stack(0.5)) +theme_minimal() + xlab('') + ylab('') # adapted from https://stackoverflow.com/questions/26869141/conditionally-hiding-data-labels-in-ggplot2-graph and http://www.sthda.com/english/wiki/ggplot2-pie-chart-quick-start-guide-r-software-and-data-visualization and https://www.rdocumentation.org/packages/ggplot2/versions/3.1.0/topics/position_stack
-          }
+    }
   })
   
   
@@ -295,7 +299,7 @@ server <- function(session,input, output) {
       days2<-main2[5:10]
       FullDays2 <- melt(days2) #adapted from https://www.statmethods.net/management/reshape.html
       ggplot(FullDays2,aes(y= value, x=variable, angle = 0)) + geom_bar(stat="identity",aes(fill = variable)) + geom_text(aes(label=value), color="Black", size=5,position = position_dodge(1),vjust = 0)+ theme_minimal()  + xlab('Day Type') +ylab('Days')#http://www.sthda.com/english/wiki/ggplot2-barplots-quick-start-guide-r-software-and-data-visualization  and  https://www.displayr.com/how-to-make-a-pie-chart-in-r/
-       }
+    }
   })
   
   
@@ -414,7 +418,7 @@ server <- function(session,input, output) {
       data5 <- merge(data4,data3, by ="Year")
       reshaped <- melt(data5, id.vars = "Year")
       ggplot(reshaped, aes(Year,value,col=variable))+geom_line()+ xlab('Year') +ylab('AQI')
-   }
+    }
   })
   
   ######################## A LINE GRAPH TO DISPLAY THE CHANGES OF PollutantS DAYS BY YEAR################
@@ -439,7 +443,7 @@ server <- function(session,input, output) {
       data123456 <- merge(data12345,data6, by ="Year")
       reshaped <- melt(data123456, id.vars = "Year")
       ggplot(reshaped, aes(Year,value,col=variable))+geom_line()+ xlab('Year') +ylab('Days')
-     }
+    }
   })
   
   
@@ -459,7 +463,7 @@ server <- function(session,input, output) {
       str(melted)
       pie<-ggplot(melted, aes(x="", y=value))+geom_bar(width = 1, stat = "identity", aes("", value, fill = Legend), position = position_stack())+coord_polar("y")+  geom_text(data =melted, mapping = aes(x= "",y= value,label=percent(value/sum(value))), size=5, position = position_stack(0.5)) + theme_minimal()  + xlab('') +ylab('') 
       pie + scale_fill_manual(values= c("green", "gray"))
-      }
+    }
   })
   
   
@@ -561,8 +565,18 @@ server <- function(session,input, output) {
   
   ###################################blank daily code###############
   
-  output$line <- renderPlot({
+  output$line_chart <- renderPlot({
+    df <- dailyY()
+    if(nrow(df) == 0){
+      errorPrint <- "No Data Available"
+      errorPrint
+    }
+    else {
+      ggplot(df, aes(Date,AQI,col = `Defining Parameter`)) + 
+        geom_line(group=1) +
+        ylab('Daily AQI')
       
+    }
   })
   
   output$bar <- renderPlot({
@@ -570,14 +584,14 @@ server <- function(session,input, output) {
   })
   
   output$table <- DT::renderDataTable({
-   
+    
     
   })
   
   output$map <- renderLeaflet({ # adapted from prof code
     
   })
-
+  
 }####~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END OF SERVER CODE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~####
 
 
