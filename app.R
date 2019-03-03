@@ -105,10 +105,10 @@ years<-c(1980:2018)
 ui <- dashboardPage(
   ################################################################################ THE COLOR AND LENGTH OF THE TITLE FOR THE SIDEBAR ################################################################################
   skin = "yellow",
-  dashboardHeader(title = "CS 424 PROJECT 2", titleWidth = 450 ),
+  dashboardHeader(title = "CS 424 PROJECT 2"),
   
   ######################################## CREATE DROP DOWN MENUS IN SIDEBAR + NEW TAB CONTAINING RESOURCES ######################################## 
-  dashboardSidebar(sidebarMenu(disable = FALSE, collapsed = FALSE,
+  dashboardSidebar(sidebarMenu(disable = FALSE, collapsed = FALSE, style = "margin-top:500px",
                                selectInput("Year", "Select the year to visualize", years, selected = 2017),
                                selectInput("State", "State", choices = "" , selected = ""),
                                selectInput("Countys", "Countys",choices = "" , selected = ""),
@@ -149,6 +149,7 @@ ui <- dashboardPage(
         h6("  *http://shiny.rstudio.com/articles/shinyapps.html"),
         h6("  *student who was in office hours on Friday - never got your name"),
         h6("  *http://www.cookbook-r.com/Graphs/Colors_(ggplot2)/"),
+        h6("  *https://stackoverflow.com/questions/33266157/how-to-add-more-whitespace-to-the-main-panel-in-shiny-dashboard"),
         h6("  *professor Andy Johnson")
         
       ), tabItem(tabName = "yearlydata",
@@ -202,7 +203,8 @@ ui <- dashboardPage(
                    ),
                    ################### ROW LINE PLOTS #####################
                    fluidRow(box( title = "AQI Count over Years", solidHeader = TRUE, status = "primary", width = 6, plotOutput("line1", height = 400)),
-                            box(title = "Pollutant Count over Years", solidHeader = TRUE, status = "primary", width = 6, plotOutput("line2", height = 400))
+                            box(title = "Pollutant Count over Years", solidHeader = TRUE, status = "primary", width = 6, plotOutput("line2", height = 400)),
+                            box(title = "Pollutant Count over the years", solidHeader = TRUE, status = "primary", width = 4, dataTableOutput("tableBig", height = 400))
                    )
                    
                  )),
@@ -401,6 +403,27 @@ server <- function(session,input, output) {
       map <- addMarkers(map, mapit$Longitude, mapit$Latitude, popup = "evl")
       map
     }
+  })
+  
+  ####################### TABLE FOR DIFFERNT PollutantS/ DAYS Pollutant IN AIR/ % OF DAYS  #################
+  output$tableBig <- DT::renderDataTable({
+    main2 <- mainC()
+    if(nrow(main2) == 0){
+      errorPrint <- "No Data Available"
+      errorPrint
+    } else {
+      str(main2)
+      days2<-main2[14:19]
+      days2$year <- main2[3]
+      row.names(days2) <- NULL
+      str(days2)
+      data.frame(days2)
+      avg<- function(x) {return(percent(x/main2$Days.with.AQI))}
+      final<- as.data.frame(lapply(days2[,1:6], avg))
+      final$year <- days2$year
+      displaydata<- as.data.frame(final)
+    }
+    
   })
   
   ######################## A LINE GRAPH TO DISPLAY THE CHANGES OF DAY TYPES BY YEAR ################
