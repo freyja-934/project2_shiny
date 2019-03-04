@@ -99,7 +99,7 @@ allData <- rbind(aqi_1980,aqi_1981,aqi_1982,aqi_1983,aqi_1984,aqi_1985,aqi_1986,
 
 ######################################################################## CREATE A STARTING DROPDOWN OPTION FOR YEAR ########################################################################################
 years<-c(1980:2018)
-
+pollutant<-c("Ozone","SO2","CO","NO2","PM2.5","PM10","AQI")
 
 
 
@@ -115,9 +115,11 @@ ui <- dashboardPage(
                                selectInput("Year", "Select the year to visualize", years, selected = 2017),
                                selectInput("State", "State", choices = "" , selected = ""),
                                selectInput("Countys", "Countys",choices = "" , selected = ""),
+                               selectInput("Polluant", "Polluant", pollutant, selected = ""), 
                                #selectInput("County", "Select the county to visualize", listNamesB, selected = " select County"), #### THIS IS THE PART B GRADE MENU ####
                                menuItem("Yearly Data", tabName="yearlydata", icon = icon("dashboard")),
                                menuItem("Daily Data", tabName="dailydata", icon = icon("dashboard")),
+                               menuItem("Map Data", tabName="mapdata", icon = icon("dashboard")),
                                menuItem("Resources", tabName="resources", icon = icon("bullet"))
   )),
   ######################################## THE MAIN BODDY OF THE WEB APP ########################################
@@ -324,7 +326,37 @@ ui <- dashboardPage(
                        ))
                 )
                 
+              )),
+      
+      
+      tabItem(tabName = "mapdata",
+              
+              ######################################## THE MAIN BODY DISPLAY FOR MAP DATA ########################################
+              fluidRow(
+                ################## FIRST COLUMN ######################
+                column(3,
+                       
+                       fluidRow(box(title = "this is the bar plot box", solidHeader = TRUE, status = "primary", width = 12, plotOutput("bar", height = 400)))
+                ),
+                
+                column(3,
+                       
+                       fluidRow(box(title = "this is the bar plot box", solidHeader = TRUE, status = "primary", width = 12, plotOutput("bar", height = 400)))
+                ),
+                
+                column(3, 
+                       
+                       fluidRow(box(title = "this is the table box", solidHeader = TRUE, status = "primary", width = 12, dataTableOutput("table", height = 400)))
+                ),
+                
+                column(3,
+                       
+                       fluidRow(box(title = "this is the map box", solidHeader = TRUE, status = "primary", width = 12, leafletOutput("map", height = 400)))
+                ) 
+                
               ))
+      
+      
       
     ))) ####~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~< END OF UI CODE >~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#####
 
@@ -670,6 +702,70 @@ server <- function(session,input, output) {
       str(melted)
       pie<-ggplot(melted, aes(x="", y=value))+geom_bar(width = 1, stat = "identity", aes("", value, fill = Legend), position = position_stack())+coord_polar("y")+  geom_text(data =melted, mapping = aes(x= "",y= value,label=percent(value/sum(value))), size=5, position = position_stack(0.5)) + theme_minimal()  + xlab('') +ylab('') 
       pie + scale_fill_manual(values= c("gray", "gold"))
+    }
+  })
+  
+  ###################### AN INTERACTIVE MAP FOR POLLUTANTS AND AQI##################
+  ######("Ozone","SO2","CO","NO2","PM2.5","PM10","AQI")
+  output$map2 <- renderLeaflet({ # adapted from prof code
+    main2 <- mainY()
+    if(nrow(main2) == 0){
+      errorPrint <- "No Data Available"
+      errorPrint
+    } else {
+      if(pol == "Ozone"){
+        main2 <-  main2[1:19]
+        main2$Total <- main2[,14]+main2[,15]+main2[,16]+main2[,17]
+        main2$percentage <- (main2[,16]/main2[,20])*100
+        main2 <- main2[with(main2,order(-percentage)),]
+        main2 <- main2 %>% slice (1:100) #take the frist 100 rows 
+        
+        
+        
+        map2 <- leaflet() %>% addTiles()  %>% setView(-96, 39, 4.3)
+        map2
+      }
+      
+      if(pol == "SO2"){
+        main2 <-  main2[1:19]
+        main2$Total <- main2[,14]+main2[,15]+main2[,16]+main2[,17]
+        main2$percentage <- (main2[,17]/main2[,20])*100
+        main2 <- main2[with(main2,order(-percentage)),]
+        main2 <- main2 %>% slice (1:100) 
+      }
+      
+      if(pol == "CO"){
+        main2 <-  main2[1:19]
+        main2$Total <- main2[,14]+main2[,15]+main2[,16]+main2[,17]
+        main2$percentage <- (main2[,14]/main2[,20])*100
+        main2 <- main2[with(main2,order(-percentage)),]
+        main2 <- main2 %>% slice (1:100)  
+      }
+      
+      if(pol == "PM2.5"){
+        main2 <-  main2[1:19]
+        main2$Total <- main2[,14]+main2[,15]+main2[,16]+main2[,17]
+        main2$percentage <- (main2[,18]/main2[,20])*100
+        main2 <- main2[with(main2,order(-percentage)),]
+        main2 <- main2 %>% slice (1:100) 
+      }
+      
+      if(pol == "PM10"){
+        main2 <-  main2[1:19]
+        main2$Total <- main2[,14]+main2[,15]+main2[,16]+main2[,17]
+        main2$percentage <- (main2[,19]/main2[,20])*100
+        main2 <- main2[with(main2,order(-percentage)),]
+        main2 <- main2 %>% slice (1:100) 
+      } 
+      
+      if(pol == "AQI"){
+        main2 <-  main2[1:19]
+        main2$Total <- main2[,5]+main2[,6]+main2[,7]+main2[,8]+main2[,9]+main2[,10]
+        
+        
+        main2 <- main2 %>% slice (1:100) 
+      }
+      
     }
   })
   
