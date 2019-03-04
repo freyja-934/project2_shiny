@@ -234,20 +234,20 @@ ui <- dashboardPage(
                 column(2,
                        fluidRow(box(
                          ##JANUARY
+                         h5("JANUARY"),
                         tabsetPanel(
-                          h5("JANUARY"),
                           tabPanel(title = "Table", dataTableOutput("table1", height = 400)),
                           tabPanel(title = "Bar plot box", plotOutput("bar1", height = 400))
                         ),
                         ##MAY
+                        h5("MAY"),
                         tabsetPanel(
-                          h5("MAY"),
                           tabPanel(title = "Table", dataTableOutput("table5", height = 400)),
                           tabPanel(title = "Bar plot box", plotOutput("bar5", height = 400))
                         ),
                         ##SEPTEMBER
+                        h5("SEPTEMBER"),
                         tabsetPanel(
-                          h5("SEPTEMBER"),
                           tabPanel(title = "Table", dataTableOutput("table9", height = 400)),
                           tabPanel(title = "Bar plot box", plotOutput("bar9", height = 400))
                         )
@@ -258,20 +258,20 @@ ui <- dashboardPage(
                 column(2,
                        fluidRow(box(
                          ##FEBRUARY
+                         h5("FEBRUARY"),
                          tabsetPanel(
-                           h5("FEBRUARY"),
                            tabPanel(title = "Table", dataTableOutput("table2", height = 400)),
                            tabPanel(title = "Bar plot box", plotOutput("bar2", height = 400))
                          ),
                          ##JUNE
+                         h5("JUNE"),
                          tabsetPanel(
-                           h5("JUNE"),
                            tabPanel(title = "Table", dataTableOutput("table6", height = 400)),
                            tabPanel(title = "Bar plot box", plotOutput("bar6", height = 400))
                          ),
                          ##OCTOBER
+                         h5("OCTOBER"),
                          tabsetPanel(
-                           h5("OCTOBER"),
                            tabPanel(title = "Table", dataTableOutput("table10", height = 400)),
                            tabPanel(title = "Bar plot box", plotOutput("bar10", height = 400))
                          )
@@ -282,20 +282,20 @@ ui <- dashboardPage(
                 column(2,
                        fluidRow(box(
                          ##MARCH
+                         h5("MARCH"),
                          tabsetPanel(
-                           h5("MARCH"),
                            tabPanel(title = "Table", dataTableOutput("table3", height = 400)),
                            tabPanel(title = "Bar plot box", plotOutput("bar3", height = 400))
                          ),
                          ##JULY
+                         h5("JULY"),
                          tabsetPanel(
-                           h5("JULY"),
                            tabPanel(title = "Table", dataTableOutput("table7", height = 400)),
                            tabPanel(title = "Bar plot box", plotOutput("bar7", height = 400))
                          ),
                          ##NOVEMBER
+                         h5("NOVEMBER"),
                          tabsetPanel(
-                           h5("NOVEMBER"),
                            tabPanel(title = "Table", dataTableOutput("table11", height = 400)),
                            tabPanel(title = "Bar plot box", plotOutput("bar11", height = 400))
                          )
@@ -306,20 +306,20 @@ ui <- dashboardPage(
                 column(2,
                        fluidRow(box(
                          ##APRIL
+                         h5("APRIL"),
                          tabsetPanel(
-                           h5("APRIL"),
                            tabPanel(title = "Table", dataTableOutput("table4", height = 400)),
                            tabPanel(title = "Bar plot box", plotOutput("bar4", height = 400))
                          ),
                          ##AUGUST
+                         h5("AUGUST"),
                          tabsetPanel(
-                           h5("AUGUST"),
                            tabPanel(title = "Table", dataTableOutput("table8", height = 400)),
                            tabPanel(title = "Bar plot box", plotOutput("bar8", height = 400))
                          ),
                          ##DECEMBER
+                         h5("DECEMBER"),
                          tabsetPanel(
-                           h5("DECEMBER"),
                            tabPanel(title = "Table", dataTableOutput("table12", height = 400)),
                            tabPanel(title = "Bar plot box", plotOutput("bar12", height = 400))
                          )
