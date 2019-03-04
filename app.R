@@ -112,9 +112,11 @@ ui <- dashboardPage(
                                selectInput("Year", "Select the year to visualize", years, selected = 2017),
                                selectInput("State", "State", choices = "" , selected = ""),
                                selectInput("Countys", "Countys",choices = "" , selected = ""),
+                               selectInput("Polluant", "Polluant", pollutant, selected = ""), 
                                #selectInput("County", "Select the county to visualize", listNamesB, selected = " select County"), #### THIS IS THE PART B GRADE MENU ####
                                menuItem("Yearly Data", tabName="yearlydata", icon = icon("dashboard")),
                                menuItem("Daily Data", tabName="dailydata", icon = icon("dashboard")),
+                               menuItem("Map Data", tabName="mapdata", icon = icon("dashboard")),
                                menuItem("Resources", tabName="resources", icon = icon("bullet"))
   )),
   ######################################## THE MAIN BODDY OF THE WEB APP ########################################
@@ -321,7 +323,37 @@ ui <- dashboardPage(
                        ))
                 )
                 
+              )),
+      
+      
+      tabItem(tabName = "mapdata",
+              
+              ######################################## THE MAIN BODY DISPLAY FOR MAP DATA ########################################
+              fluidRow(
+                ################## FIRST COLUMN ######################
+                column(3,
+                       
+                       fluidRow(box(title = "this is the bar plot box", solidHeader = TRUE, status = "primary", width = 12, plotOutput("bar", height = 400)))
+                ),
+                
+                column(3,
+                       
+                       fluidRow(box(title = "this is the bar plot box", solidHeader = TRUE, status = "primary", width = 12, plotOutput("bar", height = 400)))
+                ),
+                
+                column(3, 
+                       
+                       fluidRow(box(title = "this is the table box", solidHeader = TRUE, status = "primary", width = 12, dataTableOutput("table", height = 400)))
+                ),
+                
+                column(3,
+                       
+                       fluidRow(box(title = "this is the map box", solidHeader = TRUE, status = "primary", width = 12, leafletOutput("map", height = 400)))
+                ) 
+                
               ))
+      
+      
       
     ))) ####~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~< END OF UI CODE >~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#####
 
