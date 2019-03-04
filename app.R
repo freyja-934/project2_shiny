@@ -714,35 +714,53 @@ server <- function(session,input, output) {
         main2 <-  main2[1:19]
         main2$Total <- main2[,14]+main2[,15]+main2[,16]+main2[,17]
         main2$percentage <- (main2[,16]/main2[,20])*100
+        main2 <- main2[with(main2,order(-percentage)),]
+        main2 <- main2 %>% slice (1:100) #take the frist 100 rows 
+        
+        
+        
+        map2 <- leaflet() %>% addTiles()  %>% setView(-96, 39, 4.3)
+        map2
       }
       
       if(pol == "SO2"){
         main2 <-  main2[1:19]
         main2$Total <- main2[,14]+main2[,15]+main2[,16]+main2[,17]
         main2$percentage <- (main2[,17]/main2[,20])*100
+        main2 <- main2[with(main2,order(-percentage)),]
+        main2 <- main2 %>% slice (1:100) 
       }
       
       if(pol == "CO"){
         main2 <-  main2[1:19]
         main2$Total <- main2[,14]+main2[,15]+main2[,16]+main2[,17]
         main2$percentage <- (main2[,14]/main2[,20])*100
+        main2 <- main2[with(main2,order(-percentage)),]
+        main2 <- main2 %>% slice (1:100)  
       }
       
       if(pol == "PM2.5"){
         main2 <-  main2[1:19]
         main2$Total <- main2[,14]+main2[,15]+main2[,16]+main2[,17]
         main2$percentage <- (main2[,18]/main2[,20])*100
+        main2 <- main2[with(main2,order(-percentage)),]
+        main2 <- main2 %>% slice (1:100) 
       }
       
       if(pol == "PM10"){
         main2 <-  main2[1:19]
         main2$Total <- main2[,14]+main2[,15]+main2[,16]+main2[,17]
         main2$percentage <- (main2[,19]/main2[,20])*100
+        main2 <- main2[with(main2,order(-percentage)),]
+        main2 <- main2 %>% slice (1:100) 
       } 
       
       if(pol == "AQI"){
         main2 <-  main2[1:19]
         main2$Total <- main2[,5]+main2[,6]+main2[,7]+main2[,8]+main2[,9]+main2[,10]
+        
+        
+        main2 <- main2 %>% slice (1:100) 
       }
       
     }
