@@ -28,7 +28,7 @@ library(dplyr)
 temp = list.files(pattern="*.csv")
 allData2 <- lapply(temp, function(x) fread(x, stringsAsFactors = FALSE))
 dailyData <- do.call(rbind, allData2)
-dailyData$Date <- as.Date(dailyData$Date)
+#dailyData$Date <- as.Date(dailyData$Date)
 
 
 ################ AQI FILES FROM 1980-2018 ########################
@@ -371,7 +371,10 @@ server <- function(session,input, output) {
   mainC<- reactive({subset(allData, allData$County == input$Countys & allData$State == input$State)})
   mapLL <- reactive({subset(latlong, State.Name == input$State & County.Name == input$Countys)})
   
-  dailyY <- reactive({subset(dailyData, as.integer(substr(dailyData$Date,1,4)) == input$Year & dailyData$`county Name` == input$Countys & dailyData$`State Name` == input$State) })
+  dailyY <- reactive({
+    subset(dailyData, as.integer(substr(dailyData$Date,1,4)) == input$Year & dailyData$`county Name` == input$Countys & dailyData$`State Name` == input$State) %>%
+      mutate(Date = as.Date(Date))
+    })
   
   
   #################### CHANGES DROP MENU OPTIONS FOR STATE BASED ON YEAR CHOSEN####################
