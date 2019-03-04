@@ -218,114 +218,134 @@ ui <- dashboardPage(
               ######################################## THE MAIN BODY DISPLAY FOR DAILY DATA - PROJECT 2 ########################################
               fluidRow(
                 
+                ################## FIRST ROW ######################
+                fluidRow(box(title = "Daily AQI line chart", solidHeader = TRUE, status = "primary", width = 12, plotOutput("line_chart", height = 400))),
+              
+                
                 ################## FIRST COLUMN ######################
                 column(2,
-                       fluidRow(box(title = "Daily AQI line chart", solidHeader = TRUE, status = "primary", width = 12, plotOutput("line_chart", height = 400)))
+                       fluidRow(box(width = 12,
+                                    
+                        ##JANUARY
+                        h4("JANUARY"),
+                        tabsetPanel(
+                          tabPanel(title = "Table", width = 12,dataTableOutput("table1", height = 400)),
+                          tabPanel(title = "Bar plot box", width = 12,plotOutput("bar1", height = 400))
+                        ),
+                        
+                        ##JULY
+                        h4("JULY"),
+                        tabsetPanel(
+                          tabPanel(title = "Table",width = 12, dataTableOutput("table7", height = 400)),
+                          tabPanel(title = "Bar plot box", width = 12,plotOutput("bar7", height = 400))
+                        )
+                        
+                      ))
                 ),
                 
                 ################## SECOND COLUMN ######################
                 column(2,
-                       fluidRow(box(title = "this is the map box", solidHeader = TRUE, status = "primary", width = 12, leafletOutput("map", height = 400)))
-                       
-                       
+                       fluidRow(box(width = 12,
+                                    
+                         ##FEBRUARY
+                         h4("FEBRUARY"),
+                         tabsetPanel(
+                           tabPanel(title = "Table", width = 12,dataTableOutput("table2", height = 400)),
+                           tabPanel(title = "Bar plot box", width = 12,plotOutput("bar2", height = 400))
+                         ),
+                         
+                         ##AUGUST
+                         h4("AUGUST"),
+                         tabsetPanel(
+                           tabPanel(title = "Table", width = 12,dataTableOutput("table8", height = 400)),
+                           tabPanel(title = "Bar plot box", width = 12,plotOutput("bar8", height = 400))
+                         )
+                        
+                       ))
                 ),
                 
                 ################## THIRD COLUMN ######################
                 column(2,
-                       fluidRow(box(
-                         ##JANUARY
-                         h5("JANUARY"),
-                        tabsetPanel(
-                          tabPanel(title = "Table", dataTableOutput("table1", height = 400)),
-                          tabPanel(title = "Bar plot box", plotOutput("bar1", height = 400))
-                        ),
-                        ##MAY
-                        h5("MAY"),
-                        tabsetPanel(
-                          tabPanel(title = "Table", dataTableOutput("table5", height = 400)),
-                          tabPanel(title = "Bar plot box", plotOutput("bar5", height = 400))
-                        ),
-                        ##SEPTEMBER
-                        h5("SEPTEMBER"),
-                        tabsetPanel(
-                          tabPanel(title = "Table", dataTableOutput("table9", height = 400)),
-                          tabPanel(title = "Bar plot box", plotOutput("bar9", height = 400))
-                        )
-                      ))
+                       fluidRow(box(width = 12,
+                                    
+                         ##MARCH
+                         h4("MARCH"),
+                         tabsetPanel(
+                           tabPanel(title = "Table",width = 12, dataTableOutput("table3", height = 400)),
+                           tabPanel(title = "Bar plot box", width = 12,plotOutput("bar3", height = 400))
+                         ),
+                         
+                         ##SEPTEMBER
+                         h4("SEPTEMBER"),
+                         tabsetPanel(
+                           tabPanel(title = "Table",width = 12, dataTableOutput("table9", height = 400)),
+                           tabPanel(title = "Bar plot box", width = 12,plotOutput("bar9", height = 400))
+                         )
+                         
+                       ))
                 ),
                 
                 ################## FOURTH COLUMN ######################
                 column(2,
-                       fluidRow(box(
-                         ##FEBRUARY
-                         h5("FEBRUARY"),
+                       fluidRow(box(width = 12,
+                                    
+                         ##APRIL
+                         h4("APRIL"),
                          tabsetPanel(
-                           tabPanel(title = "Table", dataTableOutput("table2", height = 400)),
-                           tabPanel(title = "Bar plot box", plotOutput("bar2", height = 400))
+                           tabPanel(title = "Table", width = 12, dataTableOutput("table4", height = 400)),
+                           tabPanel(title = "Bar plot box", width = 12, plotOutput("bar4", height = 400))
                          ),
-                         ##JUNE
-                         h5("JUNE"),
-                         tabsetPanel(
-                           tabPanel(title = "Table", dataTableOutput("table6", height = 400)),
-                           tabPanel(title = "Bar plot box", plotOutput("bar6", height = 400))
-                         ),
+                         
                          ##OCTOBER
-                         h5("OCTOBER"),
+                         h4("OCTOBER"),
                          tabsetPanel(
-                           tabPanel(title = "Table", dataTableOutput("table10", height = 400)),
-                           tabPanel(title = "Bar plot box", plotOutput("bar10", height = 400))
+                           tabPanel(title = "Table",width = 12, dataTableOutput("table10", height = 400)),
+                           tabPanel(title = "Bar plot box", width = 12,plotOutput("bar10", height = 400))
                          )
+                         
                        ))
                 ),
                 
                 ################## FIFTH COLUMN ######################
                 column(2,
-                       fluidRow(box(
-                         ##MARCH
-                         h5("MARCH"),
-                         tabsetPanel(
-                           tabPanel(title = "Table", dataTableOutput("table3", height = 400)),
-                           tabPanel(title = "Bar plot box", plotOutput("bar3", height = 400))
-                         ),
-                         ##JULY
-                         h5("JULY"),
-                         tabsetPanel(
-                           tabPanel(title = "Table", dataTableOutput("table7", height = 400)),
-                           tabPanel(title = "Bar plot box", plotOutput("bar7", height = 400))
-                         ),
-                         ##NOVEMBER
-                         h5("NOVEMBER"),
-                         tabsetPanel(
-                           tabPanel(title = "Table", dataTableOutput("table11", height = 400)),
-                           tabPanel(title = "Bar plot box", plotOutput("bar11", height = 400))
-                         )
+                       fluidRow(box(width = 12,
+                                    
+                        ##MAY
+                        h4("MAY"),
+                        tabsetPanel(
+                          tabPanel(title = "Table", width = 12,dataTableOutput("table5", height = 400)),
+                          tabPanel(title = "Bar plot box",width = 12, plotOutput("bar5", height = 400))
+                        ),
+                          
+                        ##NOVEMBER
+                        h4("NOVEMBER"),
+                        tabsetPanel(
+                          tabPanel(title = "Table",width = 12, dataTableOutput("table11", height = 400)),
+                          tabPanel(title = "Bar plot box",width = 12, plotOutput("bar11", height = 400))
+                          )
+                        
                        ))
                 ),
                 
                 ################## SIXTH COLUMN ######################
                 column(2,
-                       fluidRow(box(
-                         ##APRIL
-                         h5("APRIL"),
-                         tabsetPanel(
-                           tabPanel(title = "Table", dataTableOutput("table4", height = 400)),
-                           tabPanel(title = "Bar plot box", plotOutput("bar4", height = 400))
-                         ),
-                         ##AUGUST
-                         h5("AUGUST"),
-                         tabsetPanel(
-                           tabPanel(title = "Table", dataTableOutput("table8", height = 400)),
-                           tabPanel(title = "Bar plot box", plotOutput("bar8", height = 400))
-                         ),
-                         ##DECEMBER
-                         h5("DECEMBER"),
-                         tabsetPanel(
-                           tabPanel(title = "Table", dataTableOutput("table12", height = 400)),
-                           tabPanel(title = "Bar plot box", plotOutput("bar12", height = 400))
-                         )
+                       fluidRow(box(width = 12,
+                                    
+                        ##JUNE
+                        h4("JUNE"),
+                        tabsetPanel(
+                          tabPanel(title = "Table", width = 12,dataTableOutput("table6", height = 400)),
+                          tabPanel(title = "Bar plot box",width = 12, plotOutput("bar6", height = 400))
+                        ),
+                          
+                        ##DECEMBER
+                        h4("DECEMBER"),
+                        tabsetPanel(
+                          tabPanel(title = "Table", width = 12,dataTableOutput("table12", height = 400)),
+                          tabPanel(title = "Bar plot box",width = 12, plotOutput("bar12", height = 400))
+                        )
                        ))
                 )
-                
               )),
       
       
@@ -334,19 +354,16 @@ ui <- dashboardPage(
               ######################################## THE MAIN BODY DISPLAY FOR MAP DATA ########################################
               fluidRow(
                 ################## FIRST COLUMN ######################
-                column(3,
+                column(1,
                        
-                       fluidRow(box(title = "this is the bar plot box", solidHeader = TRUE, status = "primary", width = 12, plotOutput("barD", height = 400)))
-                ),
-                
-                column(3, 
+                       fluidRow(box(title = "this is the bar plot box", solidHeader = TRUE, status = "primary", width = 12, plotOutput("barD", height = 400))),
                        
                        fluidRow(box(title = "this is the table box", solidHeader = TRUE, status = "primary", width = 12, dataTableOutput("tableD", height = 400)))
                 ),
                 
-                column(3,
+                column(11,
                        
-                       fluidRow(box(title = "this is the map box", solidHeader = TRUE, status = "primary", width = 12, leafletOutput("mapD", height = 400)))
+                       fluidRow(box(title = "this is the map box", solidHeader = TRUE, status = "primary", width = 12, leafletOutput("mapD", height = 1500)))
                 ) 
                 
               ))
@@ -769,7 +786,7 @@ server <- function(session,input, output) {
   
   
   
-  ###################################blank daily code###############
+  ################################### blank daily code ###############
   
   output$line_chart <- renderPlot({
     df <- dailyY()
@@ -980,14 +997,15 @@ server <- function(session,input, output) {
   
   
   output$mapD <- renderLeaflet({ # adapted from prof code
-    
+    mapD <- leaflet() %>% addTiles()  %>% setView(-96, 39, 4.3)
+    mapD
   })
   
   
   ############ DO not use this one for the map tab, this is in the daily tab (for now)########
-  output$map <- renderLeaflet({ # adapted from prof code
-    
-  })
+  #output$map <- renderLeaflet({ # adapted from prof code
+  #  
+  #})
   
   #observe({
   #  print(my_function(03))
