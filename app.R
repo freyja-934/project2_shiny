@@ -207,8 +207,8 @@ ui <- dashboardPage(
                           fluidRow(box( title = "% of Pollutant PM10", solidHeader = TRUE, status = "primary", width = 12,plotOutput("piePM10", height = 400)))
                    ),
                    ################### ROW LINE PLOTS #####################
-                   fluidRow(box( title = "AQI Count over Years", solidHeader = TRUE, status = "primary", width = 6, plotOutput("line1", height = 400)),
-                            box(title = "Pollutant Count over Years", solidHeader = TRUE, status = "primary", width = 6, plotOutput("line2", height = 400)),
+                   fluidRow(box( title = "AQI Count over Years", solidHeader = TRUE, status = "primary", width = 4, plotOutput("line1", height = 400)),
+                            box(title = "Pollutant Count over Years", solidHeader = TRUE, status = "primary", width = 4, plotOutput("line2", height = 400)),
                             box(title = "Pollutant Count over the years", solidHeader = TRUE, status = "primary", width = 4, dataTableOutput("tableBig", height = 400))
                    )
                    
@@ -336,22 +336,17 @@ ui <- dashboardPage(
                 ################## FIRST COLUMN ######################
                 column(3,
                        
-                       fluidRow(box(title = "this is the bar plot box", solidHeader = TRUE, status = "primary", width = 12, plotOutput("bar", height = 400)))
-                ),
-                
-                column(3,
-                       
-                       fluidRow(box(title = "this is the bar plot box", solidHeader = TRUE, status = "primary", width = 12, plotOutput("bar", height = 400)))
+                       fluidRow(box(title = "this is the bar plot box", solidHeader = TRUE, status = "primary", width = 12, plotOutput("barD", height = 400)))
                 ),
                 
                 column(3, 
                        
-                       fluidRow(box(title = "this is the table box", solidHeader = TRUE, status = "primary", width = 12, dataTableOutput("table", height = 400)))
+                       fluidRow(box(title = "this is the table box", solidHeader = TRUE, status = "primary", width = 12, dataTableOutput("tableD", height = 400)))
                 ),
                 
                 column(3,
                        
-                       fluidRow(box(title = "this is the map box", solidHeader = TRUE, status = "primary", width = 12, leafletOutput("map", height = 400)))
+                       fluidRow(box(title = "this is the map box", solidHeader = TRUE, status = "primary", width = 12, leafletOutput("mapD", height = 400)))
                 ) 
                 
               ))
@@ -959,18 +954,42 @@ server <- function(session,input, output) {
                                      axis.text.x=element_blank(),
                                      axis.ticks.x=element_blank())
   )
-  
   output$table12 <- DT::renderDataTable({
     my_function(12)
   })
+  
+  
+  
+  
+  ############################################the map tab function #########################################
+  
+  output$barD <- renderPlot(ggplot(my_function(12), aes(x=Category, y=`sum(Days)`, fill=Category))+
+                               geom_bar(stat = "identity")+ scale_fill_manual(values=c("green", "#E69F00", "#56B4E9", "#999999", "red", "black", "blue"))
+                             +
+                               theme(axis.title.x=element_blank(),
+                                     axis.text.x=element_blank(),
+                                     axis.ticks.x=element_blank())
+  )
+  output$tableD <- DT::renderDataTable({
+    my_function(12)
+  })
+  
+  
+  
+  output$mapD <- renderLeaflet({ # adapted from prof code
+    
+  })
+  
+  
+  ############ DO not use this one for the map tab, this is in the daily tab (for now)########
   output$map <- renderLeaflet({ # adapted from prof code
     
   })
   
-  observe({
-    print(my_function(03))
-    print(my_function(01))
-  })
+  #observe({
+  #  print(my_function(03))
+  #  print(my_function(01))
+  #})
 }####~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END OF SERVER CODE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~####
 
 
