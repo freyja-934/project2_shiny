@@ -21,11 +21,14 @@ library(tidyr)
 library(readr) #provided by import button for file
 library(rsconnect)
 library(data.table)
+library(dplyr)
+
 
 ################################################################################ READ IN ALL THE FILES ################################################################################
 temp = list.files(pattern="*.csv")
 allData2 <- lapply(temp, function(x) fread(x, stringsAsFactors = FALSE))
 dailyData <- do.call(rbind, allData2)
+dailyData$Date <- as.Date(dailyData$Date)
 
 
 ################ AQI FILES FROM 1980-2018 ########################
@@ -687,117 +690,191 @@ server <- function(session,input, output) {
       
     }
   })
-  #####JANUARY
-  output$bar1 <- renderPlot({
+  
+  
+  data_types <- data.frame(Category = c('Good', 'Moderate', 'Unhealthy for Sensitive Groups', 'Unhealthy', 'Very Unhealthy', 'Hazardous', 'Uknown'), Days = c(0,0,0,0,0,0,0))
+  
+  my_function <- function(myMonth){
+    new1 <- reactive({
+      req(dailyY())
+      dailyY() %>% 
+        mutate(month = month(Date)) %>% filter(month == myMonth) %>% group_by(Category) %>% 
+        summarise(Days = n() )#%>% aggregate(AQI, by=list(Category), FUN=sum)
+      
+    })
     
-  })
+    dt_months <- reactive({bind_rows(new1() %>% add_rownames(), data_types %>% add_rownames()) %>% group_by(Category) %>% summarise(sum(Days))
+    })
+    return(dt_months())
+  }
+  
+  
+  
+  
+  
+  
+  #####JANUARY
+  output$bar1 <- renderPlot(ggplot(my_function(01), aes(x=Category, y=`sum(Days)`, fill=Category))+
+                              geom_bar(stat = "identity")+ scale_fill_manual(values=c("green", "#E69F00", "#56B4E9", "#999999", "red", "black", "blue"))
+                            +
+                              theme(axis.title.x=element_blank(),
+                                    axis.text.x=element_blank(),
+                                    axis.ticks.x=element_blank())
+  )
   
   output$table1 <- DT::renderDataTable({
-    
+    my_function(01)
   })
   
   #####FEBRUARY
-  output$bar2 <- renderPlot({
-    
-  })
+  output$bar2 <- renderPlot(ggplot(my_function(02), aes(x=Category, y=`sum(Days)`, fill=Category))+
+                              geom_bar(stat = "identity")+ scale_fill_manual(values=c("green", "#E69F00", "#56B4E9", "#999999", "red", "black", "blue"))
+                            +
+                              theme(axis.title.x=element_blank(),
+                                    axis.text.x=element_blank(),
+                                    axis.ticks.x=element_blank())
+  )
   
   output$table2 <- DT::renderDataTable({
-    
+    my_function(02)
   })
   
   #####MARCH
-  output$bar3 <- renderPlot({
-    
-  })
-  
+  output$bar3 <- renderPlot(ggplot(my_function(03), aes(x=Category, y=`sum(Days)`, fill=Category))+
+                              geom_bar(stat = "identity")+ scale_fill_manual(values=c("green", "#E69F00", "#56B4E9", "#999999", "red", "black", "blue"))
+                            +
+                              theme(axis.title.x=element_blank(),
+                                    axis.text.x=element_blank(),
+                                    axis.ticks.x=element_blank())
+  )
   output$table3 <- DT::renderDataTable({
-    
+    my_function(03)
   })
   
   #####APRIL
-  output$bar4 <- renderPlot({
-    
-  })
+  output$bar4 <- renderPlot(ggplot(my_function(04), aes(x=Category, y=`sum(Days)`, fill=Category))+
+                              geom_bar(stat = "identity")+ scale_fill_manual(values=c("green", "#E69F00", "#56B4E9", "#999999", "red", "black", "blue"))
+                            +
+                              theme(axis.title.x=element_blank(),
+                                    axis.text.x=element_blank(),
+                                    axis.ticks.x=element_blank())
+  )
   
   output$table4 <- DT::renderDataTable({
-    
+    my_function(04)
   })
   
   #####MAY
-  output$bar5 <- renderPlot({
-    
-  })
+  output$bar5 <-renderPlot(ggplot(my_function(05), aes(x=Category, y=`sum(Days)`, fill=Category))+
+                             geom_bar(stat = "identity")+ scale_fill_manual(values=c("green", "#E69F00", "#56B4E9", "#999999", "red", "black", "blue"))
+                           +
+                             theme(axis.title.x=element_blank(),
+                                   axis.text.x=element_blank(),
+                                   axis.ticks.x=element_blank())
+  )
   
   output$table5 <- DT::renderDataTable({
-    
+    my_function(05)
   })
   
   #####JUNE
-  output$bar6 <- renderPlot({
-    
-  })
+  output$bar6 <- renderPlot(ggplot(my_function(06), aes(x=Category, y=`sum(Days)`, fill=Category))+
+                              geom_bar(stat = "identity")+ scale_fill_manual(values=c("green", "#E69F00", "#56B4E9", "#999999", "red", "black", "blue"))
+                            +
+                              theme(axis.title.x=element_blank(),
+                                    axis.text.x=element_blank(),
+                                    axis.ticks.x=element_blank())
+  )
   
   output$table6 <- DT::renderDataTable({
-    
+    my_function(06)
   })
   
   #####JULY
-  output$bar7 <- renderPlot({
-    
-  })
+  output$bar7 <- renderPlot(ggplot(my_function(07), aes(x=Category, y=`sum(Days)`, fill=Category))+
+                              geom_bar(stat = "identity")+ scale_fill_manual(values=c("green", "#E69F00", "#56B4E9", "#999999", "red", "black", "blue"))
+                            +
+                              theme(axis.title.x=element_blank(),
+                                    axis.text.x=element_blank(),
+                                    axis.ticks.x=element_blank())
+  )
   
   output$table7 <- DT::renderDataTable({
-    
+    my_function(07)
   })
   
   #####AUGUST
-  output$bar8 <- renderPlot({
-    
-  })
+  output$bar8 <- renderPlot(ggplot(my_function(08), aes(x=Category, y=`sum(Days)`, fill=Category))+
+                              geom_bar(stat = "identity")+ scale_fill_manual(values=c("green", "#E69F00", "#56B4E9", "#999999", "red", "black", "blue"))
+                            +
+                              theme(axis.title.x=element_blank(),
+                                    axis.text.x=element_blank(),
+                                    axis.ticks.x=element_blank())
+  )
   
   output$table8 <- DT::renderDataTable({
-    
+    my_function(08)
   })
   
   #####SEPTEMBER
-  output$bar9 <- renderPlot({
-    
-  })
+  output$bar9 <- renderPlot(ggplot(my_function(09), aes(x=Category, y=`sum(Days)`, fill=Category))+
+                              geom_bar(stat = "identity")+ scale_fill_manual(values=c("green", "#E69F00", "#56B4E9", "#999999", "red", "black", "blue"))
+                            +
+                              theme(axis.title.x=element_blank(),
+                                    axis.text.x=element_blank(),
+                                    axis.ticks.x=element_blank())
+  )
   
   output$table9 <- DT::renderDataTable({
-    
+    my_function(09)
   })
   
   #####OCTOBER
-  output$bar10 <- renderPlot({
-    
-  })
+  output$bar10 <- renderPlot(ggplot(my_function(10), aes(x=Category, y=`sum(Days)`, fill=Category))+
+                               geom_bar(stat = "identity")+ scale_fill_manual(values=c("green", "#E69F00", "#56B4E9", "#999999", "red", "black", "blue"))
+                             +
+                               theme(axis.title.x=element_blank(),
+                                     axis.text.x=element_blank(),
+                                     axis.ticks.x=element_blank())
+  )
   
   output$table10 <- DT::renderDataTable({
-    
+    my_function(10)
   })
   
   #####NOVEMBER
-  output$bar11 <- renderPlot({
-    
-  })
+  output$bar11 <- renderPlot(ggplot(my_function(11), aes(x=Category, y=`sum(Days)`, fill=Category))+
+                               geom_bar(stat = "identity")+ scale_fill_manual(values=c("green", "#E69F00", "#56B4E9", "#999999", "red", "black", "blue"))
+                             +
+                               theme(axis.title.x=element_blank(),
+                                     axis.text.x=element_blank(),
+                                     axis.ticks.x=element_blank())
+  )
   
   output$table11 <- DT::renderDataTable({
-    
+    my_function(11)
   })
   
   #####DECEMBER
-  output$bar12 <- renderPlot({
-    
-  })
+  output$bar12 <- renderPlot(ggplot(my_function(12), aes(x=Category, y=`sum(Days)`, fill=Category))+
+                               geom_bar(stat = "identity")+ scale_fill_manual(values=c("green", "#E69F00", "#56B4E9", "#999999", "red", "black", "blue"))
+                             +
+                               theme(axis.title.x=element_blank(),
+                                     axis.text.x=element_blank(),
+                                     axis.ticks.x=element_blank())
+  )
   
   output$table12 <- DT::renderDataTable({
-    
+    my_function(12)
   })
   output$map <- renderLeaflet({ # adapted from prof code
     
   })
   
+  observe({
+    print(my_function(03))
+    print(my_function(01))
+  })
 }####~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END OF SERVER CODE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~####
 
 
