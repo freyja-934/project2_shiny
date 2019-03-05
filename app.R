@@ -796,7 +796,7 @@ server <- function(session,input, output) {
     }
     else {
       ggplot(df, aes(Date,AQI,col = `Defining Parameter`)) + 
-        geom_line(group=1) +
+        geom_line() +
         ylab('Daily AQI')
       
     }
