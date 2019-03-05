@@ -19,7 +19,7 @@ library(scales)
 library(reshape) #and melt function from https://www.statmethods.net/management/reshape.html
 library(tidyr)
 library(readr) #provided by import button for file
-library(rsconnect)
+#library(rsconnect)
 library(data.table)
 library(dplyr)
 
