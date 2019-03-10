@@ -25,53 +25,44 @@ library(dplyr)
 
 
 ################################################################################ READ IN ALL THE FILES ################################################################################
-temp = list.files(pattern="*.csv")
+temp = list.files(path = '/Users/caseycharlesworth/Documents/GitHub/project2_shiny/daily', pattern="*.csv")
+setwd('/Users/caseycharlesworth/Documents/GitHub/project2_shiny/daily')
+#temp = list.files(path = '/Users/caseycharlesworth/Documents/GitHub/project2_shiny/daily_aqi',pattern="*.csv")
 allData2 <- lapply(temp, function(x) fread(x, stringsAsFactors = FALSE))
 dailyData <- do.call(rbind, allData2)
+setwd('/Users/caseycharlesworth/Documents/GitHub/project2_shiny')
 #dailyData$Date <- as.Date(dailyData$Date)
 
+#SO2
+temp1 = list.files(path = '/Users/caseycharlesworth/Documents/GitHub/project2_shiny/SO2', pattern="*.csv")
+setwd('/Users/caseycharlesworth/Documents/GitHub/project2_shiny/SO2')
+allSO2 <- lapply(temp1, function(x) fread(x, stringsAsFactors = FALSE))
+SO2Data <- do.call(rbind, allSO2)
+setwd('/Users/caseycharlesworth/Documents/GitHub/project2_shiny')
 
+#NO2
+temp2 = list.files(path = '/Users/caseycharlesworth/Documents/GitHub/project2_shiny/NO2', pattern="*.csv")
+setwd('/Users/caseycharlesworth/Documents/GitHub/project2_shiny/NO2')
+allNO2 <- lapply(temp2, function(x) fread(x, stringsAsFactors = FALSE))
+NO2Data <- do.call(rbind, allNO2)
+setwd('/Users/caseycharlesworth/Documents/GitHub/project2_shiny')
+
+#Ozone
+temp3 = list.files(path = '/Users/caseycharlesworth/Documents/GitHub/project2_shiny/Ozone', pattern="*.csv")
+setwd('/Users/caseycharlesworth/Documents/GitHub/project2_shiny/Ozone')
+allOzone <- lapply(temp3, function(x) fread(x, stringsAsFactors = FALSE))
+OzoneData <- do.call(rbind, allOzone)
+setwd('/Users/caseycharlesworth/Documents/GitHub/project2_shiny')
+
+#CO
+temp4 = list.files(path = '/Users/caseycharlesworth/Documents/GitHub/project2_shiny/CO', pattern="*.csv")
+setwd('/Users/caseycharlesworth/Documents/GitHub/project2_shiny/CO')
+allCO <- lapply(temp4, function(x) fread(x, stringsAsFactors = FALSE))
+COData <- do.call(rbind, allCO)
+setwd('/Users/caseycharlesworth/Documents/GitHub/project2_shiny')
+
+setwd('/Users/caseycharlesworth/Documents/GitHub/project2_shiny')
 ################ AQI FILES FROM 1980-2018 ########################
-aqi_1980 <- read.table(file= "annual/annual_aqi_by_county_1980.csv",sep = ",", header= TRUE)
-aqi_1981 <- read.table(file= "annual/annual_aqi_by_county_1981.csv",sep = ",", header= TRUE)
-aqi_1982 <- read.table(file= "annual/annual_aqi_by_county_1982.csv",sep = ",", header= TRUE)
-aqi_1983 <- read.table(file= "annual/annual_aqi_by_county_1983.csv",sep = ",", header= TRUE)
-aqi_1984 <- read.table(file= "annual/annual_aqi_by_county_1984.csv",sep = ",", header= TRUE)
-aqi_1985 <- read.table(file= "annual/annual_aqi_by_county_1985.csv",sep = ",", header= TRUE)
-aqi_1986 <- read.table(file= "annual/annual_aqi_by_county_1986.csv",sep = ",", header= TRUE)
-aqi_1987 <- read.table(file= "annual/annual_aqi_by_county_1987.csv",sep = ",", header= TRUE)
-aqi_1988 <- read.table(file= "annual/annual_aqi_by_county_1988.csv",sep = ",", header= TRUE)
-aqi_1989 <- read.table(file= "annual/annual_aqi_by_county_1989.csv",sep = ",", header= TRUE)
-
-aqi_1990 <- read.table(file= "annual/annual_aqi_by_county_1990.csv",sep = ",", header= TRUE)
-aqi_1991 <- read.table(file= "annual/annual_aqi_by_county_1991.csv",sep = ",", header= TRUE)
-aqi_1992 <- read.table(file= "annual/annual_aqi_by_county_1992.csv",sep = ",", header= TRUE)
-aqi_1993 <- read.table(file= "annual/annual_aqi_by_county_1993.csv",sep = ",", header= TRUE)
-aqi_1994 <- read.table(file= "annual/annual_aqi_by_county_1994.csv",sep = ",", header= TRUE)
-aqi_1995 <- read.table(file= "annual/annual_aqi_by_county_1995.csv",sep = ",", header= TRUE)
-aqi_1996 <- read.table(file= "annual/annual_aqi_by_county_1996.csv",sep = ",", header= TRUE)
-aqi_1997 <- read.table(file= "annual/annual_aqi_by_county_1997.csv",sep = ",", header= TRUE)
-aqi_1998 <- read.table(file= "annual/annual_aqi_by_county_1998.csv",sep = ",", header= TRUE)
-aqi_1999 <- read.table(file= "annual/annual_aqi_by_county_1999.csv",sep = ",", header= TRUE)
-
-aqi_2000 <- read.table(file= "annual/annual_aqi_by_county_2000.csv",sep = ",", header= TRUE)
-aqi_2001 <- read.table(file= "annual/annual_aqi_by_county_2001.csv",sep = ",", header= TRUE)
-aqi_2002 <- read.table(file= "annual/annual_aqi_by_county_2002.csv",sep = ",", header= TRUE)
-aqi_2003 <- read.table(file= "annual/annual_aqi_by_county_2003.csv",sep = ",", header= TRUE)
-aqi_2004 <- read.table(file= "annual/annual_aqi_by_county_2004.csv",sep = ",", header= TRUE)
-aqi_2005 <- read.table(file= "annual/annual_aqi_by_county_2005.csv",sep = ",", header= TRUE)
-aqi_2006 <- read.table(file= "annual/annual_aqi_by_county_2006.csv",sep = ",", header= TRUE)
-aqi_2007 <- read.table(file= "annual/annual_aqi_by_county_2007.csv",sep = ",", header= TRUE)
-aqi_2008 <- read.table(file= "annual/annual_aqi_by_county_2008.csv",sep = ",", header= TRUE)
-aqi_2009 <- read.table(file= "annual/annual_aqi_by_county_2009.csv",sep = ",", header= TRUE)
-
-aqi_2010 <- read.table(file= "annual/annual_aqi_by_county_2010.csv",sep = ",", header= TRUE)
-aqi_2011 <- read.table(file= "annual/annual_aqi_by_county_2011.csv",sep = ",", header= TRUE)
-aqi_2012 <- read.table(file= "annual/annual_aqi_by_county_2012.csv",sep = ",", header= TRUE)
-aqi_2013 <- read.table(file= "annual/annual_aqi_by_county_2013.csv",sep = ",", header= TRUE)
-aqi_2014 <- read.table(file= "annual/annual_aqi_by_county_2014.csv",sep = ",", header= TRUE)
-aqi_2015 <- read.table(file= "annual/annual_aqi_by_county_2015.csv",sep = ",", header= TRUE)
-aqi_2016 <- read.table(file= "annual/annual_aqi_by_county_2016.csv",sep = ",", header= TRUE)
 aqi_2017 <- read.table(file= "annual/annual_aqi_by_county_2017.csv",sep = ",", header= TRUE)
 aqi_2018 <- read.table(file= "annual/annual_aqi_by_county_2018.csv",sep = ",", header= TRUE)
 
@@ -80,7 +71,7 @@ latlong <- read.table(file= "sites/aqs_sites.csv",sep = ",", header = TRUE)
 
 ################################################################################ MERGE ALL AQI DATA INTO ONE TABLE WITH THE SAME COLUMNS AS IN EASH FILE ################################################################################
 #adapted from prof code
-allData <- rbind(aqi_1980,aqi_1981,aqi_1982,aqi_1983,aqi_1984,aqi_1985,aqi_1986,aqi_1987,aqi_1988,aqi_1989,aqi_1990,aqi_1991,aqi_1992,aqi_1993,aqi_1994,aqi_1995,aqi_1996,aqi_1997,aqi_1998,aqi_1999,aqi_2000,aqi_2001,aqi_2002,aqi_2003,aqi_2004,aqi_2005,aqi_2006,aqi_2007,aqi_2008,aqi_2009,aqi_2010,aqi_2011,aqi_2012,aqi_2013,aqi_2014,aqi_2015,aqi_2016,aqi_2017,aqi_2018)
+allData <- rbind(aqi_2017,aqi_2018)
 
 ######################################## THIS IS EXTRA CODE USED TO CREATE THE "B" AND "C" MENU LEVELS - NOT REMOVING SINCE THEY HELPED ME LEARN AND I USE THEM FOR REFERENCE 
 #toCounty <- function(x){return (toString(x))}
@@ -112,6 +103,8 @@ ui <- dashboardPage(
   
   ######################################## CREATE DROP DOWN MENUS IN SIDEBAR + NEW TAB CONTAINING RESOURCES ######################################## 
   dashboardSidebar(sidebarMenu(disable = FALSE, collapsed = FALSE, style = "margin-top:500px",
+                               actionButton("doM", "Metric"),
+                               actionButton("doI", "Imperial"),
                                selectInput("Year", "Select the year to visualize", years, selected = 2017),
                                selectInput("State", "State", choices = "" , selected = ""),
                                selectInput("Countys", "Countys",choices = "" , selected = ""),
@@ -121,6 +114,7 @@ ui <- dashboardPage(
                                menuItem("Daily Data", tabName="dailydata", icon = icon("dashboard")),
                                menuItem("Map Data", tabName="mapdata", icon = icon("dashboard")),
                                menuItem("Resources", tabName="resources", icon = icon("bullet"))
+                               
   )),
   ######################################## THE MAIN BODDY OF THE WEB APP ########################################
   dashboardBody(
