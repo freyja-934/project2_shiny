@@ -33,6 +33,9 @@ dailyData <- do.call(rbind, allData2)
 setwd('/Users/caseycharlesworth/Documents/GitHub/project2_shiny')
 #dailyData$Date <- as.Date(dailyData$Date)
 
+#State & County Codes
+state_county_codes <- read.table(file= "state_county_codes.csv",sep = ",", header= TRUE)
+
 #SO2
 temp1 = list.files(path = '/Users/caseycharlesworth/Documents/GitHub/project2_shiny/SO2', pattern="*.csv")
 setwd('/Users/caseycharlesworth/Documents/GitHub/project2_shiny/SO2')

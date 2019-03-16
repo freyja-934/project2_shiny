@@ -1,0 +1,2129 @@
+State Code,County Code,State Name,County Name
+1,1,Alabama,Autauga
+1,3,Alabama,Baldwin
+1,5,Alabama,Barbour
+1,7,Alabama,Bibb
+1,9,Alabama,Blount
+1,15,Alabama,Calhoun
+1,21,Alabama,Chilton
+1,23,Alabama,Choctaw
+1,25,Alabama,Clarke
+1,27,Alabama,Clay
+1,31,Alabama,Coffee
+1,33,Alabama,Colbert
+1,35,Alabama,Conecuh
+1,39,Alabama,Covington
+1,43,Alabama,Cullman
+1,47,Alabama,Dallas
+1,49,Alabama,DeKalb
+1,51,Alabama,Elmore
+1,53,Alabama,Escambia
+1,55,Alabama,Etowah
+1,59,Alabama,Franklin
+1,61,Alabama,Geneva
+1,67,Alabama,Henry
+1,69,Alabama,Houston
+1,71,Alabama,Jackson
+1,73,Alabama,Jefferson
+1,77,Alabama,Lauderdale
+1,79,Alabama,Lawrence
+1,81,Alabama,Lee
+1,83,Alabama,Limestone
+1,89,Alabama,Madison
+1,91,Alabama,Marengo
+1,95,Alabama,Marshall
+1,97,Alabama,Mobile
+1,99,Alabama,Monroe
+1,101,Alabama,Montgomery
+1,103,Alabama,Morgan
+1,109,Alabama,Pike
+1,113,Alabama,Russell
+1,115,Alabama,St. Clair
+1,117,Alabama,Shelby
+1,119,Alabama,Sumter
+1,121,Alabama,Talladega
+1,123,Alabama,Tallapoosa
+1,125,Alabama,Tuscaloosa
+1,127,Alabama,Walker
+1,129,Alabama,Washington
+2,13,Alaska,Aleutians East 
+2,20,Alaska,Anchorage 
+2,50,Alaska,Bethel 
+2,68,Alaska,Denali 
+2,90,Alaska,Fairbanks North Star 
+2,100,Alaska,Haines 
+2,110,Alaska,Juneau 
+2,122,Alaska,Kenai Peninsula 
+2,130,Alaska,Ketchikan Gateway 
+2,170,Alaska,Matanuska-Susitna 
+2,185,Alaska,North Slope 
+2,188,Alaska,Northwest Arctic 
+2,220,Alaska,Sitka 
+2,232,Alaska,Skagway-Hoonah-Angoon
+2,261,Alaska,Valdez-Cordova 
+2,280,Alaska,Wrangell Petersburg
+2,290,Alaska,Yukon-Koyukuk 
+4,1,Arizona,Apache
+4,3,Arizona,Cochise
+4,5,Arizona,Coconino
+4,7,Arizona,Gila
+4,9,Arizona,Graham
+4,11,Arizona,Greenlee
+4,12,Arizona,La Paz
+4,13,Arizona,Maricopa
+4,15,Arizona,Mohave
+4,17,Arizona,Navajo
+4,19,Arizona,Pima
+4,21,Arizona,Pinal
+4,23,Arizona,Santa Cruz
+4,25,Arizona,Yavapai
+4,27,Arizona,Yuma
+5,1,Arkansas,Arkansas
+5,3,Arkansas,Ashley
+5,5,Arkansas,Baxter
+5,7,Arkansas,Benton
+5,9,Arkansas,Boone
+5,19,Arkansas,Clark
+5,27,Arkansas,Columbia
+5,31,Arkansas,Craighead
+5,33,Arkansas,Crawford
+5,35,Arkansas,Crittenden
+5,41,Arkansas,Desha
+5,45,Arkansas,Faulkner
+5,51,Arkansas,Garland
+5,55,Arkansas,Greene
+5,57,Arkansas,Hempstead
+5,63,Arkansas,Independence
+5,67,Arkansas,Jackson
+5,69,Arkansas,Jefferson
+5,85,Arkansas,Lonoke
+5,89,Arkansas,Marion
+5,91,Arkansas,Miller
+5,93,Arkansas,Mississippi
+5,97,Arkansas,Montgomery
+5,101,Arkansas,Newton
+5,103,Arkansas,Ouachita
+5,107,Arkansas,Phillips
+5,113,Arkansas,Polk
+5,115,Arkansas,Pope
+5,119,Arkansas,Pulaski
+5,123,Arkansas,St. Francis
+5,125,Arkansas,Saline
+5,131,Arkansas,Sebastian
+5,135,Arkansas,Sharp
+5,139,Arkansas,Union
+5,141,Arkansas,Van Buren
+5,143,Arkansas,Washington
+5,145,Arkansas,White
+6,1,California,Alameda
+6,3,California,Alpine
+6,5,California,Amador
+6,7,California,Butte
+6,9,California,Calaveras
+6,11,California,Colusa
+6,13,California,Contra Costa
+6,15,California,Del Norte
+6,17,California,El Dorado
+6,19,California,Fresno
+6,21,California,Glenn
+6,23,California,Humboldt
+6,25,California,Imperial
+6,27,California,Inyo
+6,29,California,Kern
+6,31,California,Kings
+6,33,California,Lake
+6,35,California,Lassen
+6,37,California,Los Angeles
+6,39,California,Madera
+6,41,California,Marin
+6,43,California,Mariposa
+6,45,California,Mendocino
+6,47,California,Merced
+6,49,California,Modoc
+6,51,California,Mono
+6,53,California,Monterey
+6,55,California,Napa
+6,57,California,Nevada
+6,59,California,Orange
+6,61,California,Placer
+6,63,California,Plumas
+6,65,California,Riverside
+6,67,California,Sacramento
+6,69,California,San Benito
+6,71,California,San Bernardino
+6,73,California,San Diego
+6,75,California,San Francisco
+6,77,California,San Joaquin
+6,79,California,San Luis Obispo
+6,81,California,San Mateo
+6,83,California,Santa Barbara
+6,85,California,Santa Clara
+6,87,California,Santa Cruz
+6,89,California,Shasta
+6,91,California,Sierra
+6,93,California,Siskiyou
+6,95,California,Solano
+6,97,California,Sonoma
+6,99,California,Stanislaus
+6,101,California,Sutter
+6,103,California,Tehama
+6,105,California,Trinity
+6,107,California,Tulare
+6,109,California,Tuolumne
+6,111,California,Ventura
+6,113,California,Yolo
+6,115,California,Yuba
+8,1,Colorado,Adams
+8,3,Colorado,Alamosa
+8,5,Colorado,Arapahoe
+8,7,Colorado,Archuleta
+8,13,Colorado,Boulder
+8,14,Colorado,Broomfield
+8,15,Colorado,Chaffee
+8,19,Colorado,Clear Creek
+8,23,Colorado,Costilla
+8,29,Colorado,Delta
+8,31,Colorado,Denver
+8,35,Colorado,Douglas
+8,37,Colorado,Eagle
+8,39,Colorado,Elbert
+8,41,Colorado,El Paso
+8,43,Colorado,Fremont
+8,45,Colorado,Garfield
+8,47,Colorado,Gilpin
+8,49,Colorado,Grand
+8,51,Colorado,Gunnison
+8,55,Colorado,Huerfano
+8,57,Colorado,Jackson
+8,59,Colorado,Jefferson
+8,65,Colorado,Lake
+8,67,Colorado,La Plata
+8,69,Colorado,Larimer
+8,71,Colorado,Las Animas
+8,73,Colorado,Lincoln
+8,75,Colorado,Logan
+8,77,Colorado,Mesa
+8,81,Colorado,Moffat
+8,83,Colorado,Montezuma
+8,85,Colorado,Montrose
+8,87,Colorado,Morgan
+8,89,Colorado,Otero
+8,93,Colorado,Park
+8,97,Colorado,Pitkin
+8,99,Colorado,Prowers
+8,101,Colorado,Pueblo
+8,103,Colorado,Rio Blanco
+8,107,Colorado,Routt
+8,111,Colorado,San Juan
+8,113,Colorado,San Miguel
+8,117,Colorado,Summit
+8,119,Colorado,Teller
+8,123,Colorado,Weld
+9,1,Connecticut,Fairfield
+9,3,Connecticut,Hartford
+9,5,Connecticut,Litchfield
+9,7,Connecticut,Middlesex
+9,9,Connecticut,New Haven
+9,11,Connecticut,New London
+9,13,Connecticut,Tolland
+9,15,Connecticut,Windham
+10,1,Delaware,Kent
+10,3,Delaware,New Castle
+10,5,Delaware,Sussex
+11,1,District Of Columbia,District of Columbia
+12,1,Florida,Alachua
+12,3,Florida,Baker
+12,5,Florida,Bay
+12,7,Florida,Bradford
+12,9,Florida,Brevard
+12,11,Florida,Broward
+12,13,Florida,Calhoun
+12,15,Florida,Charlotte
+12,17,Florida,Citrus
+12,19,Florida,Clay
+12,21,Florida,Collier
+12,23,Florida,Columbia
+12,27,Florida,DeSoto
+12,31,Florida,Duval
+12,33,Florida,Escambia
+12,35,Florida,Flagler
+12,37,Florida,Franklin
+12,39,Florida,Gadsden
+12,43,Florida,Glades
+12,45,Florida,Gulf
+12,47,Florida,Hamilton
+12,49,Florida,Hardee
+12,51,Florida,Hendry
+12,53,Florida,Hernando
+12,55,Florida,Highlands
+12,57,Florida,Hillsborough
+12,59,Florida,Holmes
+12,61,Florida,Indian River
+12,63,Florida,Jackson
+12,69,Florida,Lake
+12,71,Florida,Lee
+12,73,Florida,Leon
+12,75,Florida,Levy
+12,77,Florida,Liberty
+12,81,Florida,Manatee
+12,83,Florida,Marion
+12,85,Florida,Martin
+12,86,Florida,Miami-Dade
+12,87,Florida,Monroe
+12,89,Florida,Nassau
+12,91,Florida,Okaloosa
+12,93,Florida,Okeechobee
+12,95,Florida,Orange
+12,97,Florida,Osceola
+12,99,Florida,Palm Beach
+12,101,Florida,Pasco
+12,103,Florida,Pinellas
+12,105,Florida,Polk
+12,107,Florida,Putnam
+12,109,Florida,St. Johns
+12,111,Florida,St. Lucie
+12,113,Florida,Santa Rosa
+12,115,Florida,Sarasota
+12,117,Florida,Seminole
+12,119,Florida,Sumter
+12,123,Florida,Taylor
+12,125,Florida,Union
+12,127,Florida,Volusia
+12,129,Florida,Wakulla
+13,9,Georgia,Baldwin
+13,15,Georgia,Bartow
+13,21,Georgia,Bibb
+13,31,Georgia,Bulloch
+13,39,Georgia,Camden
+13,43,Georgia,Candler
+13,45,Georgia,Carroll
+13,47,Georgia,Catoosa
+13,49,Georgia,Charlton
+13,51,Georgia,Chatham
+13,55,Georgia,Chattooga
+13,57,Georgia,Cherokee
+13,59,Georgia,Clarke
+13,63,Georgia,Clayton
+13,67,Georgia,Cobb
+13,69,Georgia,Coffee
+13,71,Georgia,Colquitt
+13,73,Georgia,Columbia
+13,77,Georgia,Coweta
+13,81,Georgia,Crisp
+13,85,Georgia,Dawson
+13,89,Georgia,DeKalb
+13,95,Georgia,Dougherty
+13,97,Georgia,Douglas
+13,103,Georgia,Effingham
+13,105,Georgia,Elbert
+13,111,Georgia,Fannin
+13,113,Georgia,Fayette
+13,115,Georgia,Floyd
+13,119,Georgia,Franklin
+13,121,Georgia,Fulton
+13,127,Georgia,Glynn
+13,135,Georgia,Gwinnett
+13,139,Georgia,Hall
+13,141,Georgia,Hancock
+13,151,Georgia,Henry
+13,153,Georgia,Houston
+13,163,Georgia,Jefferson
+13,175,Georgia,Laurens
+13,181,Georgia,Lincoln
+13,185,Georgia,Lowndes
+13,191,Georgia,McIntosh
+13,205,Georgia,Mitchell
+13,211,Georgia,Morgan
+13,213,Georgia,Murray
+13,215,Georgia,Muscogee
+13,223,Georgia,Paulding
+13,231,Georgia,Pike
+13,241,Georgia,Rabun
+13,245,Georgia,Richmond
+13,247,Georgia,Rockdale
+13,253,Georgia,Seminole
+13,255,Georgia,Spalding
+13,259,Georgia,Stewart
+13,261,Georgia,Sumter
+13,263,Georgia,Talbot
+13,275,Georgia,Thomas
+13,279,Georgia,Toombs
+13,295,Georgia,Walker
+13,297,Georgia,Walton
+13,303,Georgia,Washington
+13,305,Georgia,Wayne
+13,309,Georgia,Wheeler
+13,313,Georgia,Whitfield
+13,319,Georgia,Wilkinson
+15,1,Hawaii,Hawaii
+15,3,Hawaii,Honolulu
+15,7,Hawaii,Kauai
+15,9,Hawaii,Maui
+16,1,Idaho,Ada
+16,5,Idaho,Bannock
+16,7,Idaho,Bear Lake
+16,9,Idaho,Benewah
+16,11,Idaho,Bingham
+16,13,Idaho,Blaine
+16,15,Idaho,Boise
+16,17,Idaho,Bonner
+16,19,Idaho,Bonneville
+16,21,Idaho,Boundary
+16,23,Idaho,Butte
+16,27,Idaho,Canyon
+16,29,Idaho,Caribou
+16,31,Idaho,Cassia
+16,35,Idaho,Clearwater
+16,37,Idaho,Custer
+16,39,Idaho,Elmore
+16,41,Idaho,Franklin
+16,45,Idaho,Gem
+16,47,Idaho,Gooding
+16,49,Idaho,Idaho
+16,53,Idaho,Jerome
+16,55,Idaho,Kootenai
+16,57,Idaho,Latah
+16,59,Idaho,Lemhi
+16,61,Idaho,Lewis
+16,65,Idaho,Madison
+16,67,Idaho,Minidoka
+16,69,Idaho,Nez Perce
+16,73,Idaho,Owyhee
+16,77,Idaho,Power
+16,79,Idaho,Shoshone
+16,83,Idaho,Twin Falls
+16,85,Idaho,Valley
+17,1,Illinois,Adams
+17,3,Illinois,Alexander
+17,11,Illinois,Bureau
+17,19,Illinois,Champaign
+17,21,Illinois,Christian
+17,23,Illinois,Clark
+17,27,Illinois,Clinton
+17,29,Illinois,Coles
+17,31,Illinois,Cook
+17,33,Illinois,Crawford
+17,37,Illinois,DeKalb
+17,43,Illinois,DuPage
+17,49,Illinois,Effingham
+17,63,Illinois,Grundy
+17,65,Illinois,Hamilton
+17,77,Illinois,Jackson
+17,81,Illinois,Jefferson
+17,83,Illinois,Jersey
+17,85,Illinois,Jo Daviess
+17,89,Illinois,Kane
+17,91,Illinois,Kankakee
+17,93,Illinois,Kendall
+17,95,Illinois,Knox
+17,97,Illinois,Lake
+17,99,Illinois,La Salle
+17,105,Illinois,Livingston
+17,107,Illinois,Logan
+17,111,Illinois,McHenry
+17,113,Illinois,McLean
+17,115,Illinois,Macon
+17,117,Illinois,Macoupin
+17,119,Illinois,Madison
+17,123,Illinois,Marshall
+17,127,Illinois,Massac
+17,129,Illinois,Menard
+17,133,Illinois,Monroe
+17,141,Illinois,Ogle
+17,143,Illinois,Peoria
+17,155,Illinois,Putnam
+17,157,Illinois,Randolph
+17,161,Illinois,Rock Island
+17,163,Illinois,Saint Clair
+17,167,Illinois,Sangamon
+17,179,Illinois,Tazewell
+17,183,Illinois,Vermilion
+17,185,Illinois,Wabash
+17,195,Illinois,Whiteside
+17,197,Illinois,Will
+17,199,Illinois,Williamson
+17,201,Illinois,Winnebago
+18,3,Indiana,Allen
+18,5,Indiana,Bartholomew
+18,11,Indiana,Boone
+18,13,Indiana,Brown
+18,15,Indiana,Carroll
+18,19,Indiana,Clark
+18,27,Indiana,Daviess
+18,29,Indiana,Dearborn
+18,33,Indiana,DeKalb
+18,35,Indiana,Delaware
+18,37,Indiana,Dubois
+18,39,Indiana,Elkhart
+18,43,Indiana,Floyd
+18,45,Indiana,Fountain
+18,51,Indiana,Gibson
+18,53,Indiana,Grant
+18,55,Indiana,Greene
+18,57,Indiana,Hamilton
+18,59,Indiana,Hancock
+18,63,Indiana,Hendricks
+18,65,Indiana,Henry
+18,67,Indiana,Howard
+18,69,Indiana,Huntington
+18,71,Indiana,Jackson
+18,73,Indiana,Jasper
+18,77,Indiana,Jefferson
+18,81,Indiana,Johnson
+18,83,Indiana,Knox
+18,85,Indiana,Kosciusko
+18,89,Indiana,Lake
+18,91,Indiana,LaPorte
+18,93,Indiana,Lawrence
+18,95,Indiana,Madison
+18,97,Indiana,Marion
+18,101,Indiana,Martin
+18,105,Indiana,Monroe
+18,107,Indiana,Montgomery
+18,109,Indiana,Morgan
+18,121,Indiana,Parke
+18,123,Indiana,Perry
+18,125,Indiana,Pike
+18,127,Indiana,Porter
+18,129,Indiana,Posey
+18,133,Indiana,Putnam
+18,141,Indiana,St. Joseph
+18,145,Indiana,Shelby
+18,147,Indiana,Spencer
+18,151,Indiana,Steuben
+18,153,Indiana,Sullivan
+18,155,Indiana,Switzerland
+18,157,Indiana,Tippecanoe
+18,163,Indiana,Vanderburgh
+18,165,Indiana,Vermillion
+18,167,Indiana,Vigo
+18,169,Indiana,Wabash
+18,173,Indiana,Warrick
+18,175,Indiana,Washington
+18,177,Indiana,Wayne
+18,183,Indiana,Whitley
+19,1,Iowa,Adair
+19,3,Iowa,Adams
+19,5,Iowa,Allamakee
+19,7,Iowa,Appanoose
+19,9,Iowa,Audubon
+19,11,Iowa,Benton
+19,13,Iowa,Black Hawk
+19,15,Iowa,Boone
+19,17,Iowa,Bremer
+19,19,Iowa,Buchanan
+19,21,Iowa,Buena Vista
+19,23,Iowa,Butler
+19,25,Iowa,Calhoun
+19,27,Iowa,Carroll
+19,29,Iowa,Cass
+19,31,Iowa,Cedar
+19,33,Iowa,Cerro Gordo
+19,35,Iowa,Cherokee
+19,37,Iowa,Chickasaw
+19,39,Iowa,Clarke
+19,41,Iowa,Clay
+19,43,Iowa,Clayton
+19,45,Iowa,Clinton
+19,47,Iowa,Crawford
+19,49,Iowa,Dallas
+19,53,Iowa,Decatur
+19,55,Iowa,Delaware
+19,57,Iowa,Des Moines
+19,59,Iowa,Dickinson
+19,61,Iowa,Dubuque
+19,63,Iowa,Emmet
+19,65,Iowa,Fayette
+19,67,Iowa,Floyd
+19,69,Iowa,Franklin
+19,71,Iowa,Fremont
+19,73,Iowa,Greene
+19,75,Iowa,Grundy
+19,77,Iowa,Guthrie
+19,79,Iowa,Hamilton
+19,81,Iowa,Hancock
+19,83,Iowa,Hardin
+19,85,Iowa,Harrison
+19,87,Iowa,Henry
+19,89,Iowa,Howard
+19,91,Iowa,Humboldt
+19,93,Iowa,Ida
+19,95,Iowa,Iowa
+19,97,Iowa,Jackson
+19,99,Iowa,Jasper
+19,101,Iowa,Jefferson
+19,103,Iowa,Johnson
+19,105,Iowa,Jones
+19,107,Iowa,Keokuk
+19,109,Iowa,Kossuth
+19,111,Iowa,Lee
+19,113,Iowa,Linn
+19,115,Iowa,Louisa
+19,117,Iowa,Lucas
+19,119,Iowa,Lyon
+19,121,Iowa,Madison
+19,123,Iowa,Mahaska
+19,125,Iowa,Marion
+19,127,Iowa,Marshall
+19,129,Iowa,Mills
+19,131,Iowa,Mitchell
+19,133,Iowa,Monona
+19,135,Iowa,Monroe
+19,137,Iowa,Montgomery
+19,139,Iowa,Muscatine
+19,141,Iowa,O'Brien
+19,143,Iowa,Osceola
+19,145,Iowa,Page
+19,147,Iowa,Palo Alto
+19,149,Iowa,Plymouth
+19,151,Iowa,Pocahontas
+19,153,Iowa,Polk
+19,155,Iowa,Pottawattamie
+19,157,Iowa,Poweshiek
+19,159,Iowa,Ringgold
+19,161,Iowa,Sac
+19,163,Iowa,Scott
+19,165,Iowa,Shelby
+19,167,Iowa,Sioux
+19,169,Iowa,Story
+19,171,Iowa,Tama
+19,173,Iowa,Taylor
+19,175,Iowa,Union
+19,177,Iowa,Van Buren
+19,179,Iowa,Wapello
+19,181,Iowa,Warren
+19,183,Iowa,Washington
+19,185,Iowa,Wayne
+19,187,Iowa,Webster
+19,189,Iowa,Winnebago
+19,191,Iowa,Winneshiek
+19,193,Iowa,Woodbury
+19,195,Iowa,Worth
+19,197,Iowa,Wright
+20,1,Kansas,Allen
+20,5,Kansas,Atchison
+20,7,Kansas,Barber
+20,9,Kansas,Barton
+20,13,Kansas,Brown
+20,15,Kansas,Butler
+20,17,Kansas,Chase
+20,21,Kansas,Cherokee
+20,29,Kansas,Cloud
+20,35,Kansas,Cowley
+20,37,Kansas,Crawford
+20,41,Kansas,Dickinson
+20,43,Kansas,Doniphan
+20,45,Kansas,Douglas
+20,51,Kansas,Ellis
+20,55,Kansas,Finney
+20,57,Kansas,Ford
+20,61,Kansas,Geary
+20,65,Kansas,Graham
+20,67,Kansas,Grant
+20,71,Kansas,Greeley
+20,79,Kansas,Harvey
+20,85,Kansas,Jackson
+20,87,Kansas,Jefferson
+20,91,Kansas,Johnson
+20,93,Kansas,Kearny
+20,99,Kansas,Labette
+20,103,Kansas,Leavenworth
+20,107,Kansas,Linn
+20,111,Kansas,Lyon
+20,113,Kansas,McPherson
+20,117,Kansas,Marshall
+20,121,Kansas,Miami
+20,123,Kansas,Mitchell
+20,125,Kansas,Montgomery
+20,129,Kansas,Morton
+20,133,Kansas,Neosho
+20,145,Kansas,Pawnee
+20,147,Kansas,Phillips
+20,149,Kansas,Pottawatomie
+20,155,Kansas,Reno
+20,161,Kansas,Riley
+20,169,Kansas,Saline
+20,173,Kansas,Sedgwick
+20,175,Kansas,Seward
+20,177,Kansas,Shawnee
+20,181,Kansas,Sherman
+20,191,Kansas,Sumner
+20,193,Kansas,Thomas
+20,195,Kansas,Trego
+20,205,Kansas,Wilson
+20,209,Kansas,Wyandotte
+21,7,Kentucky,Ballard
+21,9,Kentucky,Barren
+21,13,Kentucky,Bell
+21,15,Kentucky,Boone
+21,19,Kentucky,Boyd
+21,21,Kentucky,Boyle
+21,29,Kentucky,Bullitt
+21,31,Kentucky,Butler
+21,33,Kentucky,Caldwell
+21,35,Kentucky,Calloway
+21,37,Kentucky,Campbell
+21,39,Kentucky,Carlisle
+21,41,Kentucky,Carroll
+21,43,Kentucky,Carter
+21,47,Kentucky,Christian
+21,49,Kentucky,Clark
+21,51,Kentucky,Clay
+21,59,Kentucky,Daviess
+21,61,Kentucky,Edmonson
+21,67,Kentucky,Fayette
+21,71,Kentucky,Floyd
+21,73,Kentucky,Franklin
+21,75,Kentucky,Fulton
+21,77,Kentucky,Gallatin
+21,83,Kentucky,Graves
+21,85,Kentucky,Grayson
+21,87,Kentucky,Green
+21,89,Kentucky,Greenup
+21,91,Kentucky,Hancock
+21,93,Kentucky,Hardin
+21,95,Kentucky,Harlan
+21,97,Kentucky,Harrison
+21,101,Kentucky,Henderson
+21,103,Kentucky,Henry
+21,105,Kentucky,Hickman
+21,107,Kentucky,Hopkins
+21,111,Kentucky,Jefferson
+21,113,Kentucky,Jessamine
+21,117,Kentucky,Kenton
+21,121,Kentucky,Knox
+21,123,Kentucky,Larue
+21,125,Kentucky,Laurel
+21,127,Kentucky,Lawrence
+21,133,Kentucky,Letcher
+21,139,Kentucky,Livingston
+21,141,Kentucky,Logan
+21,143,Kentucky,Lyon
+21,145,Kentucky,McCracken
+21,149,Kentucky,McLean
+21,151,Kentucky,Madison
+21,157,Kentucky,Marshall
+21,161,Kentucky,Mason
+21,163,Kentucky,Meade
+21,167,Kentucky,Mercer
+21,169,Kentucky,Metcalfe
+21,175,Kentucky,Morgan
+21,177,Kentucky,Muhlenberg
+21,179,Kentucky,Nelson
+21,183,Kentucky,Ohio
+21,185,Kentucky,Oldham
+21,187,Kentucky,Owen
+21,191,Kentucky,Pendleton
+21,193,Kentucky,Perry
+21,195,Kentucky,Pike
+21,199,Kentucky,Pulaski
+21,205,Kentucky,Rowan
+21,207,Kentucky,Russell
+21,209,Kentucky,Scott
+21,211,Kentucky,Shelby
+21,213,Kentucky,Simpson
+21,219,Kentucky,Todd
+21,221,Kentucky,Trigg
+21,223,Kentucky,Trimble
+21,227,Kentucky,Warren
+21,229,Kentucky,Washington
+21,233,Kentucky,Webster
+21,235,Kentucky,Whitley
+21,239,Kentucky,Woodford
+22,5,Louisiana,Ascension
+22,11,Louisiana,Beauregard
+22,15,Louisiana,Bossier
+22,17,Louisiana,Caddo
+22,19,Louisiana,Calcasieu
+22,27,Louisiana,Claiborne
+22,29,Louisiana,Concordia
+22,33,Louisiana,East Baton Rouge
+22,35,Louisiana,East Carroll
+22,39,Louisiana,Evangeline
+22,43,Louisiana,Grant
+22,47,Louisiana,Iberville
+22,49,Louisiana,Jackson
+22,51,Louisiana,Jefferson
+22,55,Louisiana,Lafayette
+22,57,Louisiana,Lafourche
+22,63,Louisiana,Livingston
+22,65,Louisiana,Madison
+22,67,Louisiana,Morehouse
+22,71,Louisiana,Orleans
+22,73,Louisiana,Ouachita
+22,75,Louisiana,Plaquemines
+22,77,Louisiana,Pointe Coupee
+22,79,Louisiana,Rapides
+22,85,Louisiana,Sabine
+22,87,Louisiana,St. Bernard
+22,89,Louisiana,St. Charles
+22,93,Louisiana,St. James
+22,95,Louisiana,St. John the Baptist
+22,99,Louisiana,St. Martin
+22,101,Louisiana,St. Mary
+22,103,Louisiana,St. Tammany
+22,105,Louisiana,Tangipahoa
+22,109,Louisiana,Terrebonne
+22,117,Louisiana,Washington
+22,121,Louisiana,West Baton Rouge
+22,127,Louisiana,Winn
+23,1,Maine,Androscoggin
+23,3,Maine,Aroostook
+23,5,Maine,Cumberland
+23,7,Maine,Franklin
+23,9,Maine,Hancock
+23,11,Maine,Kennebec
+23,13,Maine,Knox
+23,15,Maine,Lincoln
+23,17,Maine,Oxford
+23,19,Maine,Penobscot
+23,21,Maine,Piscataquis
+23,23,Maine,Sagadahoc
+23,25,Maine,Somerset
+23,27,Maine,Waldo
+23,29,Maine,Washington
+23,31,Maine,York
+23,901,Maine,MOBILE MONITORS
+24,1,Maryland,Allegany
+24,3,Maryland,Anne Arundel
+24,5,Maryland,Baltimore
+24,9,Maryland,Calvert
+24,13,Maryland,Carroll
+24,15,Maryland,Cecil
+24,17,Maryland,Charles
+24,19,Maryland,Dorchester
+24,21,Maryland,Frederick
+24,23,Maryland,Garrett
+24,25,Maryland,Harford
+24,27,Maryland,Howard
+24,29,Maryland,Kent
+24,31,Maryland,Montgomery
+24,33,Maryland,Prince George's
+24,37,Maryland,St. Mary's
+24,43,Maryland,Washington
+24,45,Maryland,Wicomico
+24,47,Maryland,Worcester
+24,510,Maryland,Baltimore (City)
+25,1,Massachusetts,Barnstable
+25,3,Massachusetts,Berkshire
+25,5,Massachusetts,Bristol
+25,7,Massachusetts,Dukes
+25,9,Massachusetts,Essex
+25,11,Massachusetts,Franklin
+25,13,Massachusetts,Hampden
+25,15,Massachusetts,Hampshire
+25,17,Massachusetts,Middlesex
+25,19,Massachusetts,Nantucket
+25,21,Massachusetts,Norfolk
+25,23,Massachusetts,Plymouth
+25,25,Massachusetts,Suffolk
+25,27,Massachusetts,Worcester
+26,3,Michigan,Alger
+26,5,Michigan,Allegan
+26,7,Michigan,Alpena
+26,17,Michigan,Bay
+26,19,Michigan,Benzie
+26,21,Michigan,Berrien
+26,23,Michigan,Branch
+26,25,Michigan,Calhoun
+26,27,Michigan,Cass
+26,29,Michigan,Charlevoix
+26,31,Michigan,Cheboygan
+26,33,Michigan,Chippewa
+26,35,Michigan,Clare
+26,37,Michigan,Clinton
+26,41,Michigan,Delta
+26,43,Michigan,Dickinson
+26,45,Michigan,Eaton
+26,47,Michigan,Emmet
+26,49,Michigan,Genesee
+26,55,Michigan,Grand Traverse
+26,57,Michigan,Gratiot
+26,59,Michigan,Hillsdale
+26,61,Michigan,Houghton
+26,63,Michigan,Huron
+26,65,Michigan,Ingham
+26,67,Michigan,Ionia
+26,69,Michigan,Iosco
+26,71,Michigan,Iron
+26,73,Michigan,Isabella
+26,75,Michigan,Jackson
+26,77,Michigan,Kalamazoo
+26,81,Michigan,Kent
+26,83,Michigan,Keweenaw
+26,87,Michigan,Lapeer
+26,89,Michigan,Leelanau
+26,91,Michigan,Lenawee
+26,99,Michigan,Macomb
+26,101,Michigan,Manistee
+26,103,Michigan,Marquette
+26,105,Michigan,Mason
+26,107,Michigan,Mecosta
+26,109,Michigan,Menominee
+26,111,Michigan,Midland
+26,113,Michigan,Missaukee
+26,115,Michigan,Monroe
+26,117,Michigan,Montcalm
+26,119,Michigan,Montmorency
+26,121,Michigan,Muskegon
+26,125,Michigan,Oakland
+26,127,Michigan,Oceana
+26,131,Michigan,Ontonagon
+26,133,Michigan,Osceola
+26,135,Michigan,Oscoda
+26,139,Michigan,Ottawa
+26,141,Michigan,Presque Isle
+26,143,Michigan,Roscommon
+26,145,Michigan,Saginaw
+26,147,Michigan,St. Clair
+26,151,Michigan,Sanilac
+26,153,Michigan,Schoolcraft
+26,155,Michigan,Shiawassee
+26,157,Michigan,Tuscola
+26,159,Michigan,Van Buren
+26,161,Michigan,Washtenaw
+26,163,Michigan,Wayne
+26,165,Michigan,Wexford
+27,3,Minnesota,Anoka
+27,5,Minnesota,Becker
+27,7,Minnesota,Beltrami
+27,9,Minnesota,Benton
+27,11,Minnesota,Big Stone
+27,13,Minnesota,Blue Earth
+27,17,Minnesota,Carlton
+27,19,Minnesota,Carver
+27,21,Minnesota,Cass
+27,27,Minnesota,Clay
+27,29,Minnesota,Clearwater
+27,31,Minnesota,Cook
+27,35,Minnesota,Crow Wing
+27,37,Minnesota,Dakota
+27,41,Minnesota,Douglas
+27,47,Minnesota,Freeborn
+27,49,Minnesota,Goodhue
+27,53,Minnesota,Hennepin
+27,57,Minnesota,Hubbard
+27,61,Minnesota,Itasca
+27,67,Minnesota,Kandiyohi
+27,71,Minnesota,Koochiching
+27,75,Minnesota,Lake
+27,83,Minnesota,Lyon
+27,85,Minnesota,McLeod
+27,87,Minnesota,Mahnomen
+27,93,Minnesota,Meeker
+27,95,Minnesota,Mille Lacs
+27,97,Minnesota,Morrison
+27,99,Minnesota,Mower
+27,103,Minnesota,Nicollet
+27,105,Minnesota,Nobles
+27,109,Minnesota,Olmsted
+27,111,Minnesota,Otter Tail
+27,115,Minnesota,Pine
+27,117,Minnesota,Pipestone
+27,119,Minnesota,Polk
+27,123,Minnesota,Ramsey
+27,129,Minnesota,Renville
+27,131,Minnesota,Rice
+27,133,Minnesota,Rock
+27,135,Minnesota,Roseau
+27,137,Minnesota,Saint Louis
+27,139,Minnesota,Scott
+27,141,Minnesota,Sherburne
+27,145,Minnesota,Stearns
+27,151,Minnesota,Swift
+27,163,Minnesota,Washington
+27,169,Minnesota,Winona
+27,171,Minnesota,Wright
+27,173,Minnesota,Yellow Medicine
+28,1,Mississippi,Adams
+28,3,Mississippi,Alcorn
+28,7,Mississippi,Attala
+28,11,Mississippi,Bolivar
+28,19,Mississippi,Choctaw
+28,23,Mississippi,Clarke
+28,27,Mississippi,Coahoma
+28,33,Mississippi,DeSoto
+28,35,Mississippi,Forrest
+28,37,Mississippi,Franklin
+28,43,Mississippi,Grenada
+28,45,Mississippi,Hancock
+28,47,Mississippi,Harrison
+28,49,Mississippi,Hinds
+28,59,Mississippi,Jackson
+28,67,Mississippi,Jones
+28,71,Mississippi,Lafayette
+28,73,Mississippi,Lamar
+28,75,Mississippi,Lauderdale
+28,81,Mississippi,Lee
+28,83,Mississippi,Leflore
+28,85,Mississippi,Lincoln
+28,87,Mississippi,Lowndes
+28,89,Mississippi,Madison
+28,93,Mississippi,Marshall
+28,103,Mississippi,Noxubee
+28,107,Mississippi,Panola
+28,109,Mississippi,Pearl River
+28,113,Mississippi,Pike
+28,121,Mississippi,Rankin
+28,123,Mississippi,Scott
+28,125,Mississippi,Sharkey
+28,139,Mississippi,Tippah
+28,149,Mississippi,Warren
+28,151,Mississippi,Washington
+28,155,Mississippi,Webster
+28,161,Mississippi,Yalobusha
+28,163,Mississippi,Yazoo
+29,1,Missouri,Adair
+29,3,Missouri,Andrew
+29,5,Missouri,Atchison
+29,7,Missouri,Audrain
+29,19,Missouri,Boone
+29,21,Missouri,Buchanan
+29,23,Missouri,Butler
+29,27,Missouri,Callaway
+29,29,Missouri,Camden
+29,31,Missouri,Cape Girardeau
+29,37,Missouri,Cass
+29,39,Missouri,Cedar
+29,43,Missouri,Christian
+29,47,Missouri,Clay
+29,49,Missouri,Clinton
+29,51,Missouri,Cole
+29,53,Missouri,Cooper
+29,71,Missouri,Franklin
+29,77,Missouri,Greene
+29,87,Missouri,Holt
+29,91,Missouri,Howell
+29,93,Missouri,Iron
+29,95,Missouri,Jackson
+29,97,Missouri,Jasper
+29,99,Missouri,Jefferson
+29,113,Missouri,Lincoln
+29,117,Missouri,Livingston
+29,121,Missouri,Macon
+29,123,Missouri,Madison
+29,125,Missouri,Maries
+29,127,Missouri,Marion
+29,129,Missouri,Mercer
+29,133,Missouri,Mississippi
+29,137,Missouri,Monroe
+29,143,Missouri,New Madrid
+29,147,Missouri,Nodaway
+29,157,Missouri,Perry
+29,159,Missouri,Pettis
+29,161,Missouri,Phelps
+29,163,Missouri,Pike
+29,165,Missouri,Platte
+29,171,Missouri,Putnam
+29,173,Missouri,Ralls
+29,175,Missouri,Randolph
+29,177,Missouri,Ray
+29,179,Missouri,Reynolds
+29,183,Missouri,Saint Charles
+29,186,Missouri,Sainte Genevieve
+29,187,Missouri,Saint Francois
+29,189,Missouri,Saint Louis
+29,201,Missouri,Scott
+29,203,Missouri,Shannon
+29,207,Missouri,Stoddard
+29,211,Missouri,Sullivan
+29,213,Missouri,Taney
+29,215,Missouri,Texas
+29,217,Missouri,Vernon
+29,510,Missouri,St. Louis City
+30,1,Montana,Beaverhead
+30,3,Montana,Big Horn
+30,5,Montana,Blaine
+30,7,Montana,Broadwater
+30,11,Montana,Carter
+30,13,Montana,Cascade
+30,17,Montana,Custer
+30,19,Montana,Daniels
+30,21,Montana,Dawson
+30,23,Montana,Deer Lodge
+30,25,Montana,Fallon
+30,27,Montana,Fergus
+30,29,Montana,Flathead
+30,31,Montana,Gallatin
+30,33,Montana,Garfield
+30,35,Montana,Glacier
+30,39,Montana,Granite
+30,41,Montana,Hill
+30,43,Montana,Jefferson
+30,47,Montana,Lake
+30,49,Montana,Lewis and Clark
+30,53,Montana,Lincoln
+30,55,Montana,McCone
+30,57,Montana,Madison
+30,61,Montana,Mineral
+30,63,Montana,Missoula
+30,65,Montana,Musselshell
+30,67,Montana,Park
+30,71,Montana,Phillips
+30,75,Montana,Powder River
+30,77,Montana,Powell
+30,81,Montana,Ravalli
+30,83,Montana,Richland
+30,85,Montana,Roosevelt
+30,87,Montana,Rosebud
+30,89,Montana,Sanders
+30,91,Montana,Sheridan
+30,93,Montana,Silver Bow
+30,95,Montana,Stillwater
+30,97,Montana,Sweet Grass
+30,99,Montana,Teton
+30,101,Montana,Toole
+30,105,Montana,Valley
+30,111,Montana,Yellowstone
+31,1,Nebraska,Adams
+31,17,Nebraska,Brown
+31,19,Nebraska,Buffalo
+31,25,Nebraska,Cass
+31,27,Nebraska,Cedar
+31,31,Nebraska,Cherry
+31,41,Nebraska,Custer
+31,43,Nebraska,Dakota
+31,45,Nebraska,Dawes
+31,47,Nebraska,Dawson
+31,49,Nebraska,Deuel
+31,53,Nebraska,Dodge
+31,55,Nebraska,Douglas
+31,67,Nebraska,Gage
+31,69,Nebraska,Garden
+31,79,Nebraska,Hall
+31,95,Nebraska,Jefferson
+31,107,Nebraska,Knox
+31,109,Nebraska,Lancaster
+31,111,Nebraska,Lincoln
+31,119,Nebraska,Madison
+31,127,Nebraska,Nemaha
+31,129,Nebraska,Nuckolls
+31,131,Nebraska,Otoe
+31,141,Nebraska,Platte
+31,145,Nebraska,Red Willow
+31,153,Nebraska,Sarpy
+31,157,Nebraska,Scotts Bluff
+31,165,Nebraska,Sioux
+31,171,Nebraska,Thomas
+31,173,Nebraska,Thurston
+31,177,Nebraska,Washington
+31,185,Nebraska,York
+32,1,Nevada,Churchill
+32,3,Nevada,Clark
+32,5,Nevada,Douglas
+32,7,Nevada,Elko
+32,13,Nevada,Humboldt
+32,15,Nevada,Lander
+32,19,Nevada,Lyon
+32,21,Nevada,Mineral
+32,23,Nevada,Nye
+32,27,Nevada,Pershing
+32,29,Nevada,Storey
+32,31,Nevada,Washoe
+32,33,Nevada,White Pine
+32,510,Nevada,Carson City
+33,1,New Hampshire,Belknap
+33,3,New Hampshire,Carroll
+33,5,New Hampshire,Cheshire
+33,7,New Hampshire,Coos
+33,9,New Hampshire,Grafton
+33,11,New Hampshire,Hillsborough
+33,13,New Hampshire,Merrimack
+33,15,New Hampshire,Rockingham
+33,17,New Hampshire,Strafford
+33,19,New Hampshire,Sullivan
+34,1,New Jersey,Atlantic
+34,3,New Jersey,Bergen
+34,5,New Jersey,Burlington
+34,7,New Jersey,Camden
+34,9,New Jersey,Cape May
+34,11,New Jersey,Cumberland
+34,13,New Jersey,Essex
+34,15,New Jersey,Gloucester
+34,17,New Jersey,Hudson
+34,19,New Jersey,Hunterdon
+34,21,New Jersey,Mercer
+34,23,New Jersey,Middlesex
+34,25,New Jersey,Monmouth
+34,27,New Jersey,Morris
+34,29,New Jersey,Ocean
+34,31,New Jersey,Passaic
+34,33,New Jersey,Salem
+34,35,New Jersey,Somerset
+34,37,New Jersey,Sussex
+34,39,New Jersey,Union
+34,41,New Jersey,Warren
+35,1,New Mexico,Bernalillo
+35,3,New Mexico,Catron
+35,5,New Mexico,Chaves
+35,6,New Mexico,Cibola
+35,7,New Mexico,Colfax
+35,9,New Mexico,Curry
+35,13,New Mexico,Dona Ana
+35,15,New Mexico,Eddy
+35,17,New Mexico,Grant
+35,21,New Mexico,Harding
+35,23,New Mexico,Hidalgo
+35,25,New Mexico,Lea
+35,27,New Mexico,Lincoln
+35,28,New Mexico,Los Alamos
+35,29,New Mexico,Luna
+35,31,New Mexico,McKinley
+35,35,New Mexico,Otero
+35,37,New Mexico,Quay
+35,39,New Mexico,Rio Arriba
+35,43,New Mexico,Sandoval
+35,45,New Mexico,San Juan
+35,47,New Mexico,San Miguel
+35,49,New Mexico,Santa Fe
+35,51,New Mexico,Sierra
+35,53,New Mexico,Socorro
+35,55,New Mexico,Taos
+35,57,New Mexico,Torrance
+35,59,New Mexico,Union
+35,61,New Mexico,Valencia
+36,1,New York,Albany
+36,3,New York,Allegany
+36,5,New York,Bronx
+36,7,New York,Broome
+36,9,New York,Cattaraugus
+36,11,New York,Cayuga
+36,13,New York,Chautauqua
+36,15,New York,Chemung
+36,17,New York,Chenango
+36,19,New York,Clinton
+36,21,New York,Columbia
+36,23,New York,Cortland
+36,25,New York,Delaware
+36,27,New York,Dutchess
+36,29,New York,Erie
+36,31,New York,Essex
+36,33,New York,Franklin
+36,35,New York,Fulton
+36,37,New York,Genesee
+36,39,New York,Greene
+36,41,New York,Hamilton
+36,43,New York,Herkimer
+36,45,New York,Jefferson
+36,47,New York,Kings
+36,49,New York,Lewis
+36,51,New York,Livingston
+36,53,New York,Madison
+36,55,New York,Monroe
+36,57,New York,Montgomery
+36,59,New York,Nassau
+36,61,New York,New York
+36,63,New York,Niagara
+36,65,New York,Oneida
+36,67,New York,Onondaga
+36,69,New York,Ontario
+36,71,New York,Orange
+36,73,New York,Orleans
+36,75,New York,Oswego
+36,77,New York,Otsego
+36,79,New York,Putnam
+36,81,New York,Queens
+36,83,New York,Rensselaer
+36,85,New York,Richmond
+36,87,New York,Rockland
+36,89,New York,St. Lawrence
+36,91,New York,Saratoga
+36,93,New York,Schenectady
+36,95,New York,Schoharie
+36,97,New York,Schuyler
+36,99,New York,Seneca
+36,101,New York,Steuben
+36,103,New York,Suffolk
+36,105,New York,Sullivan
+36,107,New York,Tioga
+36,109,New York,Tompkins
+36,111,New York,Ulster
+36,113,New York,Warren
+36,115,New York,Washington
+36,117,New York,Wayne
+36,119,New York,Westchester
+36,121,New York,Wyoming
+36,123,New York,Yates
+37,1,North Carolina,Alamance
+37,3,North Carolina,Alexander
+37,5,North Carolina,Alleghany
+37,9,North Carolina,Ashe
+37,11,North Carolina,Avery
+37,13,North Carolina,Beaufort
+37,15,North Carolina,Bertie
+37,19,North Carolina,Brunswick
+37,21,North Carolina,Buncombe
+37,23,North Carolina,Burke
+37,25,North Carolina,Cabarrus
+37,27,North Carolina,Caldwell
+37,29,North Carolina,Camden
+37,31,North Carolina,Carteret
+37,33,North Carolina,Caswell
+37,35,North Carolina,Catawba
+37,37,North Carolina,Chatham
+37,39,North Carolina,Cherokee
+37,41,North Carolina,Chowan
+37,45,North Carolina,Cleveland
+37,47,North Carolina,Columbus
+37,49,North Carolina,Craven
+37,51,North Carolina,Cumberland
+37,55,North Carolina,Dare
+37,57,North Carolina,Davidson
+37,59,North Carolina,Davie
+37,61,North Carolina,Duplin
+37,63,North Carolina,Durham
+37,65,North Carolina,Edgecombe
+37,67,North Carolina,Forsyth
+37,69,North Carolina,Franklin
+37,71,North Carolina,Gaston
+37,73,North Carolina,Gates
+37,75,North Carolina,Graham
+37,77,North Carolina,Granville
+37,81,North Carolina,Guilford
+37,83,North Carolina,Halifax
+37,85,North Carolina,Harnett
+37,87,North Carolina,Haywood
+37,89,North Carolina,Henderson
+37,91,North Carolina,Hertford
+37,95,North Carolina,Hyde
+37,97,North Carolina,Iredell
+37,99,North Carolina,Jackson
+37,101,North Carolina,Johnston
+37,103,North Carolina,Jones
+37,105,North Carolina,Lee
+37,107,North Carolina,Lenoir
+37,109,North Carolina,Lincoln
+37,111,North Carolina,McDowell
+37,113,North Carolina,Macon
+37,117,North Carolina,Martin
+37,119,North Carolina,Mecklenburg
+37,121,North Carolina,Mitchell
+37,123,North Carolina,Montgomery
+37,125,North Carolina,Moore
+37,127,North Carolina,Nash
+37,129,North Carolina,New Hanover
+37,131,North Carolina,Northampton
+37,133,North Carolina,Onslow
+37,135,North Carolina,Orange
+37,139,North Carolina,Pasquotank
+37,145,North Carolina,Person
+37,147,North Carolina,Pitt
+37,149,North Carolina,Polk
+37,151,North Carolina,Randolph
+37,153,North Carolina,Richmond
+37,155,North Carolina,Robeson
+37,157,North Carolina,Rockingham
+37,159,North Carolina,Rowan
+37,161,North Carolina,Rutherford
+37,163,North Carolina,Sampson
+37,165,North Carolina,Scotland
+37,167,North Carolina,Stanly
+37,169,North Carolina,Stokes
+37,171,North Carolina,Surry
+37,173,North Carolina,Swain
+37,175,North Carolina,Transylvania
+37,179,North Carolina,Union
+37,181,North Carolina,Vance
+37,183,North Carolina,Wake
+37,187,North Carolina,Washington
+37,189,North Carolina,Watauga
+37,191,North Carolina,Wayne
+37,193,North Carolina,Wilkes
+37,195,North Carolina,Wilson
+37,199,North Carolina,Yancey
+38,3,North Dakota,Barnes
+38,5,North Dakota,Benson
+38,7,North Dakota,Billings
+38,11,North Dakota,Bowman
+38,13,North Dakota,Burke
+38,15,North Dakota,Burleigh
+38,17,North Dakota,Cass
+38,25,North Dakota,Dunn
+38,35,North Dakota,Grand Forks
+38,37,North Dakota,Grant
+38,41,North Dakota,Hettinger
+38,53,North Dakota,McKenzie
+38,55,North Dakota,McLean
+38,57,North Dakota,Mercer
+38,59,North Dakota,Morton
+38,61,North Dakota,Mountrail
+38,65,North Dakota,Oliver
+38,71,North Dakota,Ramsey
+38,77,North Dakota,Richland
+38,83,North Dakota,Sheridan
+38,87,North Dakota,Slope
+38,89,North Dakota,Stark
+38,91,North Dakota,Steele
+38,93,North Dakota,Stutsman
+38,101,North Dakota,Ward
+38,105,North Dakota,Williams
+39,1,Ohio,Adams
+39,3,Ohio,Allen
+39,5,Ohio,Ashland
+39,7,Ohio,Ashtabula
+39,9,Ohio,Athens
+39,11,Ohio,Auglaize
+39,13,Ohio,Belmont
+39,15,Ohio,Brown
+39,17,Ohio,Butler
+39,19,Ohio,Carroll
+39,21,Ohio,Champaign
+39,23,Ohio,Clark
+39,25,Ohio,Clermont
+39,27,Ohio,Clinton
+39,29,Ohio,Columbiana
+39,31,Ohio,Coshocton
+39,33,Ohio,Crawford
+39,35,Ohio,Cuyahoga
+39,37,Ohio,Darke
+39,39,Ohio,Defiance
+39,41,Ohio,Delaware
+39,43,Ohio,Erie
+39,45,Ohio,Fairfield
+39,47,Ohio,Fayette
+39,49,Ohio,Franklin
+39,51,Ohio,Fulton
+39,53,Ohio,Gallia
+39,55,Ohio,Geauga
+39,57,Ohio,Greene
+39,59,Ohio,Guernsey
+39,61,Ohio,Hamilton
+39,63,Ohio,Hancock
+39,67,Ohio,Harrison
+39,69,Ohio,Henry
+39,73,Ohio,Hocking
+39,75,Ohio,Holmes
+39,77,Ohio,Huron
+39,79,Ohio,Jackson
+39,81,Ohio,Jefferson
+39,83,Ohio,Knox
+39,85,Ohio,Lake
+39,87,Ohio,Lawrence
+39,89,Ohio,Licking
+39,91,Ohio,Logan
+39,93,Ohio,Lorain
+39,95,Ohio,Lucas
+39,97,Ohio,Madison
+39,99,Ohio,Mahoning
+39,101,Ohio,Marion
+39,103,Ohio,Medina
+39,105,Ohio,Meigs
+39,107,Ohio,Mercer
+39,109,Ohio,Miami
+39,111,Ohio,Monroe
+39,113,Ohio,Montgomery
+39,115,Ohio,Morgan
+39,119,Ohio,Muskingum
+39,121,Ohio,Noble
+39,123,Ohio,Ottawa
+39,125,Ohio,Paulding
+39,127,Ohio,Perry
+39,129,Ohio,Pickaway
+39,133,Ohio,Portage
+39,135,Ohio,Preble
+39,139,Ohio,Richland
+39,141,Ohio,Ross
+39,143,Ohio,Sandusky
+39,145,Ohio,Scioto
+39,147,Ohio,Seneca
+39,149,Ohio,Shelby
+39,151,Ohio,Stark
+39,153,Ohio,Summit
+39,155,Ohio,Trumbull
+39,157,Ohio,Tuscarawas
+39,159,Ohio,Union
+39,163,Ohio,Vinton
+39,165,Ohio,Warren
+39,167,Ohio,Washington
+39,169,Ohio,Wayne
+39,173,Ohio,Wood
+39,175,Ohio,Wyandot
+40,1,Oklahoma,Adair
+40,5,Oklahoma,Atoka
+40,9,Oklahoma,Beckham
+40,13,Oklahoma,Bryan
+40,15,Oklahoma,Caddo
+40,17,Oklahoma,Canadian
+40,19,Oklahoma,Carter
+40,21,Oklahoma,Cherokee
+40,23,Oklahoma,Choctaw
+40,27,Oklahoma,Cleveland
+40,29,Oklahoma,Coal
+40,31,Oklahoma,Comanche
+40,33,Oklahoma,Cotton
+40,35,Oklahoma,Craig
+40,37,Oklahoma,Creek
+40,39,Oklahoma,Custer
+40,41,Oklahoma,Delaware
+40,43,Oklahoma,Dewey
+40,45,Oklahoma,Ellis
+40,47,Oklahoma,Garfield
+40,49,Oklahoma,Garvin
+40,51,Oklahoma,Grady
+40,55,Oklahoma,Greer
+40,57,Oklahoma,Harmon
+40,65,Oklahoma,Jackson
+40,67,Oklahoma,Jefferson
+40,69,Oklahoma,Johnston
+40,71,Oklahoma,Kay
+40,73,Oklahoma,Kingfisher
+40,75,Oklahoma,Kiowa
+40,77,Oklahoma,Latimer
+40,79,Oklahoma,Le Flore
+40,81,Oklahoma,Lincoln
+40,83,Oklahoma,Logan
+40,85,Oklahoma,Love
+40,87,Oklahoma,McClain
+40,89,Oklahoma,McCurtain
+40,91,Oklahoma,McIntosh
+40,95,Oklahoma,Marshall
+40,97,Oklahoma,Mayes
+40,99,Oklahoma,Murray
+40,101,Oklahoma,Muskogee
+40,105,Oklahoma,Nowata
+40,109,Oklahoma,Oklahoma
+40,111,Oklahoma,Okmulgee
+40,113,Oklahoma,Osage
+40,115,Oklahoma,Ottawa
+40,117,Oklahoma,Pawnee
+40,119,Oklahoma,Payne
+40,121,Oklahoma,Pittsburg
+40,123,Oklahoma,Pontotoc
+40,125,Oklahoma,Pottawatomie
+40,127,Oklahoma,Pushmataha
+40,129,Oklahoma,Roger Mills
+40,131,Oklahoma,Rogers
+40,133,Oklahoma,Seminole
+40,135,Oklahoma,Sequoyah
+40,137,Oklahoma,Stephens
+40,139,Oklahoma,Texas
+40,141,Oklahoma,Tillman
+40,143,Oklahoma,Tulsa
+40,145,Oklahoma,Wagoner
+40,147,Oklahoma,Washington
+40,151,Oklahoma,Woods
+40,153,Oklahoma,Woodward
+41,1,Oregon,Baker
+41,3,Oregon,Benton
+41,5,Oregon,Clackamas
+41,7,Oregon,Clatsop
+41,9,Oregon,Columbia
+41,11,Oregon,Coos
+41,13,Oregon,Crook
+41,15,Oregon,Curry
+41,17,Oregon,Deschutes
+41,19,Oregon,Douglas
+41,23,Oregon,Grant
+41,25,Oregon,Harney
+41,27,Oregon,Hood River
+41,29,Oregon,Jackson
+41,31,Oregon,Jefferson
+41,33,Oregon,Josephine
+41,35,Oregon,Klamath
+41,37,Oregon,Lake
+41,39,Oregon,Lane
+41,41,Oregon,Lincoln
+41,43,Oregon,Linn
+41,45,Oregon,Malheur
+41,47,Oregon,Marion
+41,51,Oregon,Multnomah
+41,53,Oregon,Polk
+41,59,Oregon,Umatilla
+41,61,Oregon,Union
+41,63,Oregon,Wallowa
+41,65,Oregon,Wasco
+41,67,Oregon,Washington
+41,71,Oregon,Yamhill
+42,1,Pennsylvania,Adams
+42,3,Pennsylvania,Allegheny
+42,5,Pennsylvania,Armstrong
+42,7,Pennsylvania,Beaver
+42,11,Pennsylvania,Berks
+42,13,Pennsylvania,Blair
+42,15,Pennsylvania,Bradford
+42,17,Pennsylvania,Bucks
+42,19,Pennsylvania,Butler
+42,21,Pennsylvania,Cambria
+42,25,Pennsylvania,Carbon
+42,27,Pennsylvania,Centre
+42,29,Pennsylvania,Chester
+42,31,Pennsylvania,Clarion
+42,33,Pennsylvania,Clearfield
+42,35,Pennsylvania,Clinton
+42,41,Pennsylvania,Cumberland
+42,43,Pennsylvania,Dauphin
+42,45,Pennsylvania,Delaware
+42,47,Pennsylvania,Elk
+42,49,Pennsylvania,Erie
+42,51,Pennsylvania,Fayette
+42,55,Pennsylvania,Franklin
+42,59,Pennsylvania,Greene
+42,63,Pennsylvania,Indiana
+42,65,Pennsylvania,Jefferson
+42,69,Pennsylvania,Lackawanna
+42,71,Pennsylvania,Lancaster
+42,73,Pennsylvania,Lawrence
+42,75,Pennsylvania,Lebanon
+42,77,Pennsylvania,Lehigh
+42,79,Pennsylvania,Luzerne
+42,81,Pennsylvania,Lycoming
+42,83,Pennsylvania,McKean
+42,85,Pennsylvania,Mercer
+42,89,Pennsylvania,Monroe
+42,91,Pennsylvania,Montgomery
+42,95,Pennsylvania,Northampton
+42,99,Pennsylvania,Perry
+42,101,Pennsylvania,Philadelphia
+42,107,Pennsylvania,Schuylkill
+42,111,Pennsylvania,Somerset
+42,115,Pennsylvania,Susquehanna
+42,117,Pennsylvania,Tioga
+42,119,Pennsylvania,Union
+42,123,Pennsylvania,Warren
+42,125,Pennsylvania,Washington
+42,129,Pennsylvania,Westmoreland
+42,131,Pennsylvania,Wyoming
+42,133,Pennsylvania,York
+44,1,Rhode Island,Bristol
+44,3,Rhode Island,Kent
+44,5,Rhode Island,Newport
+44,7,Rhode Island,Providence
+44,9,Rhode Island,Washington
+45,1,South Carolina,Abbeville
+45,3,South Carolina,Aiken
+45,5,South Carolina,Allendale
+45,7,South Carolina,Anderson
+45,11,South Carolina,Barnwell
+45,13,South Carolina,Beaufort
+45,15,South Carolina,Berkeley
+45,19,South Carolina,Charleston
+45,21,South Carolina,Cherokee
+45,23,South Carolina,Chester
+45,25,South Carolina,Chesterfield
+45,29,South Carolina,Colleton
+45,31,South Carolina,Darlington
+45,33,South Carolina,Dillon
+45,35,South Carolina,Dorchester
+45,37,South Carolina,Edgefield
+45,39,South Carolina,Fairfield
+45,41,South Carolina,Florence
+45,43,South Carolina,Georgetown
+45,45,South Carolina,Greenville
+45,47,South Carolina,Greenwood
+45,49,South Carolina,Hampton
+45,51,South Carolina,Horry
+45,53,South Carolina,Jasper
+45,55,South Carolina,Kershaw
+45,57,South Carolina,Lancaster
+45,59,South Carolina,Laurens
+45,61,South Carolina,Lee
+45,63,South Carolina,Lexington
+45,71,South Carolina,Newberry
+45,73,South Carolina,Oconee
+45,75,South Carolina,Orangeburg
+45,77,South Carolina,Pickens
+45,79,South Carolina,Richland
+45,83,South Carolina,Spartanburg
+45,85,South Carolina,Sumter
+45,87,South Carolina,Union
+45,89,South Carolina,Williamsburg
+45,91,South Carolina,York
+46,5,South Dakota,Beadle
+46,11,South Dakota,Brookings
+46,13,South Dakota,Brown
+46,19,South Dakota,Butte
+46,21,South Dakota,Campbell
+46,29,South Dakota,Codington
+46,33,South Dakota,Custer
+46,35,South Dakota,Davison
+46,47,South Dakota,Fall River
+46,51,South Dakota,Grant
+46,63,South Dakota,Harding
+46,65,South Dakota,Hughes
+46,71,South Dakota,Jackson
+46,81,South Dakota,Lawrence
+46,93,South Dakota,Meade
+46,99,South Dakota,Minnehaha
+46,103,South Dakota,Pennington
+46,105,South Dakota,Perkins
+46,109,South Dakota,Roberts
+46,127,South Dakota,Union
+46,129,South Dakota,Walworth
+46,135,South Dakota,Yankton
+47,1,Tennessee,Anderson
+47,3,Tennessee,Bedford
+47,5,Tennessee,Benton
+47,9,Tennessee,Blount
+47,11,Tennessee,Bradley
+47,13,Tennessee,Campbell
+47,17,Tennessee,Carroll
+47,19,Tennessee,Carter
+47,21,Tennessee,Cheatham
+47,25,Tennessee,Claiborne
+47,29,Tennessee,Cocke
+47,31,Tennessee,Coffee
+47,35,Tennessee,Cumberland
+47,37,Tennessee,Davidson
+47,41,Tennessee,DeKalb
+47,43,Tennessee,Dickson
+47,45,Tennessee,Dyer
+47,47,Tennessee,Fayette
+47,51,Tennessee,Franklin
+47,53,Tennessee,Gibson
+47,55,Tennessee,Giles
+47,57,Tennessee,Grainger
+47,59,Tennessee,Greene
+47,61,Tennessee,Grundy
+47,63,Tennessee,Hamblen
+47,65,Tennessee,Hamilton
+47,71,Tennessee,Hardin
+47,73,Tennessee,Hawkins
+47,75,Tennessee,Haywood
+47,79,Tennessee,Henry
+47,81,Tennessee,Hickman
+47,83,Tennessee,Houston
+47,85,Tennessee,Humphreys
+47,89,Tennessee,Jefferson
+47,93,Tennessee,Knox
+47,99,Tennessee,Lawrence
+47,103,Tennessee,Lincoln
+47,105,Tennessee,Loudon
+47,107,Tennessee,McMinn
+47,113,Tennessee,Madison
+47,115,Tennessee,Marion
+47,117,Tennessee,Marshall
+47,119,Tennessee,Maury
+47,121,Tennessee,Meigs
+47,123,Tennessee,Monroe
+47,125,Tennessee,Montgomery
+47,127,Tennessee,Moore
+47,129,Tennessee,Morgan
+47,131,Tennessee,Obion
+47,135,Tennessee,Perry
+47,139,Tennessee,Polk
+47,141,Tennessee,Putnam
+47,143,Tennessee,Rhea
+47,145,Tennessee,Roane
+47,147,Tennessee,Robertson
+47,149,Tennessee,Rutherford
+47,151,Tennessee,Scott
+47,155,Tennessee,Sevier
+47,157,Tennessee,Shelby
+47,161,Tennessee,Stewart
+47,163,Tennessee,Sullivan
+47,165,Tennessee,Sumner
+47,167,Tennessee,Tipton
+47,173,Tennessee,Union
+47,177,Tennessee,Warren
+47,179,Tennessee,Washington
+47,181,Tennessee,Wayne
+47,183,Tennessee,Weakley
+47,187,Tennessee,Williamson
+47,189,Tennessee,Wilson
+48,5,Texas,Angelina
+48,25,Texas,Bee
+48,27,Texas,Bell
+48,29,Texas,Bexar
+48,37,Texas,Bowie
+48,39,Texas,Brazoria
+48,41,Texas,Brazos
+48,43,Texas,Brewster
+48,49,Texas,Brown
+48,55,Texas,Caldwell
+48,57,Texas,Calhoun
+48,61,Texas,Cameron
+48,65,Texas,Carson
+48,67,Texas,Cass
+48,71,Texas,Chambers
+48,85,Texas,Collin
+48,91,Texas,Comal
+48,109,Texas,Culberson
+48,113,Texas,Dallas
+48,121,Texas,Denton
+48,135,Texas,Ector
+48,139,Texas,Ellis
+48,141,Texas,El Paso
+48,149,Texas,Fayette
+48,157,Texas,Fort Bend
+48,161,Texas,Freestone
+48,167,Texas,Galveston
+48,171,Texas,Gillespie
+48,179,Texas,Gray
+48,181,Texas,Grayson
+48,183,Texas,Gregg
+48,189,Texas,Hale
+48,199,Texas,Hardin
+48,201,Texas,Harris
+48,203,Texas,Harrison
+48,209,Texas,Hays
+48,215,Texas,Hidalgo
+48,221,Texas,Hood
+48,227,Texas,Howard
+48,231,Texas,Hunt
+48,233,Texas,Hutchinson
+48,243,Texas,Jeff Davis
+48,245,Texas,Jefferson
+48,251,Texas,Johnson
+48,253,Texas,Jones
+48,257,Texas,Kaufman
+48,273,Texas,Kleberg
+48,291,Texas,Liberty
+48,303,Texas,Lubbock
+48,309,Texas,McLennan
+48,311,Texas,McMullen
+48,315,Texas,Marion
+48,321,Texas,Matagorda
+48,323,Texas,Maverick
+48,329,Texas,Midland
+48,331,Texas,Milam
+48,339,Texas,Montgomery
+48,341,Texas,Moore
+48,343,Texas,Morris
+48,347,Texas,Nacogdoches
+48,349,Texas,Navarro
+48,355,Texas,Nueces
+48,361,Texas,Orange
+48,367,Texas,Parker
+48,373,Texas,Polk
+48,375,Texas,Potter
+48,381,Texas,Randall
+48,395,Texas,Robertson
+48,397,Texas,Rockwall
+48,401,Texas,Rusk
+48,409,Texas,San Patricio
+48,415,Texas,Scurry
+48,423,Texas,Smith
+48,439,Texas,Tarrant
+48,441,Texas,Taylor
+48,449,Texas,Titus
+48,451,Texas,Tom Green
+48,453,Texas,Travis
+48,457,Texas,Tyler
+48,465,Texas,Val Verde
+48,469,Texas,Victoria
+48,471,Texas,Walker
+48,473,Texas,Waller
+48,479,Texas,Webb
+48,485,Texas,Wichita
+48,491,Texas,Williamson
+48,497,Texas,Wise
+49,3,Utah,Box Elder
+49,5,Utah,Cache
+49,7,Utah,Carbon
+49,9,Utah,Daggett
+49,11,Utah,Davis
+49,13,Utah,Duchesne
+49,15,Utah,Emery
+49,17,Utah,Garfield
+49,19,Utah,Grand
+49,21,Utah,Iron
+49,23,Utah,Juab
+49,25,Utah,Kane
+49,27,Utah,Millard
+49,35,Utah,Salt Lake
+49,37,Utah,San Juan
+49,45,Utah,Tooele
+49,47,Utah,Uintah
+49,49,Utah,Utah
+49,53,Utah,Washington
+49,55,Utah,Wayne
+49,57,Utah,Weber
+50,1,Vermont,Addison
+50,3,Vermont,Bennington
+50,5,Vermont,Caledonia
+50,7,Vermont,Chittenden
+50,17,Vermont,Orange
+50,21,Vermont,Rutland
+50,23,Vermont,Washington
+50,25,Vermont,Windham
+50,27,Vermont,Windsor
+51,1,Virginia,Accomack
+51,3,Virginia,Albemarle
+51,5,Virginia,Alleghany
+51,7,Virginia,Amelia
+51,9,Virginia,Amherst
+51,11,Virginia,Appomattox
+51,13,Virginia,Arlington
+51,15,Virginia,Augusta
+51,19,Virginia,Bedford
+51,23,Virginia,Botetourt
+51,25,Virginia,Brunswick
+51,27,Virginia,Buchanan
+51,29,Virginia,Buckingham
+51,31,Virginia,Campbell
+51,33,Virginia,Caroline
+51,35,Virginia,Carroll
+51,36,Virginia,Charles
+51,41,Virginia,Chesterfield
+51,43,Virginia,Clarke
+51,47,Virginia,Culpeper
+51,57,Virginia,Essex
+51,59,Virginia,Fairfax
+51,61,Virginia,Fauquier
+51,65,Virginia,Fluvanna
+51,67,Virginia,Franklin
+51,69,Virginia,Frederick
+51,71,Virginia,Giles
+51,73,Virginia,Gloucester
+51,83,Virginia,Halifax
+51,85,Virginia,Hanover
+51,87,Virginia,Henrico
+51,89,Virginia,Henry
+51,93,Virginia,Isle of Wight
+51,101,Virginia,King William
+51,103,Virginia,Lancaster
+51,107,Virginia,Loudoun
+51,113,Virginia,Madison
+51,117,Virginia,Mecklenburg
+51,121,Virginia,Montgomery
+51,125,Virginia,Nelson
+51,131,Virginia,Northampton
+51,133,Virginia,Northumberland
+51,135,Virginia,Nottoway
+51,139,Virginia,Page
+51,141,Virginia,Patrick
+51,143,Virginia,Pittsylvania
+51,147,Virginia,Prince Edward
+51,149,Virginia,Prince George
+51,153,Virginia,Prince William
+51,155,Virginia,Pulaski
+51,161,Virginia,Roanoke
+51,163,Virginia,Rockbridge
+51,165,Virginia,Rockingham
+51,167,Virginia,Russell
+51,171,Virginia,Shenandoah
+51,173,Virginia,Smyth
+51,179,Virginia,Stafford
+51,183,Virginia,Sussex
+51,185,Virginia,Tazewell
+51,187,Virginia,Warren
+51,191,Virginia,Washington
+51,195,Virginia,Wise
+51,197,Virginia,Wythe
+51,199,Virginia,York
+51,510,Virginia,Alexandria City
+51,515,Virginia,Bedford City
+51,520,Virginia,Bristol City
+51,530,Virginia,Buena Vista City
+51,540,Virginia,Charlottesville City
+51,550,Virginia,Chesapeake City
+51,570,Virginia,Colonial Heights City
+51,580,Virginia,Covington City
+51,590,Virginia,Danville City
+51,595,Virginia,Emporia City
+51,600,Virginia,Fairfax City
+51,610,Virginia,Falls Church City
+51,620,Virginia,Franklin City
+51,630,Virginia,Fredericksburg City
+51,640,Virginia,Galax City
+51,650,Virginia,Hampton City
+51,660,Virginia,Harrisonburg City
+51,670,Virginia,Hopewell City
+51,678,Virginia,Lexington City
+51,680,Virginia,Lynchburg City
+51,690,Virginia,Martinsville City
+51,700,Virginia,Newport News City
+51,710,Virginia,Norfolk City
+51,720,Virginia,Norton City
+51,730,Virginia,Petersburg City
+51,740,Virginia,Portsmouth City
+51,750,Virginia,Radford City
+51,760,Virginia,Richmond City
+51,770,Virginia,Roanoke City
+51,775,Virginia,Salem City
+51,790,Virginia,Staunton City
+51,800,Virginia,Suffolk City
+51,810,Virginia,Virginia Beach City
+51,820,Virginia,Waynesboro City
+51,830,Virginia,Williamsburg City
+51,840,Virginia,Winchester City
+53,1,Washington,Adams
+53,3,Washington,Asotin
+53,5,Washington,Benton
+53,7,Washington,Chelan
+53,9,Washington,Clallam
+53,11,Washington,Clark
+53,13,Washington,Columbia
+53,15,Washington,Cowlitz
+53,17,Washington,Douglas
+53,19,Washington,Ferry
+53,21,Washington,Franklin
+53,23,Washington,Garfield
+53,25,Washington,Grant
+53,27,Washington,Grays Harbor
+53,29,Washington,Island
+53,31,Washington,Jefferson
+53,33,Washington,King
+53,35,Washington,Kitsap
+53,37,Washington,Kittitas
+53,39,Washington,Klickitat
+53,41,Washington,Lewis
+53,43,Washington,Lincoln
+53,45,Washington,Mason
+53,47,Washington,Okanogan
+53,49,Washington,Pacific
+53,51,Washington,Pend Oreille
+53,53,Washington,Pierce
+53,57,Washington,Skagit
+53,59,Washington,Skamania
+53,61,Washington,Snohomish
+53,63,Washington,Spokane
+53,65,Washington,Stevens
+53,67,Washington,Thurston
+53,71,Washington,Walla Walla
+53,73,Washington,Whatcom
+53,75,Washington,Whitman
+53,77,Washington,Yakima
+54,3,West Virginia,Berkeley
+54,9,West Virginia,Brooke
+54,11,West Virginia,Cabell
+54,19,West Virginia,Fayette
+54,21,West Virginia,Gilmer
+54,25,West Virginia,Greenbrier
+54,29,West Virginia,Hancock
+54,33,West Virginia,Harrison
+54,39,West Virginia,Kanawha
+54,41,West Virginia,Lewis
+54,49,West Virginia,Marion
+54,51,West Virginia,Marshall
+54,53,West Virginia,Mason
+54,55,West Virginia,Mercer
+54,57,West Virginia,Mineral
+54,61,West Virginia,Monongalia
+54,69,West Virginia,Ohio
+54,79,West Virginia,Putnam
+54,81,West Virginia,Raleigh
+54,89,West Virginia,Summers
+54,93,West Virginia,Tucker
+54,99,West Virginia,Wayne
+54,101,West Virginia,Webster
+54,107,West Virginia,Wood
+55,3,Wisconsin,Ashland
+55,5,Wisconsin,Barron
+55,7,Wisconsin,Bayfield
+55,9,Wisconsin,Brown
+55,11,Wisconsin,Buffalo
+55,15,Wisconsin,Calumet
+55,17,Wisconsin,Chippewa
+55,19,Wisconsin,Clark
+55,21,Wisconsin,Columbia
+55,23,Wisconsin,Crawford
+55,25,Wisconsin,Dane
+55,27,Wisconsin,Dodge
+55,29,Wisconsin,Door
+55,31,Wisconsin,Douglas
+55,33,Wisconsin,Dunn
+55,35,Wisconsin,Eau Claire
+55,37,Wisconsin,Florence
+55,39,Wisconsin,Fond du Lac
+55,41,Wisconsin,Forest
+55,43,Wisconsin,Grant
+55,45,Wisconsin,Green
+55,47,Wisconsin,Green Lake
+55,49,Wisconsin,Iowa
+55,53,Wisconsin,Jackson
+55,55,Wisconsin,Jefferson
+55,57,Wisconsin,Juneau
+55,59,Wisconsin,Kenosha
+55,61,Wisconsin,Kewaunee
+55,63,Wisconsin,La Crosse
+55,65,Wisconsin,Lafayette
+55,67,Wisconsin,Langlade
+55,69,Wisconsin,Lincoln
+55,71,Wisconsin,Manitowoc
+55,73,Wisconsin,Marathon
+55,75,Wisconsin,Marinette
+55,78,Wisconsin,Menominee
+55,79,Wisconsin,Milwaukee
+55,81,Wisconsin,Monroe
+55,83,Wisconsin,Oconto
+55,85,Wisconsin,Oneida
+55,87,Wisconsin,Outagamie
+55,89,Wisconsin,Ozaukee
+55,93,Wisconsin,Pierce
+55,95,Wisconsin,Polk
+55,97,Wisconsin,Portage
+55,99,Wisconsin,Price
+55,101,Wisconsin,Racine
+55,103,Wisconsin,Richland
+55,105,Wisconsin,Rock
+55,107,Wisconsin,Rusk
+55,109,Wisconsin,St. Croix
+55,111,Wisconsin,Sauk
+55,113,Wisconsin,Sawyer
+55,115,Wisconsin,Shawano
+55,117,Wisconsin,Sheboygan
+55,119,Wisconsin,Taylor
+55,121,Wisconsin,Trempealeau
+55,123,Wisconsin,Vernon
+55,125,Wisconsin,Vilas
+55,127,Wisconsin,Walworth
+55,129,Wisconsin,Washburn
+55,131,Wisconsin,Washington
+55,133,Wisconsin,Waukesha
+55,135,Wisconsin,Waupaca
+55,139,Wisconsin,Winnebago
+55,141,Wisconsin,Wood
+56,1,Wyoming,Albany
+56,3,Wyoming,Big Horn
+56,5,Wyoming,Campbell
+56,7,Wyoming,Carbon
+56,9,Wyoming,Converse
+56,11,Wyoming,Crook
+56,13,Wyoming,Fremont
+56,15,Wyoming,Goshen
+56,17,Wyoming,Hot Springs
+56,19,Wyoming,Johnson
+56,21,Wyoming,Laramie
+56,23,Wyoming,Lincoln
+56,25,Wyoming,Natrona
+56,27,Wyoming,Niobrara
+56,29,Wyoming,Park
+56,31,Wyoming,Platte
+56,33,Wyoming,Sheridan
+56,35,Wyoming,Sublette
+56,37,Wyoming,Sweetwater
+56,39,Wyoming,Teton
+56,41,Wyoming,Uinta
+56,43,Wyoming,Washakie
+56,45,Wyoming,Weston
+66,10,Guam,Guam
+72,1,Puerto Rico,Adjuntas
+72,5,Puerto Rico,Aguadilla
+72,13,Puerto Rico,Arecibo
+72,17,Puerto Rico,Barceloneta
+72,21,Puerto Rico,Bayamon
+72,25,Puerto Rico,Caguas
+72,31,Puerto Rico,Carolina
+72,33,Puerto Rico,Catano
+72,51,Puerto Rico,Dorado
+72,53,Puerto Rico,Fajardo
+72,54,Puerto Rico,Florida
+72,55,Puerto Rico,Guanica
+72,57,Puerto Rico,Guayama
+72,59,Puerto Rico,Guayanilla
+72,61,Puerto Rico,Guaynabo
+72,69,Puerto Rico,Humacao
+72,77,Puerto Rico,Juncos
+72,81,Puerto Rico,Lares
+72,89,Puerto Rico,Luquillo
+72,91,Puerto Rico,Manati
+72,97,Puerto Rico,Mayagnez
+72,111,Puerto Rico,Penuelas
+72,113,Puerto Rico,Ponce
+72,119,Puerto Rico,Rio Grande
+72,123,Puerto Rico,Salinas
+72,127,Puerto Rico,San Juan
+72,137,Puerto Rico,Toa Baja
+72,147,Puerto Rico,Vieques
+72,151,Puerto Rico,Yabucoa
+78,10,Virgin Islands,St Croix
+78,20,Virgin Islands,St John
+78,30,Virgin Islands,St Thomas
+80,2,Country Of Mexico,BAJA CALIFORNIA NORTE
+80,6,Country Of Mexico,CHIHUAHUA STATE
+80,15,Country Of Mexico,MEXICO STATE
+80,26,Country Of Mexico,SONORA
+CC,4,Canada,New Brunswick
+CC,8,Canada,Ontario
+CC,11,Canada,Saskatchewan
