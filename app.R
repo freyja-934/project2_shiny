@@ -36,35 +36,7 @@ setwd('/Users/caseycharlesworth/Documents/GitHub/project2_shiny')
 #State & County Codes
 state_county_codes <- read.table(file= "codes/state_county_codes.csv",sep = ",", header= TRUE, quote="")
 
-#SO2
-temp1 = list.files(path = '/Users/caseycharlesworth/Documents/GitHub/project2_shiny/SO2', pattern="*.csv")
-setwd('/Users/caseycharlesworth/Documents/GitHub/project2_shiny/SO2')
-allSO2 <- lapply(temp1, function(x) fread(x, stringsAsFactors = FALSE))
-SO2Data <- do.call(rbind, allSO2)
-setwd('/Users/caseycharlesworth/Documents/GitHub/project2_shiny')
 
-#NO2
-temp2 = list.files(path = '/Users/caseycharlesworth/Documents/GitHub/project2_shiny/NO2', pattern="*.csv")
-setwd('/Users/caseycharlesworth/Documents/GitHub/project2_shiny/NO2')
-allNO2 <- lapply(temp2, function(x) fread(x, stringsAsFactors = FALSE))
-NO2Data <- do.call(rbind, allNO2)
-setwd('/Users/caseycharlesworth/Documents/GitHub/project2_shiny')
-
-#Ozone
-temp3 = list.files(path = '/Users/caseycharlesworth/Documents/GitHub/project2_shiny/Ozone', pattern="*.csv")
-setwd('/Users/caseycharlesworth/Documents/GitHub/project2_shiny/Ozone')
-allOzone <- lapply(temp3, function(x) fread(x, stringsAsFactors = FALSE))
-OzoneData <- do.call(rbind, allOzone)
-setwd('/Users/caseycharlesworth/Documents/GitHub/project2_shiny')
-
-#CO
-temp4 = list.files(path = '/Users/caseycharlesworth/Documents/GitHub/project2_shiny/CO', pattern="*.csv")
-setwd('/Users/caseycharlesworth/Documents/GitHub/project2_shiny/CO')
-allCO <- lapply(temp4, function(x) fread(x, stringsAsFactors = FALSE))
-COData <- do.call(rbind, allCO)
-setwd('/Users/caseycharlesworth/Documents/GitHub/project2_shiny')
-
-setwd('/Users/caseycharlesworth/Documents/GitHub/project2_shiny')
 ################ AQI FILES FROM 1980-2018 ########################
 aqi_2017 <- read.table(file= "annual/annual_aqi_by_county_2017.csv",sep = ",", header= TRUE)
 aqi_2018 <- read.table(file= "annual/annual_aqi_by_county_2018.csv",sep = ",", header= TRUE)
@@ -412,6 +384,48 @@ server <- function(session,input, output) {
       mutate(Date = as.Date(Date))
     })
   
+  ####### Hourly Pollutant data ######
+  # Ozone
+  ozone_data <- reactive({
+    req(input$Year)
+    file_path = paste("ozone/hourly_44201_",toString(input$Year), ".csv", sep="", quote="")
+    read.table(file= file_path,sep = ",", header= TRUE)
+  })
+  
+  # CO
+  co_data <- reactive({
+    req(input$Year)
+    file_path = paste("CO/hourly_42101_",toString(input$Year), ".csv", sep="", quote="")
+    read.table(file= file_path,sep = ",", header= TRUE)
+  })
+  
+  # NO2
+  no2_data <- reactive({
+    req(input$Year)
+    file_path = paste("NO2/hourly_42602_",toString(input$Year), ".csv", sep="", quote="")
+    read.table(file= file_path,sep = ",", header= TRUE)
+  })
+  
+  # SO2
+  so2_data <- reactive({
+    req(input$Year)
+    file_path = paste("SO2/hourly_42401_2017_",toString(input$Year), ".csv", sep="", quote="")
+    read.table(file= file_path,sep = ",", header= TRUE)
+  })
+
+  # Temp
+  temp_data <- reactive({
+    req(input$Year)
+    file_path = paste("temp/hourly_TEMP_",toString(input$Year), ".csv", sep="")
+    read.table(file= file_path,sep = ",", header= TRUE)
+  })
+  
+  # Wind
+  temp_data <- reactive({
+    req(input$Year)
+    file_path = paste("wind/hourly_WIND_",toString(input$Year), ".csv", sep="")
+    read.table(file= file_path,sep = ",", header= TRUE)
+  })
   
   #################### CHANGES DROP MENU OPTIONS FOR STATE BASED ON YEAR CHOSEN####################
   #observe events adapted from https://gist.github.com/aagarw30/d08c5fb1794cf9b58fa38342db97b697
