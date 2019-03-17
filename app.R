@@ -28,13 +28,13 @@ library(dplyr)
 temp = list.files(path = '/Users/caseycharlesworth/Documents/GitHub/project2_shiny/daily', pattern="*.csv")
 setwd('/Users/caseycharlesworth/Documents/GitHub/project2_shiny/daily')
 #temp = list.files(path = '/Users/caseycharlesworth/Documents/GitHub/project2_shiny/daily_aqi',pattern="*.csv")
-allData2 <- lapply(temp, function(x) fread(x, stringsAsFactors = FALSE))
+allData2 <- lapply(temp, function(x) fread(x, stringsAsFactors = FALSE,quote = ""))
 dailyData <- do.call(rbind, allData2)
 setwd('/Users/caseycharlesworth/Documents/GitHub/project2_shiny')
 #dailyData$Date <- as.Date(dailyData$Date)
 
 #State & County Codes
-state_county_codes <- read.table(file= "state_county_codes.csv",sep = ",", header= TRUE)
+state_county_codes <- read.table(file= "codes/state_county_codes.csv",sep = ",", header= TRUE, quote="")
 
 #SO2
 temp1 = list.files(path = '/Users/caseycharlesworth/Documents/GitHub/project2_shiny/SO2', pattern="*.csv")
@@ -374,6 +374,28 @@ ui <- dashboardPage(
 # Define server logic required to draw a histogram
 server <- function(session,input, output) {
   theme_set(theme_light(base_size = 18)) #FROM PROFS CODE
+  
+  ####### Function to convert state and county codes to state and county #######
+  get_state_name <- function(state_code, county_code){
+    newD <- subset(state_county_codes, state_county_codes$County.Code == county_code & state_county_codes$State.Code == state_code) 
+    return (newD[1,3])
+  }
+  get_county_name <- function(state_code, county_code){
+    newD <- subset(state_county_codes, state_county_codes$County.Code == county_code & state_county_codes$State.Code == state_code) 
+    return (newD[1,4])
+  }
+  
+  get_state_code<- function(state_name, county_name){
+    newD <- subset(state_county_codes, state_county_codes$County.Code == county_code & state_county_codes$State.Code == state_code) 
+    return (newD[1,1])
+  }
+  get_county_code <- function(state_name, county_name){
+    newD <- subset(state_county_codes, state_county_codes$County.Name == county_name & state_county_codes$State.Name == state_name) 
+    return (newD[1,2])
+  }
+  
+  data <- get_county_code("Alabama","Autauga")
+  print(data)
   
   ####################CODE USED FOR B PART OF PROJECT ####################
   #mainY <- reactive({subset(allData, allData$Year == input$Year & allData$County == (strsplit(input$County, " ,")[[1]][1]) & allData$State == (strsplit(input$County, ", ")[[1]][2]))})
@@ -816,10 +838,7 @@ server <- function(session,input, output) {
     return(dt_months())
   }
   
-  
-  
-  
-  
+
   
   #####JANUARY
   output$bar1 <- renderPlot(ggplot(my_function(01), aes(x=Category, y=`sum(Days)`, fill=Category))+
