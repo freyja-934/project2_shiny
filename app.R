@@ -407,7 +407,7 @@ server <- function(session,input, output) {
   mainY <- reactive({subset(allData, allData$Year == input$Year & allData$County == input$Countys & allData$State == input$State) })
   mainC<- reactive({subset(allData, allData$County == input$Countys & allData$State == input$State)})
   mapLL <- reactive({subset(latlong, State.Name == input$State & County.Name == input$Countys)})
-  
+  allY <- reactive({subset(allData, allData$Year == input$Year) }) 
   dailyY <- reactive({
     subset(dailyData, as.integer(substr(dailyData$Date,1,4)) == input$Year & dailyData$`county Name` == input$Countys & dailyData$`State Name` == input$State) %>%
       mutate(Date = as.Date(Date))
@@ -1015,26 +1015,68 @@ server <- function(session,input, output) {
   
   
   output$mapD <- renderLeaflet({ # adapted from prof code
-    main2 <- mainY()
-    USmap <- getData("GADM", country = "usa", level = 2)
-    
+    main2 <- allY()
+    str(main2)
+   USmap <- getData("GADM", country = "usa", level = 2)
+    #str(USmap)
     if(input$Polluant == "Ozone"){
       main2 <-  main2[1:19]
-      main2$Total <- main2[,14]+main2[,15]+main2[,16]+main2[,17]
+      main2$Total <- main2[,14]+main2[,15]+main2[,16]+main2[,17]+main2[,18]+main2[,19]
       main2$percentage <- (main2[,16]/main2[,20])*100
       main2 <- main2[with(main2,order(-percentage)),]
       main2 <- main2 %>% slice (1:100) #take the frist 100 rows 
       
       
-      mapD <- leaflet() %>% addTiles()  %>% setView(-96, 39, 4.3)
+      temp <- merge(USmap, main2,
+                    by.x = c("NAME_1", "NAME_2"), by.y = c("State", "County"),
+                    all.x = TRUE)
+      
+     mypal <- colorNumeric(palette = "viridis", reverse = TRUE, domain = temp$percentage, na.color = "transparent")
+     str("###########################################################################################")
+     str(mypal)
+     
+     mapD <- leaflet() %>%
+        addProviderTiles("OpenStreetMap.Mapnik") %>%
+        setView(lat = 39, lng = -98, zoom = 6) %>%
+        addPolygons(data = USmap, stroke = FALSE, smoothFactor = 0.2, fillOpacity = 1,
+                    fillColor = ~mypal(temp$percentage),
+                    popup = paste("County: ", temp$NAME_2, "<br>",
+                                  "Percentage: ", temp$percentage, "<br>")) %>%
+        addLegend(position = "bottomleft", pal = mypal, values = temp$percentage,
+                  title = "Percentage",
+                  opacity = 1)
+
+   
     }
     
-    else if(input$Polluant == "Ozone"){
-      mapD <- leaflet() %>% addTiles()  %>% setView(-96, 39, 4.3)
-    }
     
     else if(input$Polluant == "SO2"){
-      mapD <- leaflet() %>% addTiles()  %>% setView(-96, 39, 4.3)
+      
+      main2 <-  main2[1:19]
+      main2$Total <- main2[,14]+main2[,15]+main2[,16]+main2[,17]+main2[,18]+main2[,19]
+      main2$percentage <- (main2[,17]/main2[,20])*100
+      main2 <- main2[with(main2,order(-percentage)),]
+      main2 <- main2 %>% slice (1:100) #take the frist 100 rows 
+      
+      
+      temp <- merge(USmap, main2,
+                    by.x = c("NAME_1", "NAME_2"), by.y = c("State", "County"),
+                    all.x = TRUE)
+      
+      mypal <- colorNumeric(palette = "viridis", reverse = TRUE, domain = temp$percentage, na.color = "transparent")
+      str("###########################################################################################")
+      str(mypal)
+      
+      mapD <- leaflet() %>%
+        addProviderTiles("OpenStreetMap.Mapnik") %>%
+        setView(lat = 39, lng = -98, zoom = 6) %>%
+        addPolygons(data = USmap, stroke = FALSE, smoothFactor = 0.2, fillOpacity = 1,
+                    fillColor = ~mypal(temp$percentage),
+                    popup = paste("County: ", temp$NAME_2, "<br>",
+                                  "Percentage: ", temp$percentage, "<br>")) %>%
+        addLegend(position = "bottomleft", pal = mypal, values = temp$percentage,
+                  title = "Percentage",
+                  opacity = 1)
     }
     
     else if(input$Polluant == "CO"){
