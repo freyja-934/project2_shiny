@@ -1078,17 +1078,120 @@ server <- function(session,input, output) {
                   title = "Percentage",
                   opacity = 1)
     }
+   
+   
+   else if(input$Polluant == "NO2"){
+     
+     main2 <-  main2[1:19]
+     main2$Total <- main2[,14]+main2[,15]+main2[,16]+main2[,17]+main2[,18]+main2[,19]
+     main2$percentage <- (main2[,15]/main2[,20])*100
+     main2 <- main2[with(main2,order(-percentage)),]
+     main2 <- main2 %>% slice (1:100) #take the frist 100 rows 
+     
+     
+     temp <- merge(USmap, main2,
+                   by.x = c("NAME_1", "NAME_2"), by.y = c("State", "County"),
+                   all.x = TRUE)
+     
+     mypal <- colorNumeric(palette = "viridis", reverse = TRUE, domain = temp$percentage, na.color = "transparent")
+     str("###########################################################################################")
+     str(mypal)
+     
+     mapD <- leaflet() %>%
+       addProviderTiles("OpenStreetMap.Mapnik") %>%
+       setView(lat = 39, lng = -98, zoom = 6) %>%
+       addPolygons(data = USmap, stroke = FALSE, smoothFactor = 0.2, fillOpacity = 1,
+                   fillColor = ~mypal(temp$percentage),
+                   popup = paste("County: ", temp$NAME_2, "<br>",
+                                 "Percentage: ", temp$percentage, "<br>")) %>%
+       addLegend(position = "bottomleft", pal = mypal, values = temp$percentage,
+                 title = "Percentage",
+                 opacity = 1)
+   }
+   
     
     else if(input$Polluant == "CO"){
-      mapD <- leaflet() %>% addTiles()  %>% setView(-96, 39, 4.3)
+      main2 <-  main2[1:19]
+      main2$Total <- main2[,14]+main2[,15]+main2[,16]+main2[,17]+main2[,18]+main2[,19]
+      main2$percentage <- (main2[,14]/main2[,20])*100
+      main2 <- main2[with(main2,order(-percentage)),]
+      main2 <- main2 %>% slice (1:100) #take the frist 100 rows 
+      
+      
+      temp <- merge(USmap, main2,
+                    by.x = c("NAME_1", "NAME_2"), by.y = c("State", "County"),
+                    all.x = TRUE)
+      
+      mypal <- colorNumeric(palette = "viridis", reverse = TRUE, domain = temp$percentage, na.color = "transparent")
+      str("###########################################################################################")
+      str(mypal)
+      
+      mapD <- leaflet() %>%
+        addProviderTiles("OpenStreetMap.Mapnik") %>%
+        setView(lat = 39, lng = -98, zoom = 6) %>%
+        addPolygons(data = USmap, stroke = FALSE, smoothFactor = 0.2, fillOpacity = 1,
+                    fillColor = ~mypal(temp$percentage),
+                    popup = paste("County: ", temp$NAME_2, "<br>",
+                                  "Percentage: ", temp$percentage, "<br>")) %>%
+        addLegend(position = "bottomleft", pal = mypal, values = temp$percentage,
+                  title = "Percentage",
+                  opacity = 1)
     }
     
     else if(input$Polluant == "PM2.5"){
-      mapD <- leaflet() %>% addTiles()  %>% setView(-96, 39, 4.3)
+      main2 <-  main2[1:19]
+      main2$Total <- main2[,14]+main2[,15]+main2[,16]+main2[,17]+main2[,18]+main2[,19]
+      main2$percentage <- (main2[,18]/main2[,20])*100
+      main2 <- main2[with(main2,order(-percentage)),]
+      main2 <- main2 %>% slice (1:100) #take the frist 100 rows 
+      
+      
+      temp <- merge(USmap, main2,
+                    by.x = c("NAME_1", "NAME_2"), by.y = c("State", "County"),
+                    all.x = TRUE)
+      
+      mypal <- colorNumeric(palette = "viridis", reverse = TRUE, domain = temp$percentage, na.color = "transparent")
+      str("###########################################################################################")
+      str(mypal)
+      
+      mapD <- leaflet() %>%
+        addProviderTiles("OpenStreetMap.Mapnik") %>%
+        setView(lat = 39, lng = -98, zoom = 6) %>%
+        addPolygons(data = USmap, stroke = FALSE, smoothFactor = 0.2, fillOpacity = 1,
+                    fillColor = ~mypal(temp$percentage),
+                    popup = paste("County: ", temp$NAME_2, "<br>",
+                                  "Percentage: ", temp$percentage, "<br>")) %>%
+        addLegend(position = "bottomleft", pal = mypal, values = temp$percentage,
+                  title = "Percentage",
+                  opacity = 1)
     }
     
     else if(input$Polluant == "PM10"){
-      mapD <- leaflet() %>% addTiles()  %>% setView(-96, 39, 4.3)
+      main2 <-  main2[1:19]
+      main2$Total <- main2[,14]+main2[,15]+main2[,16]+main2[,17]+main2[,18]+main2[,19]
+      main2$percentage <- (main2[,19]/main2[,20])*100
+      main2 <- main2[with(main2,order(-percentage)),]
+      main2 <- main2 %>% slice (1:100) #take the frist 100 rows 
+      
+      
+      temp <- merge(USmap, main2,
+                    by.x = c("NAME_1", "NAME_2"), by.y = c("State", "County"),
+                    all.x = TRUE)
+      
+      mypal <- colorNumeric(palette = "viridis", reverse = TRUE, domain = temp$percentage, na.color = "transparent")
+      str("###########################################################################################")
+      str(mypal)
+      
+      mapD <- leaflet() %>%
+        addProviderTiles("OpenStreetMap.Mapnik") %>%
+        setView(lat = 39, lng = -98, zoom = 6) %>%
+        addPolygons(data = USmap, stroke = FALSE, smoothFactor = 0.2, fillOpacity = 1,
+                    fillColor = ~mypal(temp$percentage),
+                    popup = paste("County: ", temp$NAME_2, "<br>",
+                                  "Percentage: ", temp$percentage, "<br>")) %>%
+        addLegend(position = "bottomleft", pal = mypal, values = temp$percentage,
+                  title = "Percentage",
+                  opacity = 1)
     }
     
     else {
