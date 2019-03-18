@@ -230,14 +230,14 @@ ui <- dashboardPage(
                        fluidRow(box(width = 12,
                                     
                         ##JANUARY
-                        h4("JANUARY"),
+                        h2("JANUARY"),
                         tabsetPanel(
                           tabPanel(title = "Table", width = 12,dataTableOutput("table1", height = 400)),
                           tabPanel(title = "Bar plot box", width = 12,plotOutput("bar1", height = 400))
                         ),
                         
                         ##JULY
-                        h4("JULY"),
+                        h2("JULY"),
                         tabsetPanel(
                           tabPanel(title = "Table",width = 12, dataTableOutput("table7", height = 400)),
                           tabPanel(title = "Bar plot box", width = 12,plotOutput("bar7", height = 400))
@@ -251,14 +251,14 @@ ui <- dashboardPage(
                        fluidRow(box(width = 12,
                                     
                          ##FEBRUARY
-                         h4("FEBRUARY"),
+                         h2("FEBRUARY"),
                          tabsetPanel(
                            tabPanel(title = "Table", width = 12,dataTableOutput("table2", height = 400)),
                            tabPanel(title = "Bar plot box", width = 12,plotOutput("bar2", height = 400))
                          ),
                          
                          ##AUGUST
-                         h4("AUGUST"),
+                         h2("AUGUST"),
                          tabsetPanel(
                            tabPanel(title = "Table", width = 12,dataTableOutput("table8", height = 400)),
                            tabPanel(title = "Bar plot box", width = 12,plotOutput("bar8", height = 400))
@@ -272,14 +272,14 @@ ui <- dashboardPage(
                        fluidRow(box(width = 12,
                                     
                          ##MARCH
-                         h4("MARCH"),
+                         h2("MARCH"),
                          tabsetPanel(
                            tabPanel(title = "Table",width = 12, dataTableOutput("table3", height = 400)),
                            tabPanel(title = "Bar plot box", width = 12,plotOutput("bar3", height = 400))
                          ),
                          
                          ##SEPTEMBER
-                         h4("SEPTEMBER"),
+                         h2("SEPTEMBER"),
                          tabsetPanel(
                            tabPanel(title = "Table",width = 12, dataTableOutput("table9", height = 400)),
                            tabPanel(title = "Bar plot box", width = 12,plotOutput("bar9", height = 400))
@@ -293,14 +293,14 @@ ui <- dashboardPage(
                        fluidRow(box(width = 12,
                                     
                          ##APRIL
-                         h4("APRIL"),
+                         h2("APRIL"),
                          tabsetPanel(
                            tabPanel(title = "Table", width = 12, dataTableOutput("table4", height = 400)),
                            tabPanel(title = "Bar plot box", width = 12, plotOutput("bar4", height = 400))
                          ),
                          
                          ##OCTOBER
-                         h4("OCTOBER"),
+                         h2("OCTOBER"),
                          tabsetPanel(
                            tabPanel(title = "Table",width = 12, dataTableOutput("table10", height = 400)),
                            tabPanel(title = "Bar plot box", width = 12,plotOutput("bar10", height = 400))
@@ -314,14 +314,14 @@ ui <- dashboardPage(
                        fluidRow(box(width = 12,
                                     
                         ##MAY
-                        h4("MAY"),
+                        h2("MAY"),
                         tabsetPanel(
                           tabPanel(title = "Table", width = 12,dataTableOutput("table5", height = 400)),
                           tabPanel(title = "Bar plot box",width = 12, plotOutput("bar5", height = 400))
                         ),
                           
                         ##NOVEMBER
-                        h4("NOVEMBER"),
+                        h2("NOVEMBER"),
                         tabsetPanel(
                           tabPanel(title = "Table",width = 12, dataTableOutput("table11", height = 400)),
                           tabPanel(title = "Bar plot box",width = 12, plotOutput("bar11", height = 400))
@@ -335,14 +335,14 @@ ui <- dashboardPage(
                        fluidRow(box(width = 12,
                                     
                         ##JUNE
-                        h4("JUNE"),
+                        h2("JUNE"),
                         tabsetPanel(
                           tabPanel(title = "Table", width = 12,dataTableOutput("table6", height = 400)),
                           tabPanel(title = "Bar plot box",width = 12, plotOutput("bar6", height = 400))
                         ),
                           
                         ##DECEMBER
-                        h4("DECEMBER"),
+                        h2("DECEMBER"),
                         tabsetPanel(
                           tabPanel(title = "Table", width = 12,dataTableOutput("table12", height = 400)),
                           tabPanel(title = "Bar plot box",width = 12, plotOutput("bar12", height = 400))
@@ -358,10 +358,11 @@ ui <- dashboardPage(
               fluidRow(
                 ################## FIRST COLUMN ######################
                 column(1,
+                       #sliderInput("obs", "Number of observations:", min = 0, max = 1000, value = 500)
+                       uiOutput("slider")
+                      # fluidRow(box(title = "this is the bar plot box", solidHeader = TRUE, status = "primary", width = 12, plotOutput("barD", height = 400))),
                        
-                       fluidRow(box(title = "this is the bar plot box", solidHeader = TRUE, status = "primary", width = 12, plotOutput("barD", height = 400))),
-                       
-                       fluidRow(box(title = "this is the table box", solidHeader = TRUE, status = "primary", width = 12, dataTableOutput("tableD", height = 400)))
+                       #fluidRow(box(title = "this is the table box", solidHeader = TRUE, status = "primary", width = 12, dataTableOutput("tableD", height = 400)))
                 ),
                 
                 column(11,
@@ -822,7 +823,7 @@ server <- function(session,input, output) {
     }
     else {
       ggplot(df, aes(Date,AQI,col = `Defining Parameter`)) + 
-        geom_line() +
+        geom_line(size =1.5) + scale_color_manual(values=c("#BEEB15", "#A59E17", "#BAAF9E" ,"#E8895D", "red3" ,"#773344", "black"))+
         ylab('Daily AQI')
       
     }
@@ -849,7 +850,7 @@ server <- function(session,input, output) {
   
   #####JANUARY
   output$bar1 <- renderPlot(ggplot(my_function(01), aes(x=Category, y=`sum(Days)`, fill=Category))+
-                              geom_bar(stat = "identity")+ scale_fill_manual(values=c("green", "#E69F00", "#56B4E9", "#999999", "red", "black", "blue"))
+                              geom_bar(stat = "identity")+ scale_fill_manual(values=c("#BEEB15", "#A59E17", "#BAAF9E" ,"#E8895D", "red3" ,"#773344", "black"))
                             +
                               theme(axis.title.x=element_blank(),
                                     axis.text.x=element_blank(),
@@ -862,7 +863,7 @@ server <- function(session,input, output) {
   
   #####FEBRUARY
   output$bar2 <- renderPlot(ggplot(my_function(02), aes(x=Category, y=`sum(Days)`, fill=Category))+
-                              geom_bar(stat = "identity")+ scale_fill_manual(values=c("green", "#E69F00", "#56B4E9", "#999999", "red", "black", "blue"))
+                              geom_bar(stat = "identity")+ scale_fill_manual(values=c("#BEEB15", "#A59E17", "#BAAF9E" ,"#E8895D", "red3" ,"#773344", "black"))
                             +
                               theme(axis.title.x=element_blank(),
                                     axis.text.x=element_blank(),
@@ -875,7 +876,7 @@ server <- function(session,input, output) {
   
   #####MARCH
   output$bar3 <- renderPlot(ggplot(my_function(03), aes(x=Category, y=`sum(Days)`, fill=Category))+
-                              geom_bar(stat = "identity")+ scale_fill_manual(values=c("green", "#E69F00", "#56B4E9", "#999999", "red", "black", "blue"))
+                              geom_bar(stat = "identity")+ scale_fill_manual(values=c("#BEEB15", "#A59E17", "#BAAF9E" ,"#E8895D", "red3" ,"#773344", "black"))
                             +
                               theme(axis.title.x=element_blank(),
                                     axis.text.x=element_blank(),
@@ -887,7 +888,7 @@ server <- function(session,input, output) {
   
   #####APRIL
   output$bar4 <- renderPlot(ggplot(my_function(04), aes(x=Category, y=`sum(Days)`, fill=Category))+
-                              geom_bar(stat = "identity")+ scale_fill_manual(values=c("green", "#E69F00", "#56B4E9", "#999999", "red", "black", "blue"))
+                              geom_bar(stat = "identity")+ scale_fill_manual(values=c("#BEEB15", "#A59E17", "#BAAF9E" ,"#E8895D", "red3" ,"#773344", "black"))
                             +
                               theme(axis.title.x=element_blank(),
                                     axis.text.x=element_blank(),
@@ -900,7 +901,7 @@ server <- function(session,input, output) {
   
   #####MAY
   output$bar5 <-renderPlot(ggplot(my_function(05), aes(x=Category, y=`sum(Days)`, fill=Category))+
-                             geom_bar(stat = "identity")+ scale_fill_manual(values=c("green", "#E69F00", "#56B4E9", "#999999", "red", "black", "blue"))
+                             geom_bar(stat = "identity")+ scale_fill_manual(values=c("#BEEB15", "#A59E17", "#BAAF9E" ,"#E8895D", "red3" ,"#773344", "black"))
                            +
                              theme(axis.title.x=element_blank(),
                                    axis.text.x=element_blank(),
@@ -913,7 +914,7 @@ server <- function(session,input, output) {
   
   #####JUNE
   output$bar6 <- renderPlot(ggplot(my_function(06), aes(x=Category, y=`sum(Days)`, fill=Category))+
-                              geom_bar(stat = "identity")+ scale_fill_manual(values=c("green", "#E69F00", "#56B4E9", "#999999", "red", "black", "blue"))
+                              geom_bar(stat = "identity")+ scale_fill_manual(values=c("#BEEB15", "#A59E17", "#BAAF9E" ,"#E8895D", "red3" ,"#773344", "black"))
                             +
                               theme(axis.title.x=element_blank(),
                                     axis.text.x=element_blank(),
@@ -926,7 +927,7 @@ server <- function(session,input, output) {
   
   #####JULY
   output$bar7 <- renderPlot(ggplot(my_function(07), aes(x=Category, y=`sum(Days)`, fill=Category))+
-                              geom_bar(stat = "identity")+ scale_fill_manual(values=c("green", "#E69F00", "#56B4E9", "#999999", "red", "black", "blue"))
+                              geom_bar(stat = "identity")+ scale_fill_manual(values=c("#BEEB15", "#A59E17", "#BAAF9E" ,"#E8895D", "red3" ,"#773344", "black"))
                             +
                               theme(axis.title.x=element_blank(),
                                     axis.text.x=element_blank(),
@@ -939,7 +940,7 @@ server <- function(session,input, output) {
   
   #####AUGUST
   output$bar8 <- renderPlot(ggplot(my_function(08), aes(x=Category, y=`sum(Days)`, fill=Category))+
-                              geom_bar(stat = "identity")+ scale_fill_manual(values=c("green", "#E69F00", "#56B4E9", "#999999", "red", "black", "blue"))
+                              geom_bar(stat = "identity")+ scale_fill_manual(values=c("#BEEB15", "#A59E17", "#BAAF9E" ,"#E8895D", "red3" ,"#773344", "black"))
                             +
                               theme(axis.title.x=element_blank(),
                                     axis.text.x=element_blank(),
@@ -952,7 +953,7 @@ server <- function(session,input, output) {
   
   #####SEPTEMBER
   output$bar9 <- renderPlot(ggplot(my_function(09), aes(x=Category, y=`sum(Days)`, fill=Category))+
-                              geom_bar(stat = "identity")+ scale_fill_manual(values=c("green", "#E69F00", "#56B4E9", "#999999", "red", "black", "blue"))
+                              geom_bar(stat = "identity")+ scale_fill_manual(values=c("#BEEB15", "#A59E17", "#BAAF9E" ,"#E8895D", "red3" ,"#773344", "black"))
                             +
                               theme(axis.title.x=element_blank(),
                                     axis.text.x=element_blank(),
@@ -965,7 +966,7 @@ server <- function(session,input, output) {
   
   #####OCTOBER
   output$bar10 <- renderPlot(ggplot(my_function(10), aes(x=Category, y=`sum(Days)`, fill=Category))+
-                               geom_bar(stat = "identity")+ scale_fill_manual(values=c("green", "#E69F00", "#56B4E9", "#999999", "red", "black", "blue"))
+                               geom_bar(stat = "identity")+ scale_fill_manual(values=c("#BEEB15", "#A59E17", "#BAAF9E" ,"#E8895D", "red3" ,"#773344", "black"))
                              +
                                theme(axis.title.x=element_blank(),
                                      axis.text.x=element_blank(),
@@ -978,7 +979,7 @@ server <- function(session,input, output) {
   
   #####NOVEMBER
   output$bar11 <- renderPlot(ggplot(my_function(11), aes(x=Category, y=`sum(Days)`, fill=Category))+
-                               geom_bar(stat = "identity")+ scale_fill_manual(values=c("green", "#E69F00", "#56B4E9", "#999999", "red", "black", "blue"))
+                               geom_bar(stat = "identity")+ scale_fill_manual(values=c("#BEEB15", "#A59E17", "#BAAF9E" ,"#E8895D", "red3" ,"#773344", "black"))
                              +
                                theme(axis.title.x=element_blank(),
                                      axis.text.x=element_blank(),
@@ -991,7 +992,7 @@ server <- function(session,input, output) {
   
   #####DECEMBER
   output$bar12 <- renderPlot(ggplot(my_function(12), aes(x=Category, y=`sum(Days)`, fill=Category))+
-                               geom_bar(stat = "identity")+ scale_fill_manual(values=c("green", "#E69F00", "#56B4E9", "#999999", "red", "black", "blue"))
+                               geom_bar(stat = "identity")+ scale_fill_manual(values=c("#BEEB15", "#A59E17", "#BAAF9E" ,"#E8895D", "red3" ,"#773344", "black"))
                              +
                                theme(axis.title.x=element_blank(),
                                      axis.text.x=element_blank(),
@@ -1007,7 +1008,7 @@ server <- function(session,input, output) {
   ############################################the map tab function #########################################
   ##Conrad
   output$barD <- renderPlot(ggplot(my_function(12), aes(x=Category, y=`sum(Days)`, fill=Category))+
-                               geom_bar(stat = "identity")+ scale_fill_manual(values=c("green", "#E69F00", "#56B4E9", "#999999", "red", "black", "blue"))
+                               geom_bar(stat = "identity")+ scale_fill_manual(values=c("#BEEB15", "#A59E17", "#BAAF9E" ,"#E8895D", "red3" ,"#773344", "black"))
                              +
                                theme(axis.title.x=element_blank(),
                                      axis.text.x=element_blank(),
@@ -1206,6 +1207,18 @@ server <- function(session,input, output) {
     
     
     mapD
+  })
+  
+  output$slider <- renderUI({
+    sliderInput("inSlider", "Slider", min=20, max=200, value=100)
+  })
+  
+  observeEvent(input$doI, {
+    
+  })
+  
+  observeEvent(input$doM, {
+    
   })
   
   
