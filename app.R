@@ -22,15 +22,20 @@ library(readr) #provided by import button for file
 #library(rsconnect)
 library(data.table)
 library(dplyr)
-
+library(raster)
 
 ################################################################################ READ IN ALL THE FILES ################################################################################
-temp = list.files(path = '/Users/caseycharlesworth/Documents/GitHub/project2_shiny/daily', pattern="*.csv")
-setwd('/Users/caseycharlesworth/Documents/GitHub/project2_shiny/daily')
+temp = list.files(path = '/Users/nflbu/Desktop/424_Project_2/shiny1/project2_shiny/daily', pattern="*.csv")
+#temp = list.files(path = '/Users/caseycharlesworth/Documents/GitHub/project2_shiny/daily', pattern="*.csv")
+
+setwd('/Users/nflbu/Desktop/424_Project_2/shiny1/project2_shiny/daily')
+#setwd('/Users/caseycharlesworth/Documents/GitHub/project2_shiny/daily')
 #temp = list.files(path = '/Users/caseycharlesworth/Documents/GitHub/project2_shiny/daily_aqi',pattern="*.csv")
-allData2 <- lapply(temp, function(x) fread(x, stringsAsFactors = FALSE,quote = ""))
+allData2 <- lapply(temp, function(x) fread(x, stringsAsFactors = FALSE))
 dailyData <- do.call(rbind, allData2)
-setwd('/Users/caseycharlesworth/Documents/GitHub/project2_shiny')
+#setwd('/Users/caseycharlesworth/Documents/GitHub/project2_shiny')
+setwd('/Users/nflbu/Desktop/424_Project_2/shiny1/project2_shiny')
+
 #dailyData$Date <- as.Date(dailyData$Date)
 
 #State & County Codes
