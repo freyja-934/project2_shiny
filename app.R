@@ -27,7 +27,9 @@ library(raster)
 ################################################################################ READ IN ALL THE FILES ################################################################################
 #temp = list.files(path = '/Users/nflbu/Desktop/424_Project_2/shiny1/project2_shiny/daily', pattern="*.csv")
 #temp = list.files(path = '/Users/caseycharlesworth/Documents/GitHub/project2_shiny/daily', pattern="*.csv")
+#temp = list.files(path = '/Users/conradptasznik/Desktop/project2_shiny/daily', pattern="*.csv")
 temp = list.files(path = 'daily', pattern="*.csv", full.names=TRUE)
+
 
 #setwd('/Users/nflbu/Desktop/424_Project_2/shiny1/project2_shiny/daily')
 #setwd('/Users/caseycharlesworth/Documents/GitHub/project2_shiny/daily')
@@ -373,25 +375,27 @@ ui <- dashboardPage(
               )),
       
       
+      
       tabItem(tabName = "mapdata",
               
-              ######################################## THE MAIN BODY DISPLAY FOR MAP DATA ########################################
-              fluidRow(
-                ################## FIRST COLUMN ######################
-                column(1,
-                       #sliderInput("obs", "Number of observations:", min = 0, max = 1000, value = 500)
-                       uiOutput("slider")
-                       # fluidRow(box(title = "this is the bar plot box", solidHeader = TRUE, status = "primary", width = 12, plotOutput("barD", height = 400))),
-                       
-                       #fluidRow(box(title = "this is the table box", solidHeader = TRUE, status = "primary", width = 12, dataTableOutput("tableD", height = 400)))
-                ),
-                
-                column(11,
-                       
-                       fluidRow(box(title = "this is the map box", solidHeader = TRUE, status = "primary", width = 12, leafletOutput("mapD", height = 1500)))
-                ) 
-                
-              )),
+              ######################################## THE MAIN BODY DISPLAY FOR MAP DATA #######################################
+              ################## FIRST COLUMN ######################
+              fluidRow(box(title = "this is the map box", solidHeader = TRUE, status = "primary", width = 12, leafletOutput("mapD", height = 1350))),
+              #sliderInput("obs", "Number of observations:", min = 0, max = 1000, value = 500)
+              
+              #fluidRow(box(title = "this is the table box", solidHeader = TRUE, status = "primary", width = 12, dataTableOutput("tableD", height = 400)))
+              
+              column(3,
+                     uiOutput("slider")),
+              # fluidRow(box(title = "this is the bar plot box", solidHeader = TRUE, status = "primary", width = 12, plotOutput("barD", height = 400))),
+              
+              column(3,
+                     uiOutput("dropdown")),
+              # fluidRow(box(title = "this is the bar plot box", solidHeader = TRUE, status = "primary", width = 12, plotOutput("barD", height = 400))),
+              
+              column(3,
+                     uiOutput("button")
+              )), 
       
       tabItem(tabName = "hourlydata",
               
@@ -1070,18 +1074,19 @@ server <- function(session,input, output) {
     USmap <- getData("GADM", country = "usa", level = 2)
     #str(USmap)
     if(input$Polluant == "Ozone"){
+      numOfCount <- input$inSlider
       main2 <-  main2[1:19]
       main2$Total <- main2[,14]+main2[,15]+main2[,16]+main2[,17]+main2[,18]+main2[,19]
       main2$percentage <- (main2[,16]/main2[,20])*100
       main2 <- main2[with(main2,order(-percentage)),]
-      main2 <- main2 %>% slice (1:100) #take the frist 100 rows 
+      main2 <- main2 %>% slice (1:numOfCount) #take the frist 100 rows 
       
       
       temp <- merge(USmap, main2,
                     by.x = c("NAME_1", "NAME_2"), by.y = c("State", "County"),
                     all.x = TRUE)
       
-      mypal <- colorNumeric(palette = "viridis", reverse = TRUE, domain = temp$percentage, na.color = "transparent")
+      mypal <- colorNumeric(palette = "Reds", reverse = TRUE, domain = temp$percentage, na.color = "transparent")
       str("###########################################################################################")
       str(mypal)
       
@@ -1101,19 +1106,19 @@ server <- function(session,input, output) {
     
     
     else if(input$Polluant == "SO2"){
-      
+      numOfCount <- input$inSlider
       main2 <-  main2[1:19]
       main2$Total <- main2[,14]+main2[,15]+main2[,16]+main2[,17]+main2[,18]+main2[,19]
       main2$percentage <- (main2[,17]/main2[,20])*100
       main2 <- main2[with(main2,order(-percentage)),]
-      main2 <- main2 %>% slice (1:100) #take the frist 100 rows 
+      main2 <- main2 %>% slice (1:numOfCount) #take the frist 100 rows 
       
       
       temp <- merge(USmap, main2,
                     by.x = c("NAME_1", "NAME_2"), by.y = c("State", "County"),
                     all.x = TRUE)
       
-      mypal <- colorNumeric(palette = "viridis", reverse = TRUE, domain = temp$percentage, na.color = "transparent")
+      mypal <- colorNumeric(palette = "Reds", reverse = TRUE, domain = temp$percentage, na.color = "transparent")
       str("###########################################################################################")
       str(mypal)
       
@@ -1131,19 +1136,19 @@ server <- function(session,input, output) {
     
     
     else if(input$Polluant == "NO2"){
-      
+      numOfCount <- input$inSlider
       main2 <-  main2[1:19]
       main2$Total <- main2[,14]+main2[,15]+main2[,16]+main2[,17]+main2[,18]+main2[,19]
       main2$percentage <- (main2[,15]/main2[,20])*100
       main2 <- main2[with(main2,order(-percentage)),]
-      main2 <- main2 %>% slice (1:100) #take the frist 100 rows 
+      main2 <- main2 %>% slice (1:numOfCount) #take the frist 100 rows 
       
       
       temp <- merge(USmap, main2,
                     by.x = c("NAME_1", "NAME_2"), by.y = c("State", "County"),
                     all.x = TRUE)
       
-      mypal <- colorNumeric(palette = "viridis", reverse = TRUE, domain = temp$percentage, na.color = "transparent")
+      mypal <- colorNumeric(palette = "Reds", reverse = TRUE, domain = temp$percentage, na.color = "transparent")
       str("###########################################################################################")
       str(mypal)
       
@@ -1161,18 +1166,19 @@ server <- function(session,input, output) {
     
     
     else if(input$Polluant == "CO"){
+      numOfCount <- input$inSlider
       main2 <-  main2[1:19]
       main2$Total <- main2[,14]+main2[,15]+main2[,16]+main2[,17]+main2[,18]+main2[,19]
       main2$percentage <- (main2[,14]/main2[,20])*100
       main2 <- main2[with(main2,order(-percentage)),]
-      main2 <- main2 %>% slice (1:100) #take the frist 100 rows 
+      main2 <- main2 %>% slice (1:numOfCount) #take the frist 100 rows 
       
       
       temp <- merge(USmap, main2,
                     by.x = c("NAME_1", "NAME_2"), by.y = c("State", "County"),
                     all.x = TRUE)
       
-      mypal <- colorNumeric(palette = "viridis", reverse = TRUE, domain = temp$percentage, na.color = "transparent")
+      mypal <- colorNumeric(palette = "Reds", reverse = TRUE, domain = temp$percentage, na.color = "transparent")
       str("###########################################################################################")
       str(mypal)
       
@@ -1189,18 +1195,19 @@ server <- function(session,input, output) {
     }
     
     else if(input$Polluant == "PM2.5"){
+      numOfCount <- input$inSlider
       main2 <-  main2[1:19]
       main2$Total <- main2[,14]+main2[,15]+main2[,16]+main2[,17]+main2[,18]+main2[,19]
       main2$percentage <- (main2[,18]/main2[,20])*100
       main2 <- main2[with(main2,order(-percentage)),]
-      main2 <- main2 %>% slice (1:100) #take the frist 100 rows 
+      main2 <- main2 %>% slice (1:numOfCount) #take the frist 100 rows 
       
       
       temp <- merge(USmap, main2,
                     by.x = c("NAME_1", "NAME_2"), by.y = c("State", "County"),
                     all.x = TRUE)
       
-      mypal <- colorNumeric(palette = "viridis", reverse = TRUE, domain = temp$percentage, na.color = "transparent")
+      mypal <- colorNumeric(palette = "Reds", reverse = TRUE, domain = temp$percentage, na.color = "transparent")
       str("###########################################################################################")
       str(mypal)
       
@@ -1217,18 +1224,19 @@ server <- function(session,input, output) {
     }
     
     else if(input$Polluant == "PM10"){
+      numOfCount <- input$inSlider
       main2 <-  main2[1:19]
       main2$Total <- main2[,14]+main2[,15]+main2[,16]+main2[,17]+main2[,18]+main2[,19]
       main2$percentage <- (main2[,19]/main2[,20])*100
       main2 <- main2[with(main2,order(-percentage)),]
-      main2 <- main2 %>% slice (1:100) #take the frist 100 rows 
+      main2 <- main2 %>% slice (1:numOfCount) #take the frist 100 rows 
       
       
       temp <- merge(USmap, main2,
                     by.x = c("NAME_1", "NAME_2"), by.y = c("State", "County"),
                     all.x = TRUE)
       
-      mypal <- colorNumeric(palette = "viridis", reverse = TRUE, domain = temp$percentage, na.color = "transparent")
+      mypal <- colorNumeric(palette = "Reds", reverse = TRUE, domain = temp$percentage, na.color = "transparent")
       str("###########################################################################################")
       str(mypal)
       
@@ -1244,6 +1252,38 @@ server <- function(session,input, output) {
                   opacity = 1)
     }
     
+    
+    
+    else if(input$Polluant == "AQI"){
+      numOfCount <- input$inSlider
+      main2 <-  main2[1:19]
+      
+      main2 <- main2[with(main2,order(-Max.AQI)),]
+      main2 <- main2 %>% slice (1:numOfCount) #take the frist 100 rows 
+      
+      
+      temp <- merge(USmap, main2,
+                    by.x = c("NAME_1", "NAME_2"), by.y = c("State", "County"),
+                    all.x = TRUE)
+      
+      mypal <- colorNumeric(palette = "Reds", reverse = TRUE, domain = temp$Max.AQI, na.color = "transparent")
+      str("###########################################################################################")
+      str(mypal)
+      
+      mapD <- leaflet() %>%
+        addProviderTiles("OpenStreetMap.Mapnik") %>%
+        setView(lat = 39, lng = -98, zoom = 6) %>%
+        addPolygons(data = USmap, stroke = FALSE, smoothFactor = 0.2, fillOpacity = 1,
+                    fillColor = ~mypal(temp$Max.AQI),
+                    popup = paste("County: ", temp$NAME_2, "<br>",
+                                  "Percentage: ", temp$Max.AQI, "<br>")) %>%
+        addLegend(position = "bottomleft", pal = mypal, values = temp$Max.AQI,
+                  title = "Percentage",
+                  opacity = 1)
+    }
+    
+    
+    
     else {
       mapD <- leaflet() %>% addTiles()  %>% setView(-96, 39, 4.3)
     }
@@ -1254,7 +1294,16 @@ server <- function(session,input, output) {
   })
   
   output$slider <- renderUI({
-    sliderInput("inSlider", "Slider", min=20, max=200, value=100)
+    main5 <- allY()
+    str("######################################################################")
+    str(main5)
+    max2 <- as.integer(nrow(main5)) 
+    str(max2)
+    sliderInput("inSlider", "Slider", min=0, max=max2, value=100)
+  })
+  
+  output$button <- renderUI({
+    actionButton("button", "Heatmap")
   })
   
   observeEvent(input$doI, {
