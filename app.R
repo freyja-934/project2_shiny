@@ -1000,7 +1000,7 @@ server <- function(session,input, output) {
   
   
   ############################################the map tab function #########################################
-  
+  ##Conrad
   output$barD <- renderPlot(ggplot(my_function(12), aes(x=Category, y=`sum(Days)`, fill=Category))+
                                geom_bar(stat = "identity")+ scale_fill_manual(values=c("green", "#E69F00", "#56B4E9", "#999999", "red", "black", "blue"))
                              +
@@ -1015,7 +1015,46 @@ server <- function(session,input, output) {
   
   
   output$mapD <- renderLeaflet({ # adapted from prof code
+    main2 <- mainY()
+    USmap <- getData("GADM", country = "usa", level = 2)
+    
+    if(input$Polluant == "Ozone"){
+      main2 <-  main2[1:19]
+      main2$Total <- main2[,14]+main2[,15]+main2[,16]+main2[,17]
+      main2$percentage <- (main2[,16]/main2[,20])*100
+      main2 <- main2[with(main2,order(-percentage)),]
+      main2 <- main2 %>% slice (1:100) #take the frist 100 rows 
+      
+      
+      mapD <- leaflet() %>% addTiles()  %>% setView(-96, 39, 4.3)
+    }
+    
+    else if(input$Polluant == "Ozone"){
+      mapD <- leaflet() %>% addTiles()  %>% setView(-96, 39, 4.3)
+    }
+    
+    else if(input$Polluant == "SO2"){
+      mapD <- leaflet() %>% addTiles()  %>% setView(-96, 39, 4.3)
+    }
+    
+    else if(input$Polluant == "CO"){
+      mapD <- leaflet() %>% addTiles()  %>% setView(-96, 39, 4.3)
+    }
+    
+    else if(input$Polluant == "PM2.5"){
+      mapD <- leaflet() %>% addTiles()  %>% setView(-96, 39, 4.3)
+    }
+    
+    else if(input$Polluant == "PM10"){
+      mapD <- leaflet() %>% addTiles()  %>% setView(-96, 39, 4.3)
+    }
+    
+    else {
     mapD <- leaflet() %>% addTiles()  %>% setView(-96, 39, 4.3)
+    }
+    
+    
+    
     mapD
   })
   
