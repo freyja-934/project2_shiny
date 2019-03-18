@@ -85,7 +85,7 @@ hourlyData <- bind_rows(hourlyData,pm2.5_data)
 
 #PM2.5.Mass
 pm2.5.Mass_data <- temp_data <- read.table(file= "hourly/hourly_81102_2018.csv",sep = ",", header= TRUE, stringsAsFactors = FALSE)
-pm2.5.Mass_data$Parameter.Name <- "PM2.5_Mass"
+pm2.5.Mass_data$Parameter.Name <- "PM10_Mass"
 
 hourlyData <- bind_rows(hourlyData,pm2.5.Mass_data)
 
