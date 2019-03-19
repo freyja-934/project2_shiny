@@ -94,59 +94,30 @@ hourlyData <- bind_rows(hourlyData,pm2.5.Mass_data)
 hourlyData$DateTime <- ymd_hm(paste(hourlyData$Date.Local,hourlyData$Time.Local))
 
 ################ AQI FILES FROM 1980-2018 ########################
-aqi_1980 <- read.table(file= "annual_aqi_by_county_1980.csv",sep = ",", header= TRUE)
-aqi_1981 <- read.table(file= "annual_aqi_by_county_1981.csv",sep = ",", header= TRUE)
-aqi_1982 <- read.table(file= "annual_aqi_by_county_1982.csv",sep = ",", header= TRUE)
-aqi_1983 <- read.table(file= "annual_aqi_by_county_1983.csv",sep = ",", header= TRUE)
-aqi_1984 <- read.table(file= "annual_aqi_by_county_1984.csv",sep = ",", header= TRUE)
-aqi_1985 <- read.table(file= "annual_aqi_by_county_1985.csv",sep = ",", header= TRUE)
-aqi_1986 <- read.table(file= "annual_aqi_by_county_1986.csv",sep = ",", header= TRUE)
-aqi_1987 <- read.table(file= "annual_aqi_by_county_1987.csv",sep = ",", header= TRUE)
-aqi_1988 <- read.table(file= "annual_aqi_by_county_1988.csv",sep = ",", header= TRUE)
-aqi_1989 <- read.table(file= "annual_aqi_by_county_1989.csv",sep = ",", header= TRUE)
-
-aqi_1990 <- read.table(file= "annual_aqi_by_county_1990.csv",sep = ",", header= TRUE)
-aqi_1991 <- read.table(file= "annual_aqi_by_county_1991.csv",sep = ",", header= TRUE)
-aqi_1992 <- read.table(file= "annual_aqi_by_county_1992.csv",sep = ",", header= TRUE)
-aqi_1993 <- read.table(file= "annual_aqi_by_county_1993.csv",sep = ",", header= TRUE)
-aqi_1994 <- read.table(file= "annual_aqi_by_county_1994.csv",sep = ",", header= TRUE)
-aqi_1995 <- read.table(file= "annual_aqi_by_county_1995.csv",sep = ",", header= TRUE)
-aqi_1996 <- read.table(file= "annual_aqi_by_county_1996.csv",sep = ",", header= TRUE)
-aqi_1997 <- read.table(file= "annual_aqi_by_county_1997.csv",sep = ",", header= TRUE)
-aqi_1998 <- read.table(file= "annual_aqi_by_county_1998.csv",sep = ",", header= TRUE)
-aqi_1999 <- read.table(file= "annual_aqi_by_county_1999.csv",sep = ",", header= TRUE)
-
-aqi_2000 <- read.table(file= "annual_aqi_by_county_2000.csv",sep = ",", header= TRUE)
-aqi_2001 <- read.table(file= "annual_aqi_by_county_2001.csv",sep = ",", header= TRUE)
-aqi_2002 <- read.table(file= "annual_aqi_by_county_2002.csv",sep = ",", header= TRUE)
-aqi_2003 <- read.table(file= "annual_aqi_by_county_2003.csv",sep = ",", header= TRUE)
-aqi_2004 <- read.table(file= "annual_aqi_by_county_2004.csv",sep = ",", header= TRUE)
-aqi_2005 <- read.table(file= "annual_aqi_by_county_2005.csv",sep = ",", header= TRUE)
-aqi_2006 <- read.table(file= "annual_aqi_by_county_2006.csv",sep = ",", header= TRUE)
-aqi_2007 <- read.table(file= "annual_aqi_by_county_2007.csv",sep = ",", header= TRUE)
-aqi_2008 <- read.table(file= "annual_aqi_by_county_2008.csv",sep = ",", header= TRUE)
-aqi_2009 <- read.table(file= "annual_aqi_by_county_2009.csv",sep = ",", header= TRUE)
-
-aqi_2010 <- read.table(file= "annual_aqi_by_county_2010.csv",sep = ",", header= TRUE)
-aqi_2011 <- read.table(file= "annual_aqi_by_county_2011.csv",sep = ",", header= TRUE)
-aqi_2012 <- read.table(file= "annual_aqi_by_county_2012.csv",sep = ",", header= TRUE)
-aqi_2013 <- read.table(file= "annual_aqi_by_county_2013.csv",sep = ",", header= TRUE)
-aqi_2014 <- read.table(file= "annual_aqi_by_county_2014.csv",sep = ",", header= TRUE)
-aqi_2015 <- read.table(file= "annual_aqi_by_county_2015.csv",sep = ",", header= TRUE)
-aqi_2016 <- read.table(file= "annual_aqi_by_county_2016.csv",sep = ",", header= TRUE)
-aqi_2017 <- read.table(file= "annual_aqi_by_county_2017.csv",sep = ",", header= TRUE)
-aqi_2018 <- read.table(file= "annual_aqi_by_county_2018.csv",sep = ",", header= TRUE)
-
-
+aqi_2017 <- read.table(file= "annual/annual_aqi_by_county_2017.csv",sep = ",", header= TRUE)
+aqi_2018 <- read.table(file= "annual/annual_aqi_by_county_2018.csv",sep = ",", header= TRUE)
 
 ################## AQS FILE OF SITE LAT/LONG FOR MAPPING######################
 latlong <- read.table(file= "sites/aqs_sites.csv",sep = ",", header = TRUE)
 
 ################################################################################ MERGE ALL AQI DATA INTO ONE TABLE WITH THE SAME COLUMNS AS IN EASH FILE ################################################################################
 #adapted from prof code
-allData <- rbind(aqi_1980,aqi_1981,aqi_1982,aqi_1983,aqi_1984,aqi_1985,aqi_1986,aqi_1987,aqi_1988,aqi_1989,aqi_1990,aqi_1991,aqi_1992,aqi_1993,aqi_1994,aqi_1995,aqi_1996,aqi_1997,aqi_1998,aqi_1999,aqi_2000,aqi_2001,aqi_2002,aqi_2003,aqi_2004,aqi_2005,aqi_2006,aqi_2007,aqi_2008,aqi_2009,aqi_2010,aqi_2011,aqi_2012,aqi_2013,aqi_2014,aqi_2015,aqi_2016,aqi_2017,aqi_2018)
+allData <- rbind(aqi_2017,aqi_2018)
 
-
+######################################## THIS IS EXTRA CODE USED TO CREATE THE "B" AND "C" MENU LEVELS - NOT REMOVING SINCE THEY HELPED ME LEARN AND I USE THEM FOR REFERENCE 
+#toCounty <- function(x){return (toString(x))}
+#listNames <- c(colnames(allData))
+#list2 <- unique(allData$County)
+#listNames <- toString(unique(allData$County)) #adapted from https://stat.ethz.ch/R-manual/R-devel/library/base/html/toString.html
+#listNamesGood <-c(listNames)  #lapply(listNames,toCounty) #listNames[listNames != "Hour" & listNames != "newDate"]
+#listNamesGood <- unlist(strsplit(listNames,", "))#adapted from https://stat.ethz.ch/R-manual/R-devel/library/base/html/strsplit.html
+#listNamesGood2 <- sort(listNamesGood,decreasing = FALSE) #https://stat.ethz.ch/R-manual/R-devel/library/base/html/sort.html
+#listNamesGood2[listNamesGood2 == "Hour" || listNamesGood2 == "newDate"]
+#listNames <- unique(allData[1:2])
+#listNamesGood <- paste(trimws(listNames$County),",",listNames$State)
+##listNamesB2 <- gsub(" , ", ", ", listNamesGood)
+#listNamesB <- listNamesGood[listNamesB2 == "Cook, Illinois" | listNamesB2 == "Hawaii, Hawaii" | listNamesB2 == "New York, New York" | listNamesB2 == "Los Angeles, California" | listNamesB2 == "King, Washington" |listNamesB2 == "Harris, Texas" | listNamesB2 == "Harris, Texas" | listNamesB2 == "Miami-Dade, Florida" | listNamesB2 == "San Juan, New Mexico" | listNamesB2 == "Hennepin, Minnesota" | listNamesB2 ==  "Wake, North Carolina" | listNamesB2 == "Craighead, Arkansas" | listNamesB2 == "Covington City, Virginia" ]
+#listNamesB  <- sort(listNamesB ,decreasing = FALSE)
 
 ######################################################################## CREATE A STARTING DROPDOWN OPTION FOR YEAR ########################################################################################
 years<-c(1980:2018)
@@ -419,10 +390,12 @@ ui <- dashboardPage(
               # fluidRow(box(title = "this is the bar plot box", solidHeader = TRUE, status = "primary", width = 12, plotOutput("barD", height = 400))),
               
               column(3,
-                     uiOutput("dropdown"))
+                     uiOutput("dropdown")),
               # fluidRow(box(title = "this is the bar plot box", solidHeader = TRUE, status = "primary", width = 12, plotOutput("barD", height = 400))),
               
-              ), 
+              column(3,
+                     uiOutput("button")
+              )), 
       
       tabItem(tabName = "hourlydata",
               
